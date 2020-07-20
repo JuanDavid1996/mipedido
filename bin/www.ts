@@ -23,7 +23,8 @@ mongoose
     'mongodb://localhost:27017/domi',
     {useNewUrlParser: true, useUnifiedTopology: true})
       .then((con: Mongoose) => {
-
+        console.log("connected to db");
+        // console.log("db: ", con);
         server = http.createServer(app);
         server!.listen(port);
         server!.on('error', onError);

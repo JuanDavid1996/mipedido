@@ -1,20 +1,113 @@
 import {buildSchema} from "graphql";
 
 const typeDefs =  buildSchema(`
-    type Category {
-        id: ID!
+    scalar Date
+    scalar MongoObjectId
+
+    input StoreInput {
+        code: String!
         name: String!
+        address: String!
+        phone: String!
+        category: String!
+    }
+    
+    input UserInput {
+        _id: MongoObjectId!
+        code: String!
+        firstName: String!
+        lastName: String!
+        phone: String!
+        username: String!
+        password: String!
+        role: String
+    }
+    
+    input PermissionInput {
+        name: String!
+        resource: String!
+        role: String!
+    }
+    
+    type Category {
+        _id: MongoObjectId!
+        name: String!
+    }
+    
+    type User {
+        _id: MongoObjectId!
+        code: String!
+        firstName: String!
+        lastName: String!
+        phone: String!
+        role: Role!
+    }
+    
+    type Store {
+        _id: MongoObjectId!
+        code: String!
+        name: String!
+        address: String!
+        phone: String!
+        category: String!
+    }
+    
+    type Order {
+        _id: MongoObjectId!
+        client: User!
+        domiciliary: User!
+        store: Store!
+        description: String!
+        origin: String!
+        destination: String!
+    }
+    
+    type Role {
+        _id: MongoObjectId!
+        name: String!
+        permissions: [Permission]
+    }
+    
+    type Permission {
+        _id: MongoObjectId!
+        name: String!
+        resource: String!
+        role: Role!
     }
 
     type Query {
         getCategories: [Category]
-        getCategory(id: ID!): Category
+        getCategory(_id: MongoObjectId!): Category
+        
+        getOrders: [Order]
+        getOrder(_id: MongoObjectId!): Order
+        
+        getStores: [Store]
+        getStore(_id: MongoObjectId!): Store
+        
+        getRoles: [Role]
+        getRole(_id: MongoObjectId!): Role
+        
+        getPermissions: [Permission]
+        getPermission(_id: MongoObjectId!): Permission
     }
 
     type Mutation {
         addCategory(name: String!): Category
-        updateCategory(id: ID!, name: String!): Category
-        deleteCategory(id: ID!): Category
+        updateCategory(_id: MongoObjectId!, name: String!): Category
+        deleteCategory(_id: MongoObjectId!): Category
+        
+        addStore(store: StoreInput!): Store
+        updateStore(_id: MongoObjectId!, store: StoreInput!): Store
+        deleteStore(_id: MongoObjectId!): Store
+        
+        addRole(name: String!): Role
+        updateRole(_id: MongoObjectId!, name: String!): Role
+        deleteRole(_id: MongoObjectId!): Role
+        
+        addPermission(permission: PermissionInput!): Permission
+        updatePermission(_id: MongoObjectId!, permission: PermissionInput!): Permission
+        deletePermission(_id: MongoObjectId!): Permission
     }
 `)
 export default typeDefs;

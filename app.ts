@@ -1,5 +1,5 @@
 import typeDefs from "./graphql/schema";
-import resolvers from "./graphql/resolvers"
+import resolvers from "./graphql/resolvers/"
 
 const createError = require('http-errors');
 import express = require('express');

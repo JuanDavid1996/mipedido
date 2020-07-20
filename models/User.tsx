@@ -20,6 +20,19 @@ const UserSchema = new Schema({
     },
     verified: {
         type: Boolean,
+    },
+    username: {
+        type: String,
+        require: true
+    },
+    password: {
+        type: String,
+        require: true
+    },
+    role: {
+        type: Schema.Types.ObjectId,
+        ref: "Role",
+        required: true
     }
 });
 
