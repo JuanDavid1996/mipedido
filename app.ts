@@ -1,7 +1,8 @@
+import typeDefs from "./graphql/schema";
+import resolvers from "./graphql/resolvers"
+
 const createError = require('http-errors');
 import express = require('express');
-import bodyParser from "body-parser";
-import { graphqlExpress, graphiqlExpress } from "apollo-server-express/dist/expressApollo";
 
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -9,6 +10,7 @@ const logger = require('morgan');
 const cors = require('cors');
 
 const app: express.Application = express();
+const { graphqlHTTP } = require('express-graphql');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -17,41 +19,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('*', cors());
 
-
-const { makeExecutableSchema } = require('graphql-tools');
-
-// Some fake data
-const books = [
-  {
-    title: "Harry Potter and the Sorcerer's stone",
-    author: 'J.K. Rowling',
-  },
-  {
-    title: 'Jurassic Park',
-    author: 'Michael Crichton',
-  },
-];
-
-// The GraphQL schema in string form
-const typeDefs = `
-  type Query { books: [Book] }
-  type Book { title: String, author: String }
-`;
-
-// The resolvers
-const resolvers = {
-  Query: { books: () => books },
-};
-
-// Put together a schema
-const schema = makeExecutableSchema({
-  typeDefs,
-  resolvers,
-});
-
-
-app.use("/graphql", bodyParser.json(), graphqlExpress({ schema }))
-app.use("/grapihql", graphiqlExpress({ endpointURL: '/graphql' }))
+app.use('/graphql', graphqlHTTP({
+  schema: typeDefs,
+  rootValue: resolvers,
+  graphiql: true,
+}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
