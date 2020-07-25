@@ -3,10 +3,10 @@ import { IResolvers } from "graphql-tools";
 
 const categoryResolvers: IResolvers = {
 
-    getCategories: (parent, args) => {
+    categories: (parent, args) => {
         return Category.find({});
     },
-    getCategory: (parent, args) => {
+    category: (parent, args) => {
         return Category.findById(args.id);
     },
 

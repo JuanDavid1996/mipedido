@@ -13,7 +13,7 @@ const typeDefs =  buildSchema(`
     }
     
     input UserInput {
-        _id: MongoObjectId!
+        _id: MongoObjectId
         code: String!
         firstName: String!
         lastName: String!
@@ -76,20 +76,23 @@ const typeDefs =  buildSchema(`
     }
 
     type Query {
-        getCategories: [Category]
-        getCategory(_id: MongoObjectId!): Category
+        categories: [Category]
+        category(_id: MongoObjectId!): Category
         
-        getOrders: [Order]
-        getOrder(_id: MongoObjectId!): Order
+        orders: [Order]
+        order(_id: MongoObjectId!): Order
         
-        getStores: [Store]
-        getStore(_id: MongoObjectId!): Store
+        stores: [Store]
+        store(_id: MongoObjectId!): Store
         
-        getRoles: [Role]
-        getRole(_id: MongoObjectId!): Role
+        roles: [Role]
+        role(_id: MongoObjectId!): Role
         
-        getPermissions: [Permission]
-        getPermission(_id: MongoObjectId!): Permission
+        permissions: [Permission]
+        permission(_id: MongoObjectId!): Permission
+        
+        users: [User]
+        user(_id: MongoObjectId!): User
     }
 
     type Mutation {
@@ -108,6 +111,10 @@ const typeDefs =  buildSchema(`
         addPermission(permission: PermissionInput!): Permission
         updatePermission(_id: MongoObjectId!, permission: PermissionInput!): Permission
         deletePermission(_id: MongoObjectId!): Permission
+        
+        addUser(user: UserInput!): User!
+        updateUser(_id: MongoObjectId!, user: UserInput!): User
+        deleteUser(_id: MongoObjectId!): User
     }
 `)
 export default typeDefs;

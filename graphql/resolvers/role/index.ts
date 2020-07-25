@@ -3,12 +3,12 @@ import { IResolvers } from "graphql-tools";
 
 const roleResolvers: IResolvers = {
 
-    getRoles: () => {
+    roles: () => {
         return Role.aggregate([
             { $lookup: { from: "permissions", localField: "_id", foreignField: "role", as: "permissions" } }
         ]).exec()
     },
-    getRole: (parent, args) => {
+    role: (parent, args) => {
         return Role.findById(args.id);
     },
 

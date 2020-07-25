@@ -8,10 +8,10 @@ const withPopulate = (query: DocumentQuery<any, any>) => {
 
 const permissionResolvers: IResolvers = {
 
-    getPermissions: (parent, args) => {
+    permissions: (parent, args) => {
         return withPopulate(Permission.find({}));
     },
-    getPermission: (parent, args) => {
+    permission: (parent, args) => {
         return withPopulate(Permission.findById(args.id));
     },
 

@@ -16,7 +16,7 @@ const PermissionSchema = new Schema({
         required: true
     },
 });
-mongoose.set("debug", true);
+// mongoose.set("debug", true);
 const Permissions = mongoose.model("Permission", PermissionSchema);
 const permissionType = typeof Permissions;
 module .exports = {Permissions, PermissionSchema, permissionType};

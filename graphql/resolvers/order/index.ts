@@ -3,10 +3,10 @@ import { IResolvers } from "graphql-tools";
 
 const orderResolvers: IResolvers = {
 
-        getOrders: (parent, args) => {
+        orders: (parent, args) => {
             return Order.find({});
         },
-        getOrder: (parent, args) => {
+        order: (parent, args) => {
             return Order.findById(args.id);
         },
 

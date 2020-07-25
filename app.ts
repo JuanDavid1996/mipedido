@@ -1,3 +1,6 @@
+const moduleAlias = require('module-alias')
+moduleAlias.addAlias('@models', __dirname + '/models')
+
 import typeDefs from "./graphql/schema";
 import resolvers from "./graphql/resolvers/"
 
