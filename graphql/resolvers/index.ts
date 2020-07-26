@@ -4,6 +4,11 @@ import roleResolvers from "./role";
 import permissionResolvers from "./permission";
 import userResolvers from "./user";
 
+export interface UpdateParams<T> {
+    _id: string;
+    model: T
+}
+
 export default {
     ...orderResolvers,
     ...categoryResolvers,

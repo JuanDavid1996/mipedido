@@ -13,13 +13,22 @@ const typeDefs =  buildSchema(`
     }
     
     input UserInput {
-        _id: MongoObjectId
         code: String!
         firstName: String!
         lastName: String!
         phone: String!
         username: String!
         password: String!
+        role: String
+    }
+
+    input UserUpdateInput {
+        _id: MongoObjectId!
+        code: String!
+        firstName: String!
+        lastName: String!
+        phone: String!
+        username: String!
         role: String
     }
     
@@ -41,6 +50,7 @@ const typeDefs =  buildSchema(`
         lastName: String!
         phone: String!
         role: Role!
+        username: String!
     }
     
     type Store {
@@ -113,7 +123,7 @@ const typeDefs =  buildSchema(`
         deletePermission(_id: MongoObjectId!): Permission
         
         addUser(user: UserInput!): User!
-        updateUser(_id: MongoObjectId!, user: UserInput!): User
+        updateUser(user: UserUpdateInput!): User
         deleteUser(_id: MongoObjectId!): User
     }
 `)

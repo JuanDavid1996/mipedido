@@ -4,7 +4,10 @@ const Schema = mongoose.Schema;
 const StoreSchema = new Schema({
     code: {
         type: String,
-        required: true
+        required: true,
+        index: {
+            unique: true
+        }
     },
     name: {
         type: String,
