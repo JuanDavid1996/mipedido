@@ -3,6 +3,8 @@ import categoryResolvers from "./category";
 import roleResolvers from "./role";
 import permissionResolvers from "./permission";
 import userResolvers from "./user";
+import storeTypeResolvers from "./storeTypes";
+
 
 export interface UpdateParams<T> {
     _id: string;
@@ -15,4 +17,5 @@ export default {
     ...roleResolvers,
     ...permissionResolvers,
     ...userResolvers,
+    ...storeTypeResolvers
 }

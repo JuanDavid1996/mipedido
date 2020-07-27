@@ -60,7 +60,14 @@ const typeDefs =  buildSchema(`
         address: String!
         phone: String!
         category: String!
+        type: StoreType!
     }
+
+    type StoreType {
+        _id: MongoObjectId!
+        name: String!
+    }
+
     
     type Order {
         _id: MongoObjectId!
@@ -103,6 +110,9 @@ const typeDefs =  buildSchema(`
         
         users: [User]
         user(_id: MongoObjectId!): User
+
+        storeTypes: [StoreType]
+        storeType(_id: MongoObjectId!): StoreType
     }
 
     type Mutation {
@@ -125,6 +135,10 @@ const typeDefs =  buildSchema(`
         addUser(user: UserInput!): User!
         updateUser(user: UserUpdateInput!): User
         deleteUser(_id: MongoObjectId!): User
+
+        addStoreType(name: String!): StoreType
+        updateStoreType(_id: MongoObjectId!, name: String!): StoreType
+        deleteStoreType(_id: MongoObjectId!): StoreType
     }
 `)
 export default typeDefs;

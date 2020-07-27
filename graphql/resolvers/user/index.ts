@@ -39,7 +39,8 @@ const userResolvers: IResolvers = {
         const params: any = { ...user }
         delete params._id;
         delete params.password;
-        return User.updateOne({ _id: user._id }, { ...params });
+        await User.updateOne({ _id: user._id }, { ...params });
+        return await User.findById(user._id);
     }
 }
 
