@@ -4,10 +4,6 @@ const Schema = mongoose.Schema;
 const StoreSchema = new Schema({
     code: {
         type: String,
-        required: true,
-        index: {
-            unique: true
-        }
     },
     name: {
         type: String,
@@ -24,6 +20,16 @@ const StoreSchema = new Schema({
     category: {
         type: Schema.Types.ObjectId,
         ref: "Category",
+        required: true
+    },
+    storeType: {
+        type: Schema.Types.ObjectId,
+        ref: "StoreType",
+        required: true
+    },
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
         required: true
     }
 });

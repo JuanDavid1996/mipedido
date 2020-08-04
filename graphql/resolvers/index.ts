@@ -4,6 +4,7 @@ import roleResolvers from "./role";
 import permissionResolvers from "./permission";
 import userResolvers from "./user";
 import storeTypeResolvers from "./storeTypes";
+import storeResolvers from "./store";
 
 
 export interface UpdateParams<T> {
@@ -17,5 +18,6 @@ export default {
     ...roleResolvers,
     ...permissionResolvers,
     ...userResolvers,
-    ...storeTypeResolvers
+    ...storeTypeResolvers,
+    ...storeResolvers,
 }

@@ -5,11 +5,14 @@ const typeDefs =  buildSchema(`
     scalar MongoObjectId
 
     input StoreInput {
-        code: String!
+        _id: String
+        code: String
         name: String!
         address: String!
         phone: String!
         category: String!
+        storeType: String!
+        owner: String!
     }
     
     input UserInput {
@@ -37,6 +40,7 @@ const typeDefs =  buildSchema(`
         resource: String!
         role: String!
     }
+
     
     type Category {
         _id: MongoObjectId!
@@ -59,8 +63,9 @@ const typeDefs =  buildSchema(`
         name: String!
         address: String!
         phone: String!
-        category: String!
-        type: StoreType!
+        category: Category!
+        storeType: StoreType!
+        owner: User!
     }
 
     type StoreType {
@@ -110,6 +115,7 @@ const typeDefs =  buildSchema(`
         
         users: [User]
         user(_id: MongoObjectId!): User
+        shopkeepers: [User]
 
         storeTypes: [StoreType]
         storeType(_id: MongoObjectId!): StoreType
@@ -121,7 +127,7 @@ const typeDefs =  buildSchema(`
         deleteCategory(_id: MongoObjectId!): Category
         
         addStore(store: StoreInput!): Store
-        updateStore(_id: MongoObjectId!, store: StoreInput!): Store
+        updateStore(store: StoreInput!): Store
         deleteStore(_id: MongoObjectId!): Store
         
         addRole(name: String!): Role

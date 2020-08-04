@@ -1,4 +1,5 @@
-const User = require("@models/User").Users
+const User = require("@models/User").Users;
+const Role = require("@models/Role").Roles;
 import { IResolvers } from "graphql-tools";
 
 interface BaseUserInput {
@@ -27,6 +28,10 @@ const userResolvers: IResolvers = {
     },
     user: (args) => {
         return User.findById(args._id).populate("role").exec();
+    },
+    shopkeepers: async() => {
+        const role = await Role.findOne({name: "Tendero"}).exec();
+        return await User.find({ role: role._id });
     },
 
 
