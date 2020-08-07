@@ -1,23 +1,29 @@
-const Role = require("../../../models/Role").Roles;
-import { IResolvers } from "graphql-tools";
+import Role from "../../../models/Role";
+import Permission from "../../../models/Permission";
 
-const roleResolvers: IResolvers = {
 
+const queries = {
     roles: () => {
-        return Role.aggregate([
-            { $lookup: { from: "permissions", localField: "_id", foreignField: "role", as: "permissions" } }
-        ]).exec()
+        return Role.find();
     },
-    role: (parent, args) => {
-        return Role.findById(args.id);
-    },
+    role: (args: any) => {
+        return Role.findById(args._id);
+    }
+}
 
+const resolvers = {
+    permissions: (args: any) => {
+        return Permission.find({ role: args._id });
+    }
+}
 
-    addRole({name}) {
+const mutations = {
+
+    addRole({name}: any) {
         let role = new Role({name});
         return role.save();
     },
-    updateRole(parent, args) {
+    updateRole(args: any) {
         if (!args.id) return;
         let fields = {...args}
         delete fields.id;
@@ -34,9 +40,13 @@ const roleResolvers: IResolvers = {
             }
         )
     },
-    deleteRole({id}) {
+    deleteRole({id}: any) {
         return Role.findOneAndDelete({_id: id})
     }
 
 }
-export default roleResolvers;
+export default {
+    queries,
+    resolvers,
+    mutations,
+};

@@ -34,5 +34,5 @@ const StoreSchema = new Schema({
     }
 });
 
-const Stores = mongoose.model("Store", StoreSchema);
-module .exports = {Stores, StoreSchema};
+const Store = mongoose.model("Store", StoreSchema);
+export default Store;

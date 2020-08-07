@@ -1,5 +1,6 @@
 const moduleAlias = require('module-alias')
-moduleAlias.addAlias('@models', __dirname + '/models')
+moduleAlias.addAlias('@models', __dirname + '/models');
+moduleAlias.addAlias('@DataSource', __dirname + '/DataSource');
 
 import typeDefs from "./graphql/schema";
 import resolvers from "./graphql/resolvers/"
@@ -22,9 +23,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('*', cors());
 
+import { makeExecutableSchema } from '@graphql-tools/schema';
+const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers,
+});
+
 app.use('/graphql', graphqlHTTP({
-  schema: typeDefs,
-  rootValue: resolvers,
+  schema: schema,
+  rootValue: {},
   graphiql: true,
 }));
 

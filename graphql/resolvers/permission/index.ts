@@ -1,37 +1,39 @@
-import { IResolvers } from "graphql-tools";
-import {DocumentQuery} from "mongoose";
-const Permission = require("../../../models/Permission").Permissions;
+const Permission = require("@models/Permission");
+const DataSource = require("@DataSource");
 
-const withPopulate = (query: DocumentQuery<any, any>) => {
-    return query.populate({path: "role", model: "Role"}).exec();
+const queries = {
+    permissions: () => {
+        return Permission.find();
+    },
+    permission: (args: any) => {
+        return Permission.findById(args._id);
+    },
 }
 
-const permissionResolvers: IResolvers = {
+const resolvers = {
+    role: (args: any) => DataSource.getRoleById(args.role),
+}
 
-    permissions: (parent, args) => {
-        return withPopulate(Permission.find({}));
-    },
-    permission: (parent, args) => {
-        return withPopulate(Permission.findById(args.id));
-    },
+const mutations = {
 
-    async addPermission(args) {
+    async addPermission(args: any) {
         const {permission: {name, role, resource}} = args;
         let permission = new Permission({name, role, resource});
         try {
             await permission.save();
-            return await permission.populate("role").execPopulate();
+            return await permission;
         } catch(err) {
             throw err;
         }
     },
-    updatePermission(parent, args) {
-        if (!args.id) return;
+
+    updatePermission(args: any) {
+        if (!args._id) return;
         let fields = {...args}
         delete fields.id;
         return Permission.findOneAndUpdate(
             {
-                _id: args.id
+                _id: args._id
             },{
                 $set: { ...fields }
             }, {new: true}, (err: any, role: any) => {
@@ -42,9 +44,14 @@ const permissionResolvers: IResolvers = {
             }
         )
     },
-    deletePermission({id}) {
-        return Permission.findOneAndDelete({_id: id})
+
+    deletePermission({_id}: any) {
+        return Permission.findOneAndDelete({_id})
     }
 
 }
-export default permissionResolvers;
+export default {
+    queries,
+    resolvers,
+    mutations,
+};

@@ -1,40 +1,43 @@
 const Order = require("../../../models/Order").Orders;
-import { IResolvers } from "graphql-tools";
 
-const orderResolvers: IResolvers = {
+const queries = {
+    orders: () => {
+        return Order.find({});
+    },
+    order: (args: any) => {
+        return Order.findById(args._id);
+    },
+}
 
-        orders: (parent, args) => {
-            return Order.find({});
-        },
-        order: (parent, args) => {
-            return Order.findById(args.id);
-        },
+const mutations = {
 
-
-        addOrder({client, domiciliary, store, description, origin, destination}) {
-            let order = new Order({client, domiciliary, store, description, origin, destination});
-            return order.save();
-        },
-        updateOrder(parent, args) {
-            if (!args.id) return;
-            let fields = {...args}
-            delete fields.id;
-            return Order.findOneAndUpdate(
-                {
-                    _id: args.id
-                },{
-                    $set: { ...fields }
-                }, {new: true}, (err: any, order: any) => {
-                    if (err) {
-                        throw new Error("Se produjo un error al actualizar la categoria")
-                    }
-                    return order;
+    addOrder({client, store, description, destination}: any) {
+        let order = new Order({client, store, description, destination});
+        return order.save();
+    },
+    updateOrder(args: any) {
+        if (!args._id) return;
+        let fields = {...args}
+        delete fields.id;
+        return Order.findOneAndUpdate(
+            {
+                _id: args._id
+            },{
+                $set: { ...fields }
+            }, {new: true}, (err: any, order: any) => {
+                if (err) {
+                    throw new Error("Se produjo un error al actualizar la categoria")
                 }
-            )
-        },
-        deleteOrder({id}) {
-            return Order.findOneAndDelete({_id: id})
-        }
+                return order;
+            }
+        )
+    },
+    deleteOrder({_id}: any) {
+        return Order.findOneAndDelete({_id})
+    }
 
 }
-export default orderResolvers;
+export default {
+    queries,
+    mutations
+};

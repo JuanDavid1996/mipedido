@@ -1,8 +1,11 @@
-const Store = require("@models/Store").Stores;
-const StoreType = require("@models/StoreType").StoreTypes;
-const Category = require("@models/Category").Categories;
+import StoreType from "../../../models/StoreType";
+import Store from "../../../models/Store";
+import {
+	getCategoryById,
+	getStoreTypeById,
+	getUserById
+} from "../../../DataSource";
 
-import { IResolvers } from "graphql-tools";
 
 interface StoreInput {
 	_id?: string,
@@ -15,33 +18,46 @@ interface StoreInput {
 	storeType: string
 }
 
-
 interface BaseStoreInput {
 	store: StoreInput
 }
 
-
 const validateParams = (store: StoreInput) => new Promise(async(resolve, rejected) => {
-	const type = await StoreType.findById(store.storeType);
+	const type: any = await getStoreTypeById(store.storeType);
 	if (type === "Formal") {
 		const existCode = await Store.findOne({ code: store.code });
 		if (existCode) rejected("Nit en uso");
 	}
 
-	const category = await Category.findById(store.category);
+	const category: any = await getCategoryById(store.category);
 	if (!category) rejected("Categoria no valida");
 
 	resolve();
 });
 
-
-const storesolvers: IResolvers = {
+const queries = {
 	stores: async () => {
-		return await Store.find();
+		return Store.find();
 	},
-	store: async(args) => {
-		return await Store.findById(args._id).populate(["user", "storeType", "category", "owner"]).exec();
+	store: async(args: any) => {
+		return Store.findById(args._id);
 	},
+}
+
+const resolvers = {
+
+	storeType: (args: any) => {
+		return StoreType.findById(args.storeType);
+	},
+
+	category: (args: any) => {
+		return getCategoryById(args.category);
+	},
+
+	owner: (args: any) => getUserById(args.owner),
+}
+
+const mutations = {
 
 	addStore: async({store}: BaseStoreInput) => {
 		await validateParams(store);
@@ -52,9 +68,13 @@ const storesolvers: IResolvers = {
 	 	const params: any = { ...store }
         delete params._id;
         await Store.updateOne({ _id: store._id }, { ...params });
-        return await Store.findById(store._id);
+        return Store.findById(store._id);
 	}
 }
 
-export default storesolvers;
+export default {
+	queries,
+	resolvers,
+	mutations
+};
 

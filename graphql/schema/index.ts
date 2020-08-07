@@ -1,6 +1,4 @@
-import {buildSchema} from "graphql";
-
-const typeDefs =  buildSchema(`
+const typeDefs = `
     scalar Date
     scalar MongoObjectId
 
@@ -39,6 +37,15 @@ const typeDefs =  buildSchema(`
         name: String!
         resource: String!
         role: String!
+    }
+
+    input OrderInput {
+        description: String!
+        origin: String!
+        client: String!
+        destination: String!
+        domiciliary: String!
+        store: String!
     }
 
     
@@ -82,6 +89,12 @@ const typeDefs =  buildSchema(`
         description: String!
         origin: String!
         destination: String!
+        status: OrderStatus!
+    }
+
+    type OrderStatus {
+        _id: MongoObjectId!
+        name: String!
     }
     
     type Role {
@@ -116,9 +129,12 @@ const typeDefs =  buildSchema(`
         users: [User]
         user(_id: MongoObjectId!): User
         shopkeepers: [User]
+        clients: [User]
 
         storeTypes: [StoreType]
         storeType(_id: MongoObjectId!): StoreType
+
+        orderStatuses: [OrderStatus]
     }
 
     type Mutation {
@@ -145,6 +161,13 @@ const typeDefs =  buildSchema(`
         addStoreType(name: String!): StoreType
         updateStoreType(_id: MongoObjectId!, name: String!): StoreType
         deleteStoreType(_id: MongoObjectId!): StoreType
+
+        addOrder(order: OrderInput!): Order
+        updateOrder(order: OrderInput!): Order
+        updateOrderStatus(_id: MongoObjectId!, status: String!): Order
+        deleteOrder(_id: MongoObjectId!): Order
+
+        addOrderStatus(name: String!): OrderStatus
     }
-`)
+`
 export default typeDefs;

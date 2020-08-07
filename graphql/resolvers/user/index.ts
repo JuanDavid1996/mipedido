@@ -1,6 +1,5 @@
-const User = require("@models/User").Users;
-const Role = require("@models/Role").Roles;
-import { IResolvers } from "graphql-tools";
+import User from "../../../models/User";
+import Role from "../../../models/Role";
 
 interface BaseUserInput {
     code: string,
@@ -20,20 +19,32 @@ interface UserInput<T> {
     user: T;
 }
 
-
-const userResolvers: IResolvers = {
-    
+const queries = {
     users: () => {
-        return User.find().populate("role").exec();
+        return User.find();
     },
-    user: (args) => {
+    user: (args: any) => {
         return User.findById(args._id).populate("role").exec();
     },
     shopkeepers: async() => {
-        const role = await Role.findOne({name: "Tendero"}).exec();
-        return await User.find({ role: role._id });
+        const role: any = await Role.findOne({name: "Tendero"}).exec();
+        return User.find({role: role._id});
     },
+    clients: async() => {
+        const role: any = await Role.findOne({name: "Cliente"}).exec();
+        return User.find({role: role._id});
+    },
+}
 
+const resolvers = {
+
+    role: (args: any) => {
+        return Role.findById(args.role);
+    }
+
+}
+
+const mutations = {
 
     addUser: async  ({user}: UserInput<BaseUserInput>) =>  {
         const exist = await User.findOne({username: user.username})
@@ -45,8 +56,12 @@ const userResolvers: IResolvers = {
         delete params._id;
         delete params.password;
         await User.updateOne({ _id: user._id }, { ...params });
-        return await User.findById(user._id);
+        return User.findById(user._id);
     }
 }
 
-export default userResolvers;
+export default {
+    queries,
+    resolvers,
+    mutations
+}

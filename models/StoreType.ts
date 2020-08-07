@@ -10,5 +10,5 @@ const StoreTypeSchema = new Schema({
     },
 });
 
-const StoreTypes = mongoose.model("StoreType", StoreTypeSchema);
-module .exports = {StoreTypes, StoreTypeSchema};
+const StoreType = mongoose.model("StoreType", StoreTypeSchema);
+export default StoreType;

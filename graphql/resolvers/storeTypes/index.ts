@@ -1,23 +1,19 @@
-import { IResolvers } from "graphql-tools";
-import {DocumentQuery} from "mongoose";
-const StoreType = require("../../../models/StoreType").StoreTypes;
+import StoreType from "../../../models/StoreType";
 
-
-const storeTypeResolvers: IResolvers = {
-
-    storeTypes: (args) => {
-        return StoreType.find({});
+const queries = {
+    storeTypes: () => {
+        return StoreType.find();
     },
-    permission: (args) => {
-      return StoreType.findById(args._id);  
-    },
+}
 
-    async addStoreType(args) {
+const mutations = {
+
+    async addStoreType(args: any) {
         const { name } = args;
         let storeType = new StoreType({name});
         return await storeType.save();
     },
-    updateStoreType(args) {
+    updateStoreType(args: any) {
         if (!args._id) return;
         let fields = {...args}
         delete fields._id;
@@ -34,9 +30,12 @@ const storeTypeResolvers: IResolvers = {
             }
         )
     },
-    deleteStoreType({id}) {
-        return StoreType.findOneAndDelete({_id: id})
+    deleteStoreType({_id}: any) {
+        return StoreType.findOneAndDelete({_id})
     }
 
 }
-export default storeTypeResolvers;
+export default {
+    queries,
+    mutations
+};

@@ -1,25 +1,27 @@
-const Category = require("../../../models/Category").Categories;
-import { IResolvers } from "graphql-tools";
+import Category from "../../../models/Category";
 
-const categoryResolvers: IResolvers = {
+const queries = {
 
-    categories: (parent, args) => {
+    categories: () => {
         return Category.find({});
     },
-    category: (parent, args) => {
+    category: (args: any) => {
         return Category.findById(args.id);
     },
+}
 
-    addCategory({name}) {
+const mutations = {
+
+    addCategory({name}: any) {
         let category = new Category({name: name});
         console.log(name);
         return category.save();
     },
-    updateCategory(parent, args) {
-        if (!args.id) return;
+    updateCategory(args: any) {
+        if (!args._id) return;
         return Category.findOneAndUpdate(
             {
-                _id: args.id
+                _id: args._id
             },{
                 $set: {
                     name: args.name
@@ -32,9 +34,12 @@ const categoryResolvers: IResolvers = {
             }
         )
     },
-    deleteCategory({id}) {
-        return Category.findOneAndDelete({_id: id})
+    deleteCategory({id: _id}: any) {
+        return Category.findOneAndDelete({_id})
     }
 
 }
-export default categoryResolvers;
+export default {
+    queries,
+    mutations
+}

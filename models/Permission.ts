@@ -5,9 +5,8 @@ const PermissionSchema = new Schema({
     name: {
         type: String,
         required: true,
-        index: {
-            unique: true
-        }
+        index: true,
+        unique: true
     },
     resource: {
         type: String,
@@ -20,6 +19,5 @@ const PermissionSchema = new Schema({
     },
 });
 // mongoose.set("debug", true);
-const Permissions = mongoose.model("Permission", PermissionSchema);
-const permissionType = typeof Permissions;
-module .exports = {Permissions, PermissionSchema, permissionType};
+const Permission = mongoose.model("Permission", PermissionSchema);
+export default Permission;
