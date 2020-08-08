@@ -24,6 +24,7 @@ const queries = {
     user: (context: any, args: any) => getUserById(args._id),
     shopkeepers: async() => getUsersByRoleName("Tendero"),
     clients: async() => getUsersByRoleName("Cliente"),
+    currentUser: (obj: any, args: any, context: any) => context.currentUser,
 }
 
 const resolvers = {

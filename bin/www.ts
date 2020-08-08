@@ -3,6 +3,8 @@
 import { Server } from "https";
 import { AddressInfo } from "net";
 import * as process from "process";
+import connect from "../config/db";
+import connectDB from "../config/db";
 
 /**
  * Module dependencies.
@@ -17,19 +19,14 @@ app.set('port', port);
 
 let server: Server|null = null;
 
-import mongoose, {Mongoose} from "mongoose";
-mongoose
-    .connect(
-    'mongodb://localhost:27017/domi',
-    {useNewUrlParser: true, useUnifiedTopology: true})
-      .then((con: Mongoose) => {
-        console.log("connected to db");
-        // console.log("db: ", con);
-        server = http.createServer(app);
-        server!.listen(port);
-        server!.on('error', onError);
-        server!.on('listening', onListening);
-      });
+connectDB().then(() => {
+  console.log("connected to db");
+  // console.log("db: ", con);
+  server = http.createServer(app);
+  server!.listen(port);
+  server!.on('error', onError);
+  server!.on('listening', onListening);
+})
 
 function normalizePort(val: string) {
   const port = parseInt(val, 10);

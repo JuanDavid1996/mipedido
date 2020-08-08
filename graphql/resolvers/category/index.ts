@@ -3,17 +3,17 @@ import {getCategories, getCategoryById} from "../../../DataSource";
 
 const queries = {
     categories: () => getCategories(),
-    category: (context: any, args: any) => getCategoryById(args._id),
+    category: (obj: any, args: any) => getCategoryById(args._id),
 }
 
 const mutations = {
 
-    addCategory(context: any, {name}: any) {
+    addCategory(obj: any, {name}: any) {
         let category = new Category({name: name});
         console.log(name);
         return category.save();
     },
-    updateCategory(context: any, args: any) {
+    updateCategory(obj: any, args: any) {
         if (!args._id) return;
         return Category.findOneAndUpdate(
             {
@@ -30,7 +30,7 @@ const mutations = {
             }
         )
     },
-    deleteCategory(context: any, {id: _id}: any) {
+    deleteCategory(obj: any, {id: _id}: any) {
         return Category.findOneAndDelete({_id})
     }
 

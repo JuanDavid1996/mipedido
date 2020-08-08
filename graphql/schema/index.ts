@@ -41,14 +41,21 @@ const typeDefs = `
 
     input OrderInput {
         description: String!
-        origin: String!
         client: String!
         destination: String!
-        domiciliary: String!
-        store: String!
+        domiciliary: String
+        store: String
+    }
+    
+    input ClientInput {
+        _id: MongoObjectId
+        code: String!
+        firstName: String!
+        lastName: String
+        phone: String!
+        store: String
     }
 
-    
     type Category {
         _id: MongoObjectId!
         name: String!
@@ -83,13 +90,15 @@ const typeDefs = `
     
     type Order {
         _id: MongoObjectId!
-        client: User!
-        domiciliary: User!
+        client: Client!
+        domiciliary: User
         store: Store!
         description: String!
         origin: String!
         destination: String!
         status: OrderStatus!
+        createdAt: Date
+        updatedAt: Date
     }
 
     type OrderStatus {
@@ -105,9 +114,18 @@ const typeDefs = `
     
     type Permission {
         _id: MongoObjectId!
-        name: String!
         resource: String!
         role: Role!
+    }
+    
+    type Client {
+         _id: MongoObjectId!
+        code: String!
+        firstName: String!
+        lastName: String!
+        phone: String!
+        store: Store!
+        user: User
     }
 
     type Query {
@@ -130,14 +148,21 @@ const typeDefs = `
         user(_id: MongoObjectId!): User
         shopkeepers: [User]
         clients: [User]
+        currentUser(token: String): User
 
         storeTypes: [StoreType]
         storeType(_id: MongoObjectId!): StoreType
 
         orderStatuses: [OrderStatus]
+        
+        storeClients(store: String): [Client]
+        storeClient(_id: MongoObjectId!): Client
     }
 
     type Mutation {
+        login(username: String!, password: String!): String
+    
+    
         addCategory(name: String!): Category
         updateCategory(_id: MongoObjectId!, name: String!): Category
         deleteCategory(_id: MongoObjectId!): Category
@@ -168,6 +193,9 @@ const typeDefs = `
         deleteOrder(_id: MongoObjectId!): Order
 
         addOrderStatus(name: String!): OrderStatus
+        
+        addStoreClient(client: ClientInput!): Client
+        updateStoreClient(client: ClientInput!): Client
     }
 `
 export default typeDefs;

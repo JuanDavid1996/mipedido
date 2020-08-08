@@ -2,7 +2,7 @@ import OrderStatus from "../../../models/OrderStatus";
 import {getOrderStatuses} from "../../../DataSource";
 
 const queries = {
-	orderStatuses: getOrderStatuses(),
+	orderStatuses: () => getOrderStatuses(),
 }
 
 const mutations = {

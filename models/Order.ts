@@ -18,13 +18,12 @@ const Schema = mongoose.Schema;
 const OrderSchema = new Schema({
     client: {
         type: Schema.Types.ObjectId,
-        ref: "User",
+        ref: "Client",
         required: true
     },
     domiciliary: {
         type: Schema.Types.ObjectId,
         ref: "User",
-        required: true
     },
     store: {
         type: Schema.Types.ObjectId,
@@ -42,12 +41,14 @@ const OrderSchema = new Schema({
     },
     origin: {
         type: String,
-        required: String
+        required: true
     },
     destination: {
         type: String,
-        required: String
+        required: true
     }
+}, {
+    timestamps: true,
 });
 
 const Order = mongoose.model<IOrder>("Order", OrderSchema);

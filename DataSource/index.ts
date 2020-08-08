@@ -3,13 +3,14 @@ import Permission from "../models/Permission";
 import Role from "../models/Role";
 import Category from "../models/Category";
 import StoreType from "../models/StoreType";
-import {DocumentQuery} from "mongoose";
 import Order from "../models/Order";
 import OrderStatus from "../models/OrderStatus";
 import Store from "../models/Store";
+import Client from "../models/Client";
+import {DocumentQuery} from "mongoose";
 
 export function getUserById(id: string) {
-    return User.findById(id);
+    return User.findById(id, { password: 0 });
 }
 
 export function getUsers() : DocumentQuery<IUser[], IUser> {
@@ -20,6 +21,8 @@ export async function getUsersByRoleName(roleName: string) {
     const role: any = await getRoleByName(roleName);
     return User.find({role: role._id});
 }
+
+
 
 export function getPermissionById(id: string)  {
     return Permission.findById(id);
@@ -32,6 +35,8 @@ export function getPermissions() {
 export function getPermissionByRole(role: string) {
     return Permission.find({role})
 }
+
+
 
 export function getRoleById(id: string) {
     return Role.findById(id);
@@ -54,6 +59,8 @@ export function getCategories() {
     return Category.find();
 }
 
+
+
 export function getStoreTypeById(id: string) {
     return StoreType.findById(id)
 }
@@ -61,6 +68,8 @@ export function getStoreTypeById(id: string) {
 export function getStoreTypes() {
     return StoreType.find();
 }
+
+
 
 export function getStores() {
     return Store.find();
@@ -70,6 +79,12 @@ export function getStoreById(id: string) {
     return Store.findById(id);
 }
 
+export function getStoreByOwner(owner: any) {
+    return Store.findOne({ owner: owner._id });
+}
+
+
+
 export function getOrderById(id: string) {
     return Order.findById(id);
 }
@@ -77,6 +92,8 @@ export function getOrderById(id: string) {
 export function getOrders() {
     return Order.find({});
 }
+
+
 
 export function getOrderStatusById(id: string) {
     return OrderStatus.findById(id);
@@ -86,6 +103,20 @@ export function getOrderStatuses() {
     return OrderStatus.find();
 }
 
+export function getOrderStatusByName(name: string) {
+    return OrderStatus.findOne({name: name});
+}
+
+
+export function getStoreClients(storeId?: string) {
+    let condition: any = {};
+    if (storeId) condition.store = storeId;
+    return Client.find(condition);
+}
+
+export function getStoreClientById(id: string) {
+    return Client.findById(id);
+}
 
 export default {
     getUserById,
@@ -103,4 +134,6 @@ export default {
     getOrderById,
     getOrders,
     getStores,
+    getStoreClients,
+    getOrderStatusByName,
 }

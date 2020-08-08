@@ -2,10 +2,12 @@ import orderModule from "./order";
 import categoryModule from "./category";
 import roleModule from "./role";
 import permissionModule from "./permission";
-import userModule  from "./user";
+import userModule from "./user";
 import storeTypeModule from "./storeTypes";
 import storeModule from "./store";
 import orderStatusModule from "./orderStatus";
+import storeClient from "./storeClient";
+import authModule from "./auth";
 
 export default {
     Query: {
@@ -16,7 +18,8 @@ export default {
         ...categoryModule.queries,
         ...storeTypeModule.queries,
         ...orderModule.queries,
-        ...orderStatusModule.queries
+        ...orderStatusModule.queries,
+        ...storeClient.queries,
     },
     Mutation: {
         ...userModule.mutations,
@@ -26,7 +29,9 @@ export default {
         ...categoryModule.mutations,
         ...storeTypeModule.mutations,
         ...orderModule.mutations,
-        ...orderStatusModule.mutations
+        ...orderStatusModule.mutations,
+        ...storeClient.mutations,
+        ...authModule.mutations,
     },
     User: { ...userModule.resolvers },
     Store: { ...storeModule.resolvers },
@@ -34,6 +39,8 @@ export default {
     Permission: { ...permissionModule.resolvers },
     Category: {},
     StoreType: {},
-    Order: {},
+    Order: { ...orderModule.resolvers },
     OrderStatus: {},
+    //StoreClient
+    Client: { ...storeClient.resolvers },
 }

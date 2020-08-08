@@ -1,12 +1,14 @@
 const moduleAlias = require('module-alias')
 moduleAlias.addAlias('@models', __dirname + '/models');
-moduleAlias.addAlias('@DataSource', __dirname + '/DataSource');
 
+import { makeExecutableSchema } from '@graphql-tools/schema';
 import typeDefs from "./graphql/schema";
 import resolvers from "./graphql/resolvers/"
+import express = require('express');
+import {getUserByToken} from "./graphql/resolvers/auth";
+const { graphqlHTTP } = require('express-graphql');
 
 const createError = require('http-errors');
-import express = require('express');
 
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -14,7 +16,7 @@ const logger = require('morgan');
 const cors = require('cors');
 
 const app: express.Application = express();
-const { graphqlHTTP } = require('express-graphql');
+app.set('view engine', 'html');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -23,16 +25,25 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('*', cors());
 
-import { makeExecutableSchema } from '@graphql-tools/schema';
 const schema = makeExecutableSchema({
   typeDefs,
   resolvers,
 });
 
-app.use('/graphql', graphqlHTTP({
-  schema: schema,
-  rootValue: {},
-  graphiql: true,
+app.get("/", (req: any, res: any) => res.send("Ok!"));
+
+app.use('/graphql', graphqlHTTP(async (request: Request) => {
+  const authorization = (request.headers as any)?.authorization;
+  let currentUser: any = await getUserByToken(authorization);
+
+  return {
+    schema: schema,
+    rootValue: {},
+    graphiql: true,
+    context: {
+      currentUser
+    },
+  }
 }));
 
 // catch 404 and forward to error handler
@@ -41,7 +52,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err: any, req: any, res: any, next: any) {
+app.use(function(err: any, req: any, res: any) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

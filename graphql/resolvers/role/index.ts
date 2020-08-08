@@ -9,7 +9,7 @@ const queries = {
 }
 
 const resolvers = {
-    permissions: (context: any, args: any) => getPermissionByRole(args._id),
+    permissions: (args: any) => getPermissionByRole(args._id),
 }
 
 const mutations = {
