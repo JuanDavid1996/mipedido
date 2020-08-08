@@ -1,5 +1,5 @@
 import User from "../../../models/User";
-import Role from "../../../models/Role";
+import {getRoleById, getUserById, getUsers, getUsersByRoleName} from "../../../DataSource";
 
 interface BaseUserInput {
     code: string,
@@ -20,38 +20,24 @@ interface UserInput<T> {
 }
 
 const queries = {
-    users: () => {
-        return User.find();
-    },
-    user: (args: any) => {
-        return User.findById(args._id).populate("role").exec();
-    },
-    shopkeepers: async() => {
-        const role: any = await Role.findOne({name: "Tendero"}).exec();
-        return User.find({role: role._id});
-    },
-    clients: async() => {
-        const role: any = await Role.findOne({name: "Cliente"}).exec();
-        return User.find({role: role._id});
-    },
+    users: () => getUsers(),
+    user: (context: any, args: any) => getUserById(args._id),
+    shopkeepers: async() => getUsersByRoleName("Tendero"),
+    clients: async() => getUsersByRoleName("Cliente"),
 }
 
 const resolvers = {
-
-    role: (args: any) => {
-        return Role.findById(args.role);
-    }
-
+    role: (args: any) => getRoleById(args.role),
 }
 
 const mutations = {
 
-    addUser: async  ({user}: UserInput<BaseUserInput>) =>  {
+    addUser: async  (context: any, {user}: any) =>  {
         const exist = await User.findOne({username: user.username})
         if (exist) throw Error("Nombre de usuario en uso")
         return User.create(user);
     },
-    updateUser: async ({user}: UserInput<BaseUserUpdateInput>) =>{
+    updateUser: async (context: any, {user}: UserInput<BaseUserUpdateInput>) =>{
         const params: any = { ...user }
         delete params._id;
         delete params.password;

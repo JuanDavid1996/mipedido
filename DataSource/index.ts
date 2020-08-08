@@ -1,34 +1,106 @@
-import User from "../models/User";
+import User, {IUser} from "../models/User";
 import Permission from "../models/Permission";
 import Role from "../models/Role";
 import Category from "../models/Category";
 import StoreType from "../models/StoreType";
 import {DocumentQuery} from "mongoose";
+import Order from "../models/Order";
+import OrderStatus from "../models/OrderStatus";
+import Store from "../models/Store";
 
 export function getUserById(id: string) {
     return User.findById(id);
 }
 
-export function getPermissionById(id: string) {
+export function getUsers() : DocumentQuery<IUser[], IUser> {
+    return User.find();
+}
+
+export async function getUsersByRoleName(roleName: string) {
+    const role: any = await getRoleByName(roleName);
+    return User.find({role: role._id});
+}
+
+export function getPermissionById(id: string)  {
     return Permission.findById(id);
+}
+
+export function getPermissions() {
+    return Permission.find();
+}
+
+export function getPermissionByRole(role: string) {
+    return Permission.find({role})
 }
 
 export function getRoleById(id: string) {
     return Role.findById(id);
 }
 
+export function getRoles() {
+    return Role.find();
+}
+
+export function getRoleByName(name: string) {
+    return Role.findOne({name}).exec();
+}
+
+
 export function getCategoryById(id: string) {
     return Category.findById(id);
+}
+
+export function getCategories() {
+    return Category.find();
 }
 
 export function getStoreTypeById(id: string) {
     return StoreType.findById(id)
 }
 
+export function getStoreTypes() {
+    return StoreType.find();
+}
+
+export function getStores() {
+    return Store.find();
+}
+
+export function getStoreById(id: string) {
+    return Store.findById(id);
+}
+
+export function getOrderById(id: string) {
+    return Order.findById(id);
+}
+
+export function getOrders() {
+    return Order.find({});
+}
+
+export function getOrderStatusById(id: string) {
+    return OrderStatus.findById(id);
+}
+
+export function getOrderStatuses() {
+    return OrderStatus.find();
+}
+
+
 export default {
     getUserById,
+    getUsers,
+    getUsersByRoleName,
     getPermissionById,
+    getPermissions,
+    getPermissionByRole,
     getRoleById,
+    getRoleByName,
+    getRoles,
     getCategoryById,
-    getStoreTypeById
+    getCategories,
+    getStoreTypeById,
+    getOrderById,
+    getOrders,
+    getStores,
 }

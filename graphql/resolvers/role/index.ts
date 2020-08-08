@@ -1,35 +1,30 @@
 import Role from "../../../models/Role";
 import Permission from "../../../models/Permission";
+import {getPermissionByRole, getRoleById, getRoles} from "../../../DataSource";
 
 
 const queries = {
-    roles: () => {
-        return Role.find();
-    },
-    role: (args: any) => {
-        return Role.findById(args._id);
-    }
+    roles: () => getRoles(),
+    role: (context: any, args: any) => getRoleById(args._id),
 }
 
 const resolvers = {
-    permissions: (args: any) => {
-        return Permission.find({ role: args._id });
-    }
+    permissions: (context: any, args: any) => getPermissionByRole(args._id),
 }
 
 const mutations = {
 
-    addRole({name}: any) {
+    addRole(context: any, {name}: any) {
         let role = new Role({name});
         return role.save();
     },
-    updateRole(args: any) {
-        if (!args.id) return;
+    updateRole(context: any, args: any) {
+        if (!args._id) return;
         let fields = {...args}
-        delete fields.id;
+        delete fields._id;
         return Role.findOneAndUpdate(
             {
-                _id: args.id
+                _id: args._id
             },{
                 $set: { ...fields }
             }, {new: true}, (err: any, role: any) => {
@@ -40,8 +35,8 @@ const mutations = {
             }
         )
     },
-    deleteRole({id}: any) {
-        return Role.findOneAndDelete({_id: id})
+    deleteRole(context: any, {_id}: any) {
+        return Role.findOneAndDelete({_id: _id})
     }
 
 }

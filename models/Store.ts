@@ -1,4 +1,17 @@
-import mongoose from "mongoose";
+import mongoose, {Document} from "mongoose";
+import {ICategory} from "./Category";
+import {IUser} from "./User";
+import {IStoreType} from "./StoreType";
+
+export interface IStore extends Document {
+    code: string;
+    name: string;
+    address: string;
+    phone: string;
+    category: ICategory["_id"];
+    storeType: IStoreType["_id"];
+    owner: IUser["_id"]
+}
 
 const Schema = mongoose.Schema;
 const StoreSchema = new Schema({
@@ -34,5 +47,5 @@ const StoreSchema = new Schema({
     }
 });
 
-const Store = mongoose.model("Store", StoreSchema);
+const Store = mongoose.model<IStore>("Store", StoreSchema);
 export default Store;

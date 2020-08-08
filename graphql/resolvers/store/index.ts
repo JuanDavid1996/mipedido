@@ -1,21 +1,22 @@
-import StoreType from "../../../models/StoreType";
-import Store from "../../../models/Store";
+import Store, {IStore} from "../../../models/Store";
 import {
 	getCategoryById,
+	getStoreById,
+	getStores,
 	getStoreTypeById,
 	getUserById
 } from "../../../DataSource";
 
 
 interface StoreInput {
-	_id?: string,
-	code?: string,
-	name: string,
-	phone: string,
-	address: string,
-	owner: string,
-	category: string,
-	storeType: string
+	_id?: IStore["_id"],
+	code?: IStore["code"],
+	name: IStore["name"],
+	phone: IStore["phone"],
+	address: IStore["address"],
+	owner: IStore["owner"],
+	category: IStore["category"],
+	storeType: IStore["storeType"]
 }
 
 interface BaseStoreInput {
@@ -36,34 +37,26 @@ const validateParams = (store: StoreInput) => new Promise(async(resolve, rejecte
 });
 
 const queries = {
-	stores: async () => {
-		return Store.find();
-	},
-	store: async(args: any) => {
-		return Store.findById(args._id);
-	},
+	stores: async () => getStores(),
+	store: async(context: any, args: any) => getStoreById(args._id),
 }
 
 const resolvers = {
 
-	storeType: (args: any) => {
-		return StoreType.findById(args.storeType);
-	},
+	storeType: (context: any, args: any) => getStoreTypeById(args.storeType),
 
-	category: (args: any) => {
-		return getCategoryById(args.category);
-	},
+	category: (context: any, args: any) => getCategoryById(args.category),
 
-	owner: (args: any) => getUserById(args.owner),
+	owner: (context: any, args: any) => getUserById(args.owner),
 }
 
 const mutations = {
 
-	addStore: async({store}: BaseStoreInput) => {
+	addStore: async(context: any, {store}: any) => {
 		await validateParams(store);
 		return await Store.create(store);
 	},
-	updateStore: async({store}: BaseStoreInput) => {
+	updateStore: async(context: any, {store}: BaseStoreInput) => {
 		await validateParams(store);
 	 	const params: any = { ...store }
         delete params._id;

@@ -1,4 +1,8 @@
-import mongoose from "mongoose";
+import mongoose, {Document} from "mongoose";
+
+export interface IStoreType extends Document {
+    name: string;
+}
 
 const Schema = mongoose.Schema;
 const StoreTypeSchema = new Schema({
@@ -10,5 +14,5 @@ const StoreTypeSchema = new Schema({
     },
 });
 
-const StoreType = mongoose.model("StoreType", StoreTypeSchema);
+const StoreType = mongoose.model<IStoreType>("StoreType", StoreTypeSchema);
 export default StoreType;

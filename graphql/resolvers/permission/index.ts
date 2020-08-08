@@ -1,22 +1,18 @@
-const Permission = require("@models/Permission");
-const DataSource = require("@DataSource");
+import {getPermissionById, getPermissions, getRoleById} from "../../../DataSource";
+import Permission from "../../../models/Permission";
 
 const queries = {
-    permissions: () => {
-        return Permission.find();
-    },
-    permission: (args: any) => {
-        return Permission.findById(args._id);
-    },
+    permissions: () => getPermissions(),
+    permission: (context: any,  args: any) => getPermissionById(args._id),
 }
 
 const resolvers = {
-    role: (args: any) => DataSource.getRoleById(args.role),
+    role: (args: any) => getRoleById(args.role),
 }
 
 const mutations = {
 
-    async addPermission(args: any) {
+    async addPermission(context: any, args: any) {
         const {permission: {name, role, resource}} = args;
         let permission = new Permission({name, role, resource});
         try {
@@ -27,7 +23,7 @@ const mutations = {
         }
     },
 
-    updatePermission(args: any) {
+    updatePermission(context: any, args: any) {
         if (!args._id) return;
         let fields = {...args}
         delete fields.id;
@@ -45,7 +41,7 @@ const mutations = {
         )
     },
 
-    deletePermission({_id}: any) {
+    deletePermission(context: any, {_id}: any) {
         return Permission.findOneAndDelete({_id})
     }
 

@@ -1,4 +1,8 @@
-import mongoose from "mongoose";
+import mongoose, {Document} from "mongoose";
+
+export interface IOrderStatus extends Document {
+    name: string;
+}
 
 const Schema = mongoose.Schema;
 const OrderStatusSchema = new Schema({
@@ -10,5 +14,5 @@ const OrderStatusSchema = new Schema({
     }
 });
 
-const OrderStatus = mongoose.model("OrderStatus", OrderStatusSchema);
+const OrderStatus = mongoose.model<IOrderStatus>("OrderStatus", OrderStatusSchema);
 export default OrderStatus;

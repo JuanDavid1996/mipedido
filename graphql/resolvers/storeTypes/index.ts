@@ -1,9 +1,8 @@
 import StoreType from "../../../models/StoreType";
+import {getStoreTypes} from "../../../DataSource";
 
 const queries = {
-    storeTypes: () => {
-        return StoreType.find();
-    },
+    storeTypes: () => getStoreTypes(),
 }
 
 const mutations = {
@@ -13,7 +12,7 @@ const mutations = {
         let storeType = new StoreType({name});
         return await storeType.save();
     },
-    updateStoreType(args: any) {
+    updateStoreType(context: any, args: any) {
         if (!args._id) return;
         let fields = {...args}
         delete fields._id;
@@ -30,7 +29,7 @@ const mutations = {
             }
         )
     },
-    deleteStoreType({_id}: any) {
+    deleteStoreType(context: any, {_id}: any) {
         return StoreType.findOneAndDelete({_id})
     }
 

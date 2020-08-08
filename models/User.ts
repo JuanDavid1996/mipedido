@@ -1,6 +1,22 @@
-import mongoose from "mongoose";
+import mongoose, {Document, Model} from "mongoose";
+import {IRole} from "./Role";
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+
+export interface IUser extends Document {
+    code: string;
+    firstName: string;
+    lastName: string;
+    phone: string;
+    verified: boolean;
+    username: string;
+    password: string;
+    role: IRole["_id"];
+}
+
+export interface IUserModel extends Model<IUser> {
+    validatePassword: (password: string) => Promise<boolean>;
+}
 
 const Schema = mongoose.Schema;
 const UserSchema = new Schema({
@@ -43,12 +59,11 @@ const UserSchema = new Schema({
     timestamps: true
 });
 
-UserSchema.pre('save', async function(next) {
+UserSchema.pre<IUser>('save', async function(next) {
     if (!this.isModified('password')) return next();
     try {
-        const user: any = this;
         const salt = await  bcrypt.genSalt(saltRounds);
-        user.password = await bcrypt.hash(user.password, salt);
+        this.password = await bcrypt.hash(this.password, salt);
         return next();
     } catch (e) {
         return next(e);
@@ -59,5 +74,5 @@ UserSchema.methods.validatePassword = async function(data: string) {
     return bcrypt.compare(data, this.password);
 }
 
-const User = mongoose.model("User", UserSchema);
+const User = mongoose.model<IUser, IUserModel>("User", UserSchema);
 export default User;

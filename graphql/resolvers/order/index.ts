@@ -1,21 +1,19 @@
+import {getOrderById, getOrders} from "../../../DataSource";
+
 const Order = require("../../../models/Order").Orders;
 
 const queries = {
-    orders: () => {
-        return Order.find({});
-    },
-    order: (args: any) => {
-        return Order.findById(args._id);
-    },
+    orders: () => getOrders(),
+    order: (context: any, args: any) => getOrderById(args._id),
 }
 
 const mutations = {
 
-    addOrder({client, store, description, destination}: any) {
+    addOrder(context: any, {client, store, description, destination}: any) {
         let order = new Order({client, store, description, destination});
         return order.save();
     },
-    updateOrder(args: any) {
+    updateOrder(context: any, args: any) {
         if (!args._id) return;
         let fields = {...args}
         delete fields.id;
@@ -32,7 +30,7 @@ const mutations = {
             }
         )
     },
-    deleteOrder({_id}: any) {
+    deleteOrder(context: any, {_id}: any) {
         return Order.findOneAndDelete({_id})
     }
 
