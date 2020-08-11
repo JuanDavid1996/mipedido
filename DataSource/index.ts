@@ -28,8 +28,12 @@ export function getPermissionById(id: string)  {
     return Permission.findById(id);
 }
 
+export function getPermissionByKeys(ids: string[])  {
+    return Permission.find({ _id: { $in: ids} });
+}
+
 export function getPermissions() {
-    return Permission.find();
+    return Permission.find().sort({ resource: 'asc'});
 }
 
 export function getPermissionByRole(role: string) {
@@ -81,6 +85,10 @@ export function getStoreById(id: string) {
 
 export function getStoreByOwner(owner: any) {
     return Store.findOne({ owner: owner._id });
+}
+
+export function getStoresByOwner(owner: string) {
+    return Store.find({ owner: owner });
 }
 
 

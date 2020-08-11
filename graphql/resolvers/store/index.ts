@@ -2,10 +2,12 @@ import Store, {IStore} from "../../../models/Store";
 import {
 	getCategoryById,
 	getStoreById,
-	getStores,
+	getStores, getStoresByOwner,
 	getStoreTypeById,
 	getUserById
 } from "../../../DataSource";
+import {verifyCurrentUser} from "../../../helpers/authHelpers";
+import {ICategory} from "../../../models/Category";
 
 
 interface StoreInput {
@@ -38,31 +40,49 @@ const validateParams = (store: StoreInput) => new Promise(async(resolve, rejecte
 
 const queries = {
 	stores: async () => getStores(),
-	store: async(context: any, args: any) => getStoreById(args._id),
+	store: async(obj: any, args: any, context: any) => {
+		verifyCurrentUser(context);
+		return getStoreById(args._id)
+	},
+	storesByOwner(obj: any, args: any, context: any) {
+		verifyCurrentUser(context);
+		return getStoresByOwner(args.owner);
+	},
+	async storesByCriteria(obj: any, args: any) {
+		const conditions: any = {};
+		if (args.criteria && args.criteria.trim() !== "") conditions.criteria = args.criteria;
+		const category = await getCategoryById(args.category) as ICategory;
+		if (category.name !== "Todo") conditions.category = args.category;
+		return Store.find(conditions);
+	}
 }
 
 const resolvers = {
 
-	storeType: (context: any, args: any) => getStoreTypeById(args.storeType),
+	storeType: (args: any) => getStoreTypeById(args.storeType),
 
-	category: (context: any, args: any) => getCategoryById(args.category),
+	category: (args: any) => getCategoryById(args.category),
 
-	owner: (context: any, args: any) => getUserById(args.owner),
+	owner: (args: any) => getUserById(args.owner),
 }
 
 const mutations = {
 
-	addStore: async(context: any, {store}: any) => {
+	addStore: async(obj: any, {store}: any, context: any) => {
+		verifyCurrentUser(context);
 		await validateParams(store);
 		return await Store.create(store);
 	},
-	updateStore: async(context: any, {store}: BaseStoreInput) => {
+
+	updateStore: async(obj: any, {store}: BaseStoreInput, context: any) => {
+		verifyCurrentUser(context);
 		await validateParams(store);
 	 	const params: any = { ...store }
         delete params._id;
         await Store.updateOne({ _id: store._id }, { ...params });
         return Store.findById(store._id);
-	}
+	},
+
 }
 
 export default {

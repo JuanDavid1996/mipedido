@@ -34,9 +34,7 @@ const typeDefs = `
     }
     
     input PermissionInput {
-        name: String!
         resource: String!
-        role: String!
     }
 
     input OrderInput {
@@ -115,7 +113,6 @@ const typeDefs = `
     type Permission {
         _id: MongoObjectId!
         resource: String!
-        role: Role!
     }
     
     type Client {
@@ -137,6 +134,8 @@ const typeDefs = `
         
         stores: [Store]
         store(_id: MongoObjectId!): Store
+        storesByOwner(owner: MongoObjectId!): [Store]
+        storesByCriteria(criteria: String!, category: MongoObjectId!): [Store]
         
         roles: [Role]
         role(_id: MongoObjectId!): Role
@@ -173,10 +172,12 @@ const typeDefs = `
         
         addRole(name: String!): Role
         updateRole(_id: MongoObjectId!, name: String!): Role
+        addPermissionToRole(_id: MongoObjectId, permission: MongoObjectId!): Role
+        removePermissionToRole(_id: MongoObjectId, permission: MongoObjectId!): Role
         deleteRole(_id: MongoObjectId!): Role
         
-        addPermission(permission: PermissionInput!): Permission
-        updatePermission(_id: MongoObjectId!, permission: PermissionInput!): Permission
+        addPermission(resource: String!): Permission
+        updatePermission(_id: MongoObjectId!, resource: String!): Permission
         deletePermission(_id: MongoObjectId!): Permission
         
         addUser(user: UserInput!): User!

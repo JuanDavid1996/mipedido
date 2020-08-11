@@ -1,6 +1,5 @@
 import Role from "../../../models/Role";
-import Permission from "../../../models/Permission";
-import {getPermissionByRole, getRoleById, getRoles} from "../../../DataSource";
+import {getPermissionById, getPermissionByKeys, getRoleById, getRoles} from "../../../DataSource";
 
 
 const queries = {
@@ -9,36 +8,41 @@ const queries = {
 }
 
 const resolvers = {
-    permissions: (args: any) => getPermissionByRole(args._id),
+    permissions: async (args: any, context: any) => {
+        console.log("context", context);
+        return getPermissionByKeys(args.permissions)
+    },
 }
 
 const mutations = {
 
     addRole(context: any, {name}: any) {
-        let role = new Role({name});
-        return role.save();
+        return Role.create({name, permissions: []});
     },
     updateRole(context: any, args: any) {
         if (!args._id) return;
-        let fields = {...args}
-        delete fields._id;
-        return Role.findOneAndUpdate(
-            {
-                _id: args._id
-            },{
-                $set: { ...fields }
-            }, {new: true}, (err: any, role: any) => {
-                if (err) {
-                    throw new Error("Se produjo un error al actualizar el rol")
-                }
-                return role;
-            }
-        )
+        return Role.findOneAndUpdate({_id: args._id }, { $set: { name: args.name } });
     },
     deleteRole(context: any, {_id}: any) {
         return Role.findOneAndDelete({_id: _id})
-    }
-
+    },
+    async addPermissionToRole(obj: any, args: any) {
+        const role: any = await getRoleById(args._id);
+        if ( role.permissions.indexOf(args.permission) === -1) {
+            role.permissions.push(await getPermissionById(args.permission))
+            await role.save();
+        }
+        return role;
+    },
+    async removePermissionToRole(obj: any, args: any) {
+        const role: any = await getRoleById(args._id);
+        let index =  role.permissions.indexOf(args.permission);
+        if ( index > -1) {
+            (role.permissions as Array<any>).splice(index, 1);
+            await role.save();
+        }
+        return role;
+    },
 }
 export default {
     queries,

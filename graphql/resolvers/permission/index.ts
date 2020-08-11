@@ -7,20 +7,14 @@ const queries = {
 }
 
 const resolvers = {
-    role: (args: any) => getRoleById(args.role),
+    // role: (args: any) => getRoleById(args.role),
 }
 
 const mutations = {
 
     async addPermission(context: any, args: any) {
-        const {permission: {name, role, resource}} = args;
-        let permission = new Permission({name, role, resource});
-        try {
-            await permission.save();
-            return await permission;
-        } catch(err) {
-            throw err;
-        }
+        const {resource} = args;
+        return Permission.create({resource});
     },
 
     updatePermission(context: any, args: any) {
