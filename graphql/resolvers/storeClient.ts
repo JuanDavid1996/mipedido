@@ -32,8 +32,8 @@ const mutations = {
         return Client.create(params);
     },
 
-    updateStoreClient(obj: any, args: any) {
-
+    updateStoreClient(obj: any, args: any, context: any) {
+        verifyCurrentUser(context);
     }
 }
 

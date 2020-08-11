@@ -48,15 +48,14 @@ const mutations = {
 
         return new Order({client, store, description, destination, status, origin}).save();
     },
-    updateOrder(context: any, args: any) {
-        if (!args._id) return;
-        let fields = {...args}
-        delete fields.id;
+    updateOrder(obj: any, {_id, resource}: any, context: any) {
+        verifyCurrentUser(context);
+        if (!_id) return;
         return Order.findOneAndUpdate(
             {
-                _id: args._id
+                _id
             },{
-                $set: { ...fields }
+                $set: { resource }
             }, {new: true}, (err: any, order: any) => {
                 if (err) {
                     throw new Error("Se produjo un error al actualizar la categoria")
@@ -65,7 +64,8 @@ const mutations = {
             }
         )
     },
-    deleteOrder(context: any, {_id}: any) {
+    deleteOrder(obj: any, {_id}: any, context: any) {
+        verifyCurrentUser(context);
         return Order.findOneAndDelete({_id})
     }
 

@@ -1,5 +1,6 @@
 import Category from "../../../models/Category";
 import {getCategories, getCategoryById} from "../../../DataSource";
+import {verifyCurrentUser} from "../../../helpers/authHelpers";
 
 const queries = {
     categories: () => getCategories(),
@@ -8,12 +9,14 @@ const queries = {
 
 const mutations = {
 
-    addCategory(obj: any, {name}: any) {
+    addCategory(obj: any, {name}: any, context: any) {
+        verifyCurrentUser(context);
         let category = new Category({name: name});
         console.log(name);
         return category.save();
     },
-    updateCategory(obj: any, args: any) {
+    updateCategory(obj: any, args: any, context: any) {
+        verifyCurrentUser(context);
         if (!args._id) return;
         return Category.findOneAndUpdate(
             {
@@ -30,7 +33,8 @@ const mutations = {
             }
         )
     },
-    deleteCategory(obj: any, {id: _id}: any) {
+    deleteCategory(obj: any, {id: _id}: any, context: any) {
+        verifyCurrentUser(context);
         return Category.findOneAndDelete({_id})
     }
 

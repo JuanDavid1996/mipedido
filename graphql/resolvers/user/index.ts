@@ -1,5 +1,6 @@
 import User from "../../../models/User";
 import {getRoleById, getUserById, getUsers, getUsersByRoleName} from "../../../DataSource";
+import {verifyCurrentUser} from "../../../helpers/authHelpers";
 
 interface BaseUserInput {
     code: string,
@@ -33,12 +34,14 @@ const resolvers = {
 
 const mutations = {
 
-    addUser: async  (context: any, {user}: any) =>  {
+    addUser: async  (obj: any, {user}: any, context: any) =>  {
+        verifyCurrentUser(context);
         const exist = await User.findOne({username: user.username})
         if (exist) throw Error("Nombre de usuario en uso")
         return User.create(user);
     },
-    updateUser: async (context: any, {user}: UserInput<BaseUserUpdateInput>) =>{
+    updateUser: async (obj: any, {user}: UserInput<BaseUserUpdateInput>, context: any) =>{
+        verifyCurrentUser(context);
         const params: any = { ...user }
         delete params._id;
         delete params.password;

@@ -1,9 +1,10 @@
 import {getPermissionById, getPermissions, getRoleById} from "../../../DataSource";
 import Permission from "../../../models/Permission";
+import {verifyCurrentUser} from "../../../helpers/authHelpers";
 
 const queries = {
     permissions: () => getPermissions(),
-    permission: (context: any,  args: any) => getPermissionById(args._id),
+    permission: (obj: any,  args: any) => getPermissionById(args._id),
 }
 
 const resolvers = {
@@ -12,20 +13,20 @@ const resolvers = {
 
 const mutations = {
 
-    async addPermission(context: any, args: any) {
+    async addPermission(obj: any, args: any, context: any) {
+        verifyCurrentUser(context);
         const {resource} = args;
         return Permission.create({resource});
     },
 
-    updatePermission(context: any, args: any) {
-        if (!args._id) return;
-        let fields = {...args}
-        delete fields.id;
+    updatePermission(obj: any, {_id, name}: any, context: any) {
+        verifyCurrentUser(context);
+        if (!_id) return;
         return Permission.findOneAndUpdate(
             {
-                _id: args._id
+                _id
             },{
-                $set: { ...fields }
+                $set: { name }
             }, {new: true}, (err: any, role: any) => {
                 if (err) {
                     throw new Error("Se produjo un error al actualizar el permiso")
@@ -35,7 +36,8 @@ const mutations = {
         )
     },
 
-    deletePermission(context: any, {_id}: any) {
+    deletePermission(obj: any, {_id}: any, context: any) {
+        verifyCurrentUser(context);
         return Permission.findOneAndDelete({_id})
     }
 

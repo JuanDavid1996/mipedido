@@ -1,5 +1,6 @@
 import StoreType from "../../../models/StoreType";
 import {getStoreTypes} from "../../../DataSource";
+import {verifyCurrentUser} from "../../../helpers/authHelpers";
 
 const queries = {
     storeTypes: () => getStoreTypes(),
@@ -12,15 +13,14 @@ const mutations = {
         let storeType = new StoreType({name});
         return await storeType.save();
     },
-    updateStoreType(context: any, args: any) {
-        if (!args._id) return;
-        let fields = {...args}
-        delete fields._id;
+    updateStoreType(obj: any, {_id, name}: any, context: any) {
+        verifyCurrentUser(context);
+        if (!_id) return;
         return StoreType.findOneAndUpdate(
             {
-                _id: args._id
+                _id
             },{
-                $set: { ...fields }
+                $set: { name }
             }, {new: true}, (err: any, role: any) => {
                 if (err) {
                     throw new Error("Se produjo un error al actualizar el permiso")
@@ -29,7 +29,8 @@ const mutations = {
             }
         )
     },
-    deleteStoreType(context: any, {_id}: any) {
+    deleteStoreType(obj: any, {_id}: any, context: any) {
+        verifyCurrentUser(context);
         return StoreType.findOneAndDelete({_id})
     }
 
