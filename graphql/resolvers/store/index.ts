@@ -46,6 +46,7 @@ const queries = {
 	},
 	storesByOwner(obj: any, args: any, context: any) {
 		verifyCurrentUser(context);
+		console.log(args);
 		return getStoresByOwner(args.owner);
 	},
 	async storesByCriteria(obj: any, args: any) {

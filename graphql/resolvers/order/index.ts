@@ -6,7 +6,7 @@ import {
     getRoleById, getStoreById,
     getStoreByOwner, getStoreClientById, getStoreClients, getUserById
 } from "../../../DataSource";
-import {verifyCurrentUser} from "../../../helpers/authHelpers";
+import {verifyCurrentUser, verifyIfStoreBelongsToUser} from "../../../helpers/authHelpers";
 import Order from "../../../models/Order";
 
 const queries = {
@@ -30,17 +30,16 @@ const mutations = {
         let storeModel: any = undefined;
 
         if (role.name === "Tendero") {
-            storeModel = await (getStoreByOwner(context.currentUser) as any);
-            store = storeModel._id;
+            await verifyIfStoreBelongsToUser(context.currentUser, store);
         } else if (role.name !== "Admin") {
             throw Error("No autorizado");
         }
 
-        if (!store || store.trim() === "") {
+        if (store === undefined || store.trim() === "") {
             throw Error("Parametros incompletos");
         }
 
-        if (!storeModel) storeModel = await getStoreById(store);
+        storeModel = await getStoreById(store);
 
         const { client, description, destination } = order;
         const status:string = (await getOrderStatusByName("Pendiente") as any)._id;
