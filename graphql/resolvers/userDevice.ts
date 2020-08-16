@@ -21,7 +21,7 @@ const mutations = {
   async updateUserDevice(obj: any, args: any, context: any) {
     verifyCurrentUser(context);
     const token = args.firebaseToken;
-    let userDevice = await getUserDevice(context.currentUser._id)
+    let userDevice: any = await getUserDevice(context.currentUser._id)
     if (!userDevice) {
       return await UserDevice.create({ user: context.currentUser._id, firebaseToken: token  })
     }
