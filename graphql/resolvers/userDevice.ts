@@ -23,7 +23,7 @@ const mutations = {
     const token = args.firebaseToken;
     let userDevice = await getUserDevice(context.currentUser._id)
     if (!userDevice) {
-      return UserDevice.create({ user: context.currentUser._id, firebaseToken: token  })
+      return await UserDevice.create({ user: context.currentUser._id, firebaseToken: token  })
     }
     userDevice.firebaseToken = token;
     userDevice.save()
