@@ -8,6 +8,7 @@ import storeModule from "./store";
 import orderStatusModule from "./orderStatus";
 import storeClient from "./storeClient";
 import authModule from "./auth";
+import userDeviceModule from "./userDevice";
 
 export default {
     Query: {
@@ -20,6 +21,7 @@ export default {
         ...orderModule.queries,
         ...orderStatusModule.queries,
         ...storeClient.queries,
+        ...userDeviceModule.queries,
     },
     Mutation: {
         ...userModule.mutations,
@@ -32,6 +34,7 @@ export default {
         ...orderStatusModule.mutations,
         ...storeClient.mutations,
         ...authModule.mutations,
+        ...userDeviceModule.mutations,
     },
     User: { ...userModule.resolvers },
     Store: { ...storeModule.resolvers },
@@ -43,4 +46,5 @@ export default {
     OrderStatus: {},
     //StoreClient
     Client: { ...storeClient.resolvers },
+    UserDevice: { ...userDeviceModule.resolvers },
 }
