@@ -7,7 +7,7 @@ const queries = {
 }
 
 const resolvers = {
-    user: (obj: any, args: any) => getUserById(args.user),
+    user: (args: any) => getUserById(args.user),
 }
 
 const mutations = {
