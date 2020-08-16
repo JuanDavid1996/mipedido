@@ -9,6 +9,7 @@ import resolvers from "./graphql/resolvers/"
 import express = require('express');
 import {getUserByToken} from "./graphql/resolvers/auth";
 const { graphqlHTTP } = require('express-graphql');
+const notification = require("./helpers/notification");
 
 const createError = require('http-errors');
 
@@ -34,17 +35,31 @@ const schema = makeExecutableSchema({
 
 app.get("/", (req: any, res: any) => res.send("Ok!"));
 
-app.use('/graphql', graphqlHTTP(async (request: Request, response: Response, params: GraphQLParams ) => {
-  console.log("before check headers")
+app.get("/send_notification_to", async(request: any, response: any) => {
+  
   const authorization = (request.headers as any)?.authorization;
-  console.log("before get currentUser")
+  let currentUser: any = await getUserByToken(authorization);
+  
+  if (!currentUser) {
+    return response.send("Please login");
+  }
+
+  const { to, notification, data } = request.body;
+
+  notification.send(to, notification, data)
+    .then((res: any) => {
+      response.send(res);
+    })
+    .catch((error: any) => {
+      response.send(error);
+    })
+})
+
+app.use('/graphql', graphqlHTTP(async (request: Request, response: Response, params: GraphQLParams ) => {
+  const authorization = (request.headers as any)?.authorization;
   let currentUser: any = await getUserByToken(authorization);
 
-  console.log("to graphql")
-  if (params.operationName) {
-    console.log("Operation name is ", params.operationName);
-    params.operationName = null;
-  }
+  if (params.operationName) params.operationName = null;
 
 
   return {
