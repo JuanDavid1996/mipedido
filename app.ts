@@ -35,7 +35,7 @@ const schema = makeExecutableSchema({
 
 app.get("/", (req: any, res: any) => res.send("Ok!"));
 
-app.get("/send_notification_to", async(request: any, response: any) => {
+app.post("/send_notification_to", async(request: any, response: any) => {
   
   const authorization = (request.headers as any)?.authorization;
   let currentUser: any = await getUserByToken(authorization);
@@ -44,9 +44,9 @@ app.get("/send_notification_to", async(request: any, response: any) => {
     return response.send("Please login");
   }
 
-  const { to, notification, data } = request.body;
+  const { to, body, data } = request.body;
 
-  notification.send(to, notification, data)
+  notification.send(to, body, data)
     .then((res: any) => {
       response.send(res);
     })
