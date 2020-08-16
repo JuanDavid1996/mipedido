@@ -115,6 +115,12 @@ const typeDefs = `
         resource: String!
     }
     
+    type UserDevice {
+        _id: MongoObjectId!
+        user: User!
+        firebaseToken: String!
+    }
+    
     type Client {
          _id: MongoObjectId!
         code: String!
