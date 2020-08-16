@@ -8,6 +8,7 @@ import OrderStatus from "../models/OrderStatus";
 import Store from "../models/Store";
 import Client from "../models/Client";
 import {DocumentQuery} from "mongoose";
+import UserDevice from "../models/UserDevice";
 
 export function getUserById(id: string) {
     return User.findById(id, { password: 0 });
@@ -126,6 +127,14 @@ export function getStoreClientById(id: string) {
     return Client.findById(id);
 }
 
+export function getUserDevices() {
+    return UserDevice.find()
+}
+
+export function getUserDevice(user: string) {
+    return UserDevice.findOne({ user })
+}
+
 export default {
     getUserById,
     getUsers,
@@ -144,4 +153,6 @@ export default {
     getStores,
     getStoreClients,
     getOrderStatusByName,
+    getUserDevices,
+    getUserDevice,
 }

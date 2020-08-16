@@ -156,6 +156,8 @@ const typeDefs = `
         
         storeClients(store: String): [Client]
         storeClient(_id: MongoObjectId!): Client
+        
+        userDevices: [UserDevice]
     }
 
     type Mutation {
@@ -197,6 +199,8 @@ const typeDefs = `
         
         addStoreClient(client: ClientInput!): Client
         updateStoreClient(client: ClientInput!): Client
+        
+        updateUserDevice(firebaseToken: String!): UserDevice
     }
 `
 export default typeDefs;

@@ -7,6 +7,7 @@ const KEY = "¡¡KEY!!";
 export default {
     mutations: {
         async login(obj: any, { username, password } : { username: string, password: string }) {
+            console.log("params ", username, " ", password);
             const user: any = await User.findOne({username});
 
             if (!user || !await user.validatePassword(password)) {

@@ -1,3 +1,5 @@
+import {GraphQLParams} from "express-graphql";
+
 const moduleAlias = require('module-alias')
 moduleAlias.addAlias('@models', __dirname + '/models');
 
@@ -32,9 +34,18 @@ const schema = makeExecutableSchema({
 
 app.get("/", (req: any, res: any) => res.send("Ok!"));
 
-app.use('/graphql', graphqlHTTP(async (request: Request) => {
+app.use('/graphql', graphqlHTTP(async (request: Request, response: Response, params: GraphQLParams ) => {
+  console.log("before check headers")
   const authorization = (request.headers as any)?.authorization;
+  console.log("before get currentUser")
   let currentUser: any = await getUserByToken(authorization);
+
+  console.log("to graphql")
+  if (params.operationName) {
+    console.log("Operation name is ", params.operationName);
+    params.operationName = null;
+  }
+
 
   return {
     schema: schema,
@@ -42,6 +53,10 @@ app.use('/graphql', graphqlHTTP(async (request: Request) => {
     graphiql: true,
     context: {
       currentUser
+    },
+    customFormatErrorFn: (error: any) => {
+      console.log(error);
+      return error;
     },
   }
 }));
