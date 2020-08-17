@@ -51,9 +51,12 @@ const queries = {
 	},
 	async storesByCriteria(obj: any, args: any) {
 		const conditions: any = {};
-		if (args.criteria && args.criteria.trim() !== "") conditions.criteria = args.criteria;
+		if (args.criteria && args.criteria.trim() !== "") {
+			conditions.name = { $regex: '.*'+ args.criteria + '.*', '$options' : 'i' }; 
+		}
 		const category = await getCategoryById(args.category) as ICategory;
 		if (category.name !== "Todo") conditions.category = args.category;
+		console.log(conditions)
 		return Store.find(conditions);
 	}
 }
