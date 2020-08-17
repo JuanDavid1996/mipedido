@@ -160,7 +160,7 @@ const typeDefs = `
 
         orderStatuses: [OrderStatus]
         
-        storeClients(store: String): [Client]
+        storeClients(store: String, code: String, firstName: String, phone: String): [Client]
         storeClient(_id: MongoObjectId!): Client
         
         userDevices: [UserDevice]

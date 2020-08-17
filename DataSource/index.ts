@@ -117,9 +117,14 @@ export function getOrderStatusByName(name: string) {
 }
 
 
-export function getStoreClients(storeId?: string) {
+export function getStoreClients(storeId?: string, code?: string, firstName?: string, phone?: string) {
     let condition: any = {};
     if (storeId) condition.store = storeId;
+    if (code && code.trim() !== "") condition.code = { $regex: '.*'+ code + '.*', '$options' : 'i' }
+    if (firstName && firstName.trim() !== "") condition.firstName = { $regex: '.*'+ firstName + '.*', '$options' : 'i' }
+    if (phone && phone.trim() !== "") condition.phone = { $regex: '.*'+ phone + '.*', '$options' : 'i' }
+
+
     return Client.find(condition);
 }
 

@@ -3,7 +3,9 @@ import Client from "../../models/Client";
 import {verifyCurrentUser, verifyIfStoreBelongsToUser} from "../../helpers/authHelpers";
 
 const queries = {
-    storeClients: (obj: any, args: any) => getStoreClients(args.store)
+    storeClients: (obj: any, { store, code, firstName, phone }: any, context: any) => {
+        return getStoreClients(store, code, firstName, phone)
+    }
 }
 
 const resolvers = {
