@@ -13,7 +13,7 @@ export function send(to: string, data: any, registrationIds?: string[]) {
 	  };
 
 	  if (registrationIds) {
-	  	content.registrationIds = registrationIds
+	  	content.registration_ids = registrationIds
 	  	delete content.to;
 	  }
 
