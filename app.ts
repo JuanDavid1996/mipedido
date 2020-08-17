@@ -44,9 +44,9 @@ app.post("/send_notification_to", async(request: any, response: any) => {
     return response.send("Please login");
   }
 
-  const { to, body, data } = request.body;
+  const { to, data } = request.body;
 
-  notification.send(to, body, data)
+  notification.send(to, data)
     .then((res: any) => {
       response.send(res);
     })

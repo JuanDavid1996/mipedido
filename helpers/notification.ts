@@ -1,17 +1,18 @@
 const axios = require('axios')
 
 
-export function send(to: any, notification: any, data: any) {
+export function send(to: any, data: any) {
 	return new Promise((resolve: any, rejected: any) => {
 	  
 	  const content = { 
 	  	to,
-	  	notification,
 	  	data,
 	  	android: {
 	  		priority: "hight"
 	  	}
 	  };
+
+	  console.log("before to send to pn: ", content)
 
 	  const options = {
 	    headers: {
@@ -39,9 +40,8 @@ export async function notifyNewOrder(to: string[], order: any) {
 		priority: "hight",
 	}
 
-	const notification =  { notification: { ...content } }
-	const data = { data: { ...content, order: order._id } }
+	const data = { notification: {...content, order: order._id } }
 
-	try { await send(to, notification, data); }
+	try { await send(to, data); }
 	catch(e) {}
 }
