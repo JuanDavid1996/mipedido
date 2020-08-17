@@ -3,7 +3,15 @@ const axios = require('axios')
 
 export function send(to: any, notification: any, data: any) {
 	return new Promise((resolve: any, rejected: any) => {
-	  const content = { to, notification, data };
+	  
+	  const content = { 
+	  	to,
+	  	notification,
+	  	data,
+	  	android: {
+	  		priority: "hight"
+	  	}
+	  };
 
 	  const options = {
 	    headers: {
@@ -16,7 +24,20 @@ export function send(to: any, notification: any, data: any) {
 	    .then((res: any) => {
 	     	resolve({ response: res.data, status: res.statusCod })
 	    }).catch((error: any) => {
+			console.log("Error when try to send pn ", error);
 	      rejected(error);
     	})
 	})
+}
+
+
+export async function notifyNewOrder(to: string[], order: any) {
+	console.log("to ", to)
+	const data =  {
+		title: "Nuevo pedido",
+		body: "Desde " + order.origin + " a " + order.destination,
+		priority: "hight",
+	}
+	try { await send(to, data, data); }
+	catch(e) {}
 }

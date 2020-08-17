@@ -1,12 +1,19 @@
 import {
     getOrderById,
-    getOrders, getOrderStatusById,
+    getOrders,
+    getOrderStatusById,
     getOrderStatusByName,
     getOrderStatuses,
-    getRoleById, getStoreById,
-    getStoreByOwner, getStoreClientById, getStoreClients, getUserById
+    getRoleById,
+    getStoreById,
+    getStoreByOwner,
+    getStoreClientById,
+    getStoreClients,
+    getUserById,
+    getUserDevices,
 } from "../../../DataSource";
 import {verifyCurrentUser, verifyIfStoreBelongsToUser} from "../../../helpers/authHelpers";
+import { notifyNewOrder } from "../../../helpers/notification";
 import Order from "../../../models/Order";
 
 const queries = {
@@ -23,10 +30,10 @@ const resolvers = {
 
 const mutations = {
 
-    async addOrder(obj: any, { order }: any, context: any) {
+    async addOrder(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
         const role: any = await getRoleById(context.currentUser.role);
-        let store: string = order.store;
+        let store: string = args.order.store;
         let storeModel: any = undefined;
 
         if (role.name === "Tendero") {
@@ -35,17 +42,29 @@ const mutations = {
             throw Error("No autorizado");
         }
 
+
         if (store === undefined || store.trim() === "") {
             throw Error("Parametros incompletos");
         }
 
         storeModel = await getStoreById(store);
 
-        const { client, description, destination } = order;
+        const { client, description, destination } = args.order;
         const status:string = (await getOrderStatusByName("Pendiente") as any)._id;
         const origin:string = storeModel.address;
 
-        return new Order({client, store, description, destination, status, origin}).save();
+
+        const newOrder = new Order({client, store, description, destination, status, origin})
+        await newOrder.save();
+
+
+        const uDevices: any = await getUserDevices()
+
+        const to = uDevices.map((ud: any) => ud.firebaseToken).join(",");
+
+        await notifyNewOrder(to, newOrder);
+
+        return newOrder;
     },
     updateOrder(obj: any, {_id, resource}: any, context: any) {
         verifyCurrentUser(context);
