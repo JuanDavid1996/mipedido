@@ -33,11 +33,15 @@ export function send(to: any, notification: any, data: any) {
 
 export async function notifyNewOrder(to: string[], order: any) {
 	console.log("to ", to)
-	const data =  {
+	const content = {
 		title: "Nuevo pedido",
 		body: "Desde " + order.origin + " a " + order.destination,
 		priority: "hight",
 	}
-	try { await send(to, data, data); }
+
+	const notification =  { notification: { ...content } }
+	const data = { data: { ...content, order: order._id } }
+
+	try { await send(to, notification, data); }
 	catch(e) {}
 }
