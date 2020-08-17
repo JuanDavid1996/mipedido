@@ -52,6 +52,7 @@ const typeDefs = `
         lastName: String
         phone: String!
         store: String
+        address: String!
     }
 
     type Category {
@@ -122,13 +123,14 @@ const typeDefs = `
     }
     
     type Client {
-         _id: MongoObjectId!
+        _id: MongoObjectId!
         code: String!
         firstName: String!
         lastName: String!
         phone: String!
         store: Store!
         user: User
+        address: String!
     }
 
     type Query {

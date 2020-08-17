@@ -29,6 +29,10 @@ const ClientSchema = new Schema({
         type: String,
         require: true
     },
+    address: {
+        type: String,
+        require: true
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",
