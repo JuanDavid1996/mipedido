@@ -4,7 +4,7 @@ import Role from "../models/Role";
 import Category from "../models/Category";
 import StoreType from "../models/StoreType";
 import Order from "../models/Order";
-import OrderStatus from "../models/OrderStatus";
+import OrderStatus, {IOrderStatus} from "../models/OrderStatus";
 import Store from "../models/Store";
 import Client from "../models/Client";
 import {DocumentQuery} from "mongoose";
@@ -100,6 +100,11 @@ export function getOrderById(id: string) {
 
 export function getOrders() {
     return Order.find({});
+}
+
+export async function getOrdersAvailable() {
+    const status: IOrderStatus = await getOrderStatusByName("Pendiente") as IOrderStatus;
+    return Order.find({ status: status._id });
 }
 
 

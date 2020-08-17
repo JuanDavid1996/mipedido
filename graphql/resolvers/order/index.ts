@@ -11,6 +11,7 @@ import {
     getStoreClients,
     getUserById,
     getUserDevices,
+    getOrdersAvailable,
 } from "../../../DataSource";
 import {verifyCurrentUser, verifyIfStoreBelongsToUser} from "../../../helpers/authHelpers";
 import { notifyNewOrder } from "../../../helpers/notification";
@@ -19,6 +20,7 @@ import Order from "../../../models/Order";
 const queries = {
     orders: () => getOrders(),
     order: (obj: any, args: any) => getOrderById(args._id),
+    ordersAvailable: (obj: any, args: any, context: any) => getOrdersAvailable(),
 }
 
 const resolvers = {

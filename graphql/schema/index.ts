@@ -139,6 +139,7 @@ const typeDefs = `
         
         orders: [Order]
         order(_id: MongoObjectId!): Order
+        ordersAvailable: [Order]
         
         stores: [Store]
         store(_id: MongoObjectId!): Store
