@@ -1,16 +1,21 @@
 const axios = require('axios')
 
 
-export function send(to: any, data: any) {
+export function send(to: string, data: any, registrationIds?: string[]) {
 	return new Promise((resolve: any, rejected: any) => {
 	  
-	  const content = { 
+	  const content: any = { 
 	  	to,
 	  	data,
 	  	android: {
 	  		priority: "hight"
 	  	}
 	  };
+
+	  if (registrationIds) {
+	  	content.registrationIds = registrationIds
+	  	delete content.to;
+	  }
 
 	  console.log("before to send to pn: ", content)
 
@@ -32,8 +37,8 @@ export function send(to: any, data: any) {
 }
 
 
-export async function notifyNewOrder(to: string[], order: any) {
-	console.log("to ", to)
+export async function notifyNewOrder(registrationIds: string[], order: any) {
+	console.log("registrationIds ", registrationIds)
 	const content = {
 		title: "Nuevo pedido",
 		body: "Desde " + order.origin + " a " + order.destination,
@@ -42,6 +47,6 @@ export async function notifyNewOrder(to: string[], order: any) {
 
 	const data = { notification: {...content, order: order._id } }
 
-	try { await send(to, data); }
+	try { await send("", data, registrationIds); }
 	catch(e) {}
 }

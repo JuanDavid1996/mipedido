@@ -60,9 +60,9 @@ const mutations = {
 
         const uDevices: any = await getUserDevices()
 
-        const to = uDevices.map((ud: any) => ud.firebaseToken).join(",");
+        const registrationIds = uDevices.map((ud: any) => ud.firebaseToken);
 
-        await notifyNewOrder(to, newOrder);
+        await notifyNewOrder(registrationIds, newOrder);
 
         return newOrder;
     },
