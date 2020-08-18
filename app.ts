@@ -4,11 +4,18 @@ const moduleAlias = require('module-alias')
 moduleAlias.addAlias('@models', __dirname + '/models');
 
 import { makeExecutableSchema } from '@graphql-tools/schema';
+
+
 import typeDefs from "./graphql/schema";
+
 import resolvers from "./graphql/resolvers/"
+
 import express = require('express');
+
 import {getUserByToken} from "./graphql/resolvers/auth";
+
 const { graphqlHTTP } = require('express-graphql');
+
 const notification = require("./helpers/notification");
 
 const createError = require('http-errors');

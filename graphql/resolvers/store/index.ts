@@ -87,12 +87,16 @@ const mutations = {
 	 	const params: any = { ...store }
         delete params._id;
         await Store.updateOne({ _id: store._id }, { ...params });
-        return Store.findById(store._id);
+        return getStoreById(store._id);
 	},
 	deleteStore: async(obj: any, {_id}: any, context: any) => {
 		verifyCurrentUser(context);
 		await checkPermission("deleteStore", context.currentUser);
-		return Store.findOneAndDelete({id: _id})
+		const deleteStore = await Store.findByIdAndRemove(_id)
+		if(!deleteStore) {
+         	throw new Error('Error');
+      	}
+		return deleteStore
 	}
 }
 
