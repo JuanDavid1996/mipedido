@@ -6,7 +6,10 @@ import {
 	getStoreTypeById,
 	getUserById
 } from "../../../DataSource";
-import {verifyCurrentUser} from "../../../helpers/authHelpers";
+import {
+	verifyCurrentUser,
+	checkPermission
+} from "../../../helpers/authHelpers";
 import {ICategory} from "../../../models/Category";
 
 
@@ -86,7 +89,11 @@ const mutations = {
         await Store.updateOne({ _id: store._id }, { ...params });
         return Store.findById(store._id);
 	},
-
+	deleteStore: async(obj: any, {_id}: any, context: any) => {
+		verifyCurrentUser(context);
+		await checkPermission("deleteStore", context.currentUser);
+		return Store.findOneAndDelete({id: _id})
+	}
 }
 
 export default {
