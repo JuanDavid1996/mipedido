@@ -50,3 +50,16 @@ export async function notifyNewOrder(registrationIds: string[], order: any) {
 	try { await send("", data, registrationIds); }
 	catch(e) {}
 }
+
+export async function notifyOrderTaken(registrationIds: string[]) {
+	const content = {
+		title: "Pedido tomado",
+		body: "El domiciliario esta en camino a recogerlo!",
+		priority: "hight",
+	}
+
+	const data = { notification: {...content } }
+
+	try { await send("", data, registrationIds); }
+	catch(e) {}
+}

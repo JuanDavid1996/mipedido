@@ -200,6 +200,7 @@ const typeDefs = `
         deleteStoreType(_id: MongoObjectId!): StoreType
 
         addOrder(order: OrderInput!): Order
+        takeOrder(_id: MongoObjectId!, domiciliary: MongoObjectId!): Order
         updateOrder(order: OrderInput!): Order
         updateOrderStatus(_id: MongoObjectId!, status: String!): Order
         deleteOrder(_id: MongoObjectId!): Order
@@ -210,6 +211,7 @@ const typeDefs = `
         updateStoreClient(client: ClientInput!): Client
         
         updateUserDevice(firebaseToken: String!): UserDevice
+
     }
 `
 export default typeDefs;

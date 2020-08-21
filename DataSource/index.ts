@@ -9,6 +9,7 @@ import Store from "../models/Store";
 import Client from "../models/Client";
 import {DocumentQuery} from "mongoose";
 import UserDevice from "../models/UserDevice";
+import {ORDER_STATUS} from "../constants";
 
 export function getUserById(id: string) {
     return User.findById(id, { password: 0 });
@@ -112,7 +113,7 @@ export function getOrders() {
 }
 
 export async function getOrdersAvailable() {
-    const status: IOrderStatus = await getOrderStatusByName("Pendiente") as IOrderStatus;
+    const status: IOrderStatus = await getOrderStatusByName(ORDER_STATUS.PENDIENTE) as IOrderStatus;
     return Order.find({ status: status._id });
 }
 
@@ -148,6 +149,10 @@ export function getStoreClientById(id: string) {
 
 export function getUserDevices() {
     return UserDevice.find()
+}
+
+export function getUserDeviceByIds(ids: String[]) {
+    return UserDevice.find({ user: { $in: ids } })
 }
 
 export function getUserDevice(user: string) {
