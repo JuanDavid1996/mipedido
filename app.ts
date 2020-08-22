@@ -1,4 +1,5 @@
 import {GraphQLParams} from "express-graphql";
+require('dotenv').config()
 
 const moduleAlias = require('module-alias')
 moduleAlias.addAlias('@models', __dirname + '/models');

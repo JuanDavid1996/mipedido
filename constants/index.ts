@@ -9,8 +9,8 @@ export enum ORDER_STATUS {
 	PENDIENTE = "Pendiente",
 	TOMADO = "Tomado",
 	EN_CURSO = "En curso",
-	ENTREGADO = "Entregado",
-	CANCELADO = "Cancelado"
+	COMPLETADA = "Completada",
+	CANCELADA = "Cancelada"
 }
 
 export enum PERMISSIONS {
