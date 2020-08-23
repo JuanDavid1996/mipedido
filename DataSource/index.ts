@@ -10,6 +10,7 @@ import Client from "../models/Client";
 import {DocumentQuery} from "mongoose";
 import UserDevice from "../models/UserDevice";
 import {ORDER_STATUS} from "../constants";
+import SuggestedStore from "../models/SuggestedStore";
 
 export function getUserById(id: string) {
     return User.findById(id, { password: 0 });
@@ -129,6 +130,10 @@ export function getOrderStatuses() {
 
 export function getOrderStatusByName(name: string) {
     return OrderStatus.findOne({name: name});
+}
+
+export function getSuggestedStores() {
+    return SuggestedStore.find();
 }
 
 
