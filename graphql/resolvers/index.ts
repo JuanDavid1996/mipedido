@@ -9,6 +9,7 @@ import orderStatusModule from "./orderStatus";
 import storeClient from "./storeClient";
 import authModule from "./auth";
 import userDeviceModule from "./userDevice";
+import suggestedStore from "./suggestedStore";
 
 export default {
     Query: {
@@ -22,6 +23,7 @@ export default {
         ...orderStatusModule.queries,
         ...storeClient.queries,
         ...userDeviceModule.queries,
+        ...suggestedStore.queries,
     },
     Mutation: {
         ...userModule.mutations,
@@ -35,6 +37,7 @@ export default {
         ...storeClient.mutations,
         ...authModule.mutations,
         ...userDeviceModule.mutations,
+        ...suggestedStore.mutations,
     },
     User: { ...userModule.resolvers },
     Store: { ...storeModule.resolvers },
@@ -47,4 +50,5 @@ export default {
     //StoreClient
     Client: { ...storeClient.resolvers },
     UserDevice: { ...userDeviceModule.resolvers },
+    SuggestedStore: { ...suggestedStore.resolvers },
 }

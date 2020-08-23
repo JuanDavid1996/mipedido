@@ -55,6 +55,14 @@ const typeDefs = `
         store: String
         address: String!
     }
+    
+    input SuggestedStoreInput {
+      name: String!
+      address: String!
+      phone: String!
+      owner: String!
+      category: String!
+    }
 
     type Category {
         _id: MongoObjectId!
@@ -133,6 +141,14 @@ const typeDefs = `
         user: User
         address: String
     }
+    
+    type SuggestedStore {
+      name: String!
+      address: String!
+      phone: String!
+      owner: String!
+      category: Category
+    }
 
     type Query {
         categories: [Category]
@@ -168,6 +184,8 @@ const typeDefs = `
         storeClient(_id: MongoObjectId!): Client
         
         userDevices: [UserDevice]
+        
+        suggestedStores: [SuggestedStore]
     }
 
     type Mutation {
@@ -212,7 +230,8 @@ const typeDefs = `
         updateStoreClient(client: ClientInput!): Client
         
         updateUserDevice(firebaseToken: String!): UserDevice
-
+        
+        addSuggestedStore(suggestedStore: SuggestedStoreInput): SuggestedStore
     }
 `
 export default typeDefs;

@@ -20,8 +20,6 @@ import {notifyNewOrder, notifyOrderTaken} from "../../../helpers/notification";
 import Order, {IOrder} from "../../../models/Order";
 import {BASE_ROLES, ORDER_FIELDS, ORDER_STATUS, ORDER_STATUS_FIELDS, PERMISSIONS} from "../../../constants";
 
-
-
 const queries = {
     orders: () => getOrders(),
     order: (obj: any, args: any) => getOrderById(args._id),
