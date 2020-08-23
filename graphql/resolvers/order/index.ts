@@ -53,6 +53,10 @@ const mutations = {
             throw Error("Parametros incompletos");
         }
 
+        if (!args.order.client || args.order.client.trim() === "" ) {
+            throw Error("Parametros incompletos");
+        }
+
         storeModel = await getStoreById(store);
 
         const { client, description, destination } = args.order;
@@ -68,14 +72,19 @@ const mutations = {
         await notifyNewOrder(registrationIds, newOrder);
         return newOrder;
     },
-    updateOrder(obj: any, {_id, resource}: any, context: any) {
+    updateOrder(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
-        if (!_id) return;
+        console.log(args)
+        if (!args.order._id) return;
+        const _id = args.order._id;
+        const params = args.order;
+        delete params._id;
+
         return Order.findOneAndUpdate(
             {
                 _id
             },{
-                $set: { resource }
+                $set: { ...params }
             }, {new: true}, (err: any, order: any) => {
                 if (err) {
                     throw new Error("Se produjo un error al actualizar la categoria")

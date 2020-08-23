@@ -1,6 +1,6 @@
 import User from "../../../models/User";
 import {getRoleById, getUserById, getUsers, getUsersByRoleName} from "../../../DataSource";
-import {verifyCurrentUser} from "../../../helpers/authHelpers";
+import {checkPermission, verifyCurrentUser} from "../../../helpers/authHelpers";
 
 interface BaseUserInput {
     code: string,
@@ -47,6 +47,11 @@ const mutations = {
         delete params.password;
         await User.updateOne({ _id: user._id }, { ...params });
         return User.findById(user._id);
+    },
+    async deleteUser(obj: any, args: any, context: any) {
+        verifyCurrentUser(context)
+        await checkPermission("deleteUser", context.currentUser);
+        return User.findByIdAndDelete(args._id)
     }
 }
 

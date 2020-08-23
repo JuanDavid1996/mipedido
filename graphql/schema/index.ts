@@ -38,8 +38,9 @@ const typeDefs = `
     }
 
     input OrderInput {
+        _id: MongoObjectId
         description: String!
-        client: String!
+        client: String
         destination: String!
         domiciliary: String
         store: String
@@ -130,7 +131,7 @@ const typeDefs = `
         phone: String!
         store: Store!
         user: User
-        address: String!
+        address: String
     }
 
     type Query {
