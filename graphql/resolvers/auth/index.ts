@@ -4,6 +4,10 @@ import {getUserById} from "../../../DataSource";
 
 const KEY = "¡¡KEY!!";
 
+export const generateToken = (user: string) => {
+    return jwt.sign({user}, KEY, {expiresIn: "7d"});
+}
+
 export default {
     mutations: {
         async login(obj: any, { username, password } : { username: string, password: string }) {
@@ -14,7 +18,7 @@ export default {
                 throw Error("Usuario o contraseña errada");
             }
 
-            return jwt.sign({user: user._id}, KEY, {expiresIn: "7d"});
+            return generateToken(user._id);
         },
     }
 }
