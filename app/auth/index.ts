@@ -1,7 +1,6 @@
 import User from "../../models/User";
-import {getPermissionByRole, getRoleById, getStoreByOwner, getStoresByOwner} from "../../DataSource";
+import {getRoleById, getStoresByOwner} from "../../DataSource";
 import {BASE_ROLES} from "../../constants";
-import jwt from "jsonwebtoken";
 import {generateToken} from "../../graphql/resolvers/auth";
 
 export const login = async (req: any, res: any) => {
@@ -22,10 +21,14 @@ export const login = async (req: any, res: any) => {
     jsonResponse.stores = await getStoresByOwner(user._id);
   }
 
-  jsonResponse.user = user;
+  const { _id, firstName, lastName, phone } = user;
+  jsonResponse.user = { _id, firstName, lastName, phone, role: {} };
   delete jsonResponse.user.password
 
-  jsonResponse.user.role = role;
+  jsonResponse.user.role._id = role._id
+  jsonResponse.user.role.name = role.name
+  jsonResponse.user.role.permissions = role.permissions.map((p: any) => ({ _id: p._id, resource: p.resource }))
+
   jsonResponse.token = generateToken(user._id);
 
   res.send({
