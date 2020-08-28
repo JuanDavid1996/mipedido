@@ -22,10 +22,10 @@ export const login = async (req: any, res: any) => {
     jsonResponse.stores = await getStoresByOwner(user._id);
   }
 
-  delete user.password;
   jsonResponse.user = user;
-  jsonResponse.user.role = role;
+  delete jsonResponse.user.password
 
+  jsonResponse.user.role = role;
   jsonResponse.token = generateToken(user._id);
 
   res.send({
