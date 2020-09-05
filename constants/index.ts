@@ -15,6 +15,7 @@ export enum ORDER_STATUS {
 
 export enum PERMISSIONS {
 	TAKE_ORDER = "takeOrder",
+  UPDATE_PERMISSIONS = "updatePermission",
 }
 
 export enum ORDER_FIELDS {
