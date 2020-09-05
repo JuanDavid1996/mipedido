@@ -1,6 +1,7 @@
-import {getPermissionById, getPermissions, getRoleById} from "../../../DataSource";
+import {getPermissionById, getPermissions} from "../../../DataSource";
 import Permission from "../../../models/Permission";
-import {verifyCurrentUser} from "../../../helpers/authHelpers";
+import {checkPermission, verifyCurrentUser} from "../../../helpers/authHelpers";
+import {PERMISSIONS} from "../../../constants";
 
 const queries = {
     permissions: () => getPermissions(),
@@ -19,21 +20,11 @@ const mutations = {
         return Permission.create({resource});
     },
 
-    updatePermission(obj: any, {_id, name}: any, context: any) {
+    async updatePermission(obj: any, {_id, name}: any, context: any) {
         verifyCurrentUser(context);
-        if (!_id) return;
-        return Permission.findOneAndUpdate(
-            {
-                _id
-            },{
-                $set: { name }
-            }, {new: true}, (err: any, role: any) => {
-                if (err) {
-                    throw new Error("Se produjo un error al actualizar el permiso")
-                }
-                return role;
-            }
-        )
+        await checkPermission(PERMISSIONS.UPDATE_PERMISSIONS, context.currentUser)
+        if (!_id) throw Error("Request no valido")
+        return Permission.findOneAndUpdate({_id}, {$set: {name}});
     },
 
     deletePermission(obj: any, {_id}: any, context: any) {
