@@ -1,5 +1,5 @@
 import User from "../../models/User";
-import {getRoleById, getStoresByOwner} from "../../DataSource";
+import {getOrdersByDomiciliary, getRoleById, getStoresByOwner} from "../../DataSource";
 import {BASE_ROLES} from "../../constants";
 import {generateToken} from "../../graphql/resolvers/auth";
 
@@ -19,6 +19,9 @@ export const login = async (req: any, res: any) => {
 
   if (role.name === BASE_ROLES.TENDERO) {
     jsonResponse.stores = await getStoresByOwner(user._id);
+  }
+  if (role.name === BASE_ROLES.DOMICILIARIO) {
+    jsonResponse.orders = await getOrdersByDomiciliary(user._id)
   }
 
   const { _id, firstName, lastName, phone } = user;
