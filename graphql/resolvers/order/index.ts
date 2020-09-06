@@ -1,5 +1,5 @@
 import {
-    getOrderByDomiciliary,
+    getOrdersByDomiciliary,
     getOrderByDomiciliaryWithStatus,
     getOrderById,
     getOrders,
@@ -28,7 +28,7 @@ const queries = {
         verifyCurrentUser(context)
 
         if (args.domiciliary) {
-            return getOrderByDomiciliary(args.domiciliary);
+            return getOrdersByDomiciliary(args.domiciliary);
         }
 
         return getOrders();

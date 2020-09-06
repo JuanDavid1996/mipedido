@@ -113,7 +113,7 @@ export function getOrders() {
     return Order.find({});
 }
 
-export function getOrderByDomiciliary(domiciliary: string) {
+export function getOrdersByDomiciliary(domiciliary: string) {
     return Order.find({ domiciliary });
 }
 

@@ -1,7 +1,7 @@
 import User from "../../../models/User";
 import {getRoleById, getUserById, getUsers, getUsersByRoleName} from "../../../DataSource";
 import {checkPermission, verifyCurrentUser} from "../../../helpers/authHelpers";
-import {BASE_ROLES} from "../../../constants";
+import {BASE_ROLES, PERMISSIONS} from "../../../constants";
 
 interface BaseUserInput {
     code: string,
@@ -22,11 +22,26 @@ interface UserInput<T> {
 }
 
 const queries = {
-    users: () => getUsers(),
-    user: (context: any, args: any) => getUserById(args._id),
-    shopkeepers: async() => getUsersByRoleName(BASE_ROLES.TENDERO),
-    clients: async() => getUsersByRoleName(BASE_ROLES.CLIENTE),
-    currentUser: (obj: any, args: any, context: any) => context.currentUser,
+    users: (obj: any, args: any, context: any) => {
+        verifyCurrentUser(context.currentUser)
+        return getUsers();
+    },
+    user: (obj: any, args: any, context: any) => {
+        verifyCurrentUser(context.currentUser)
+        return getUserById(args._id)
+    },
+    shopkeepers: async(obj: any, args: any, context: any) => {
+        verifyCurrentUser(context.currentUser)
+        return getUsersByRoleName(BASE_ROLES.TENDERO)
+    },
+    clients: async(obj: any, args: any, context: any) => {
+        verifyCurrentUser(context.currentUser)
+        return getUsersByRoleName(BASE_ROLES.CLIENTE)
+    },
+    currentUser: (obj: any, args: any, context: any) => {
+        verifyCurrentUser(context.currentUser)
+        context.currentUser
+    },
 }
 
 const resolvers = {
@@ -51,7 +66,7 @@ const mutations = {
     },
     async deleteUser(obj: any, args: any, context: any) {
         verifyCurrentUser(context)
-        await checkPermission("deleteUser", context.currentUser);
+        await checkPermission(PERMISSIONS.DELETE_USER, context.currentUser);
         return User.findByIdAndDelete(args._id)
     }
 }
