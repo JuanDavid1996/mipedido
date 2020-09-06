@@ -24,7 +24,10 @@ export const login = async (req: any, res: any) => {
     jsonResponse.orders = await getOrdersByDomiciliary(user._id)
       .populate({
         path: "store",
-        populate: "owner"
+        populate: {
+          patch: "owner",
+          select: "_id code firstName lastName phone"
+        }
       })
       .populate("client")
       .populate("status")
