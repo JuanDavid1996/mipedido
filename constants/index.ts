@@ -23,6 +23,9 @@ export enum PERMISSIONS {
 	LIST_CUSTOMER = "listCustomer",
 	LIST_SHOP_KEEPER = "listShopKepper",
   SHOW_USER = "showUser",
+  DELETE_ORDER = "deleteOrder",
+  UPDATE_ORDER = "updateOrder",
+  ADD_ORDER = "addOrder",
 }
 
 export enum ORDER_FIELDS {

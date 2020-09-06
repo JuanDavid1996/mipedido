@@ -7,6 +7,7 @@ require('dotenv').config({
 import connectDB from "../config/db";
 import {BASE_ROLES} from "../constants";
 import {getUserDevices} from "../DataSource";
+import userDevice from "../graphql/resolvers/userDevice";
 
 function main() {
   connectDB().then(async () => {
@@ -20,10 +21,8 @@ function main() {
         }
       }).exec()
 
-    console.log(uDevices)
-
-    // const registrationIds = uDevices.map((ud: any) => ud.firebaseToken);
-    // console.log(registrationIds)
+    const registrationIds = uDevices.filter((uDevice: any) => uDevice.user.role).map((ud: any) => ud.firebaseToken);
+    console.log(registrationIds)
   })
 }
 
