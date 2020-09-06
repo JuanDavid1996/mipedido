@@ -71,6 +71,8 @@ const mutations = {
 
     async addOrder(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.ADD_ORDER, context.currentUser);
+
         const role: any = await getRoleById(context.currentUser.role);
         let store: string = args.order.store;
         let storeModel: any = undefined;
@@ -107,14 +109,13 @@ const mutations = {
               }
           }).exec()
 
-        const registrationIds = uDevices.map((ud: any) => ud.firebaseToken);
-
+        const registrationIds = uDevices.filter((uDevice: any) => uDevice.user.role).map((ud: any) => ud.firebaseToken);
         await notifyNewOrder(registrationIds, newOrder);
         return newOrder;
     },
-    updateOrder(obj: any, args: any, context: any) {
+    async updateOrder(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
-        console.log(args)
+        await checkPermission(PERMISSIONS.UPDATE_ORDER, context.currentUser)
         if (!args.order._id) return;
         const _id = args.order._id;
         const params = args.order;
@@ -133,8 +134,9 @@ const mutations = {
             }
         )
     },
-    deleteOrder(obj: any, {_id}: any, context: any) {
+    async deleteOrder(obj: any, {_id}: any, context: any) {
         verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.DELETE_ORDER, context.currentUser)
         return Order.findOneAndDelete({_id})
     },
     async takeOrder(obj: any, {_id, domiciliary}: any, context: any) {

@@ -1,5 +1,7 @@
 import mongoose, {Mongoose} from "mongoose";
 import * as process from "process";
+const MongooseCache = require('mongoose-redis');
+
 export default function connectDB() {
 
   let uri = "mongodb://localhost:27017/domi";
@@ -9,6 +11,8 @@ export default function connectDB() {
     uri = `mongodb://${DB_USERNAME}:${DB_PASSWORD}@ds155243.mlab.com:55243/mipedido`;
   }
 
+  MongooseCache(mongoose, uri);
+
   return new Promise((resolve, rejected) => {
     mongoose
       .connect(
@@ -16,7 +20,7 @@ export default function connectDB() {
         {useNewUrlParser: true, useUnifiedTopology: true})
       .then((con: Mongoose) => {
         resolve();
-      }).catch(error => {
+      }).catch((error: any) => {
       rejected(error);
     });
   })

@@ -1,4 +1,5 @@
 import {getStoreById, getUserWithPermissions} from "../DataSource";
+import {IUser} from "../models/User";
 
 const noAuthorized = () => {
 	throw Error("No autorizado");
@@ -22,7 +23,8 @@ export async function verifyIfStoreBelongsToUser(user: any, storeId: string) {
 }
 
 const getPermissions = async (currentUser: any) => {
-  const user: any = await getUserWithPermissions(currentUser._id);
+  const key = currentUser._id + "_permissions";
+  const user: IUser = (await getUserWithPermissions(currentUser._id)).cache(120, key)
   return await user.role.permissions.map((p: any) => p.resource);
 }
 
