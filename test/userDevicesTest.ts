@@ -22,8 +22,8 @@ function main() {
 
     console.log(uDevices)
 
-    const registrationIds = uDevices.map((ud: any) => ud.firebaseToken);
-    console.log(registrationIds)
+    // const registrationIds = uDevices.map((ud: any) => ud.firebaseToken);
+    // console.log(registrationIds)
   })
 }
 
