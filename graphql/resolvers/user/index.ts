@@ -40,7 +40,7 @@ const queries = {
     },
     currentUser: (obj: any, args: any, context: any) => {
         // verifyCurrentUser(context.currentUser)
-        context.currentUser
+        return context.currentUser
     },
 }
 
