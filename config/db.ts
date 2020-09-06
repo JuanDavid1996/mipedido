@@ -11,7 +11,7 @@ export default function connectDB() {
     uri = `mongodb://${DB_USERNAME}:${DB_PASSWORD}@ds155243.mlab.com:55243/mipedido`;
   }
 
-  MongooseCache(mongoose, uri);
+  MongooseCache(mongoose, "redis://127.0.0.1:6379");
 
   return new Promise((resolve, rejected) => {
     mongoose
