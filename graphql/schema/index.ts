@@ -154,7 +154,7 @@ const typeDefs = `
         categories: [Category]
         category(_id: MongoObjectId!): Category
         
-        orders: [Order]
+        orders(domiciliary: String): [Order]
         order(_id: MongoObjectId!): Order
         ordersAvailable: [Order]
         currentOrder(domiciliary: String!): Order
