@@ -2,6 +2,7 @@ import User from "../../../models/User";
 import {getRoleById, getUserById, getUsers, getUsersByRoleName} from "../../../DataSource";
 import {checkPermission, verifyCurrentUser} from "../../../helpers/authHelpers";
 import {BASE_ROLES, PERMISSIONS} from "../../../constants";
+import {Schema} from "mongoose";
 
 interface BaseUserInput {
     code: string,
@@ -59,6 +60,7 @@ const mutations = {
     updateUser: async (obj: any, {user}: UserInput<BaseUserUpdateInput>, context: any) =>{
         verifyCurrentUser(context);
         const params: any = { ...user }
+        if (params.role) params.role = new Schema.Types.ObjectId(params.role)
         delete params._id;
         delete params.password;
         await User.updateOne({ _id: user._id }, { ...params });

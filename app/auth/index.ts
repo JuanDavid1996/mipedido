@@ -19,6 +19,7 @@ export const login = async (req: any, res: any) => {
 
   if (role.name === BASE_ROLES.TENDERO) {
     jsonResponse.stores = await getStoresByOwner(user._id);
+    // TODO: GET ORDERS BY STORE
   }
   if (role.name === BASE_ROLES.DOMICILIARIO) {
     jsonResponse.orders = await getOrdersByDomiciliary(user._id)
