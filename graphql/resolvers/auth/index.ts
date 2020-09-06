@@ -24,7 +24,7 @@ export default {
 }
 
 export async function verify(token: string) {
-    return jwt.verify(token, KEY, );
+    return jwt.verify(token, KEY );
 }
 
 export async function getUserByToken(token?: string) {

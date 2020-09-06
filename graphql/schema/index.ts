@@ -157,6 +157,7 @@ const typeDefs = `
         orders: [Order]
         order(_id: MongoObjectId!): Order
         ordersAvailable: [Order]
+        currentOrder(domiciliary: String!): Order
         
         stores: [Store]
         store(_id: MongoObjectId!): Store

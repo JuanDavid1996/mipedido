@@ -36,3 +36,7 @@ export const login = async (req: any, res: any) => {
     response: jsonResponse
   });
 }
+
+export const checkToken = async (req: any, res: any)  => {
+
+}

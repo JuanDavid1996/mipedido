@@ -1,6 +1,7 @@
 import {getRoleById, getStoreByOwner, getStoreClients, getUserById} from "../../DataSource";
 import Client from "../../models/Client";
 import {verifyCurrentUser, verifyIfStoreBelongsToUser} from "../../helpers/authHelpers";
+import {BASE_ROLES} from "../../constants";
 
 const queries = {
     storeClients: (obj: any, { store, code, firstName, phone }: any, context: any) => {
@@ -21,9 +22,9 @@ const mutations = {
         const role: any = await getRoleById(context.currentUser.role);
         let store: string = client.store;
 
-        if (role.name === "Tendero") {
+        if (role.name === BASE_ROLES.TENDERO) {
             await verifyIfStoreBelongsToUser(context.currentUser, store);
-        } else if (role.name !== "Admin") {
+        } else if (role.name !== BASE_ROLES.ADMIN) {
             throw Error("No autorizado");
         }
 

@@ -118,6 +118,10 @@ export async function getOrdersAvailable() {
     return Order.find({ status: status._id });
 }
 
+export async function getOrderByDomiciliaryWithStatus(domiciliary: string, statusName: ORDER_STATUS) {
+    const status: IOrderStatus = await getOrderStatusByName(statusName) as IOrderStatus;
+    return Order.find({ status: status._id, domiciliary });
+}
 
 
 export function getOrderStatusById(id: string) {
@@ -131,6 +135,7 @@ export function getOrderStatuses() {
 export function getOrderStatusByName(name: string) {
     return OrderStatus.findOne({name: name});
 }
+
 
 export function getSuggestedStores() {
     return SuggestedStore.find();
