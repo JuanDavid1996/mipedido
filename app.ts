@@ -6,7 +6,6 @@ moduleAlias.addAlias('@models', __dirname + '/models');
 
 import { makeExecutableSchema } from '@graphql-tools/schema';
 
-
 import typeDefs from "./graphql/schema";
 
 import resolvers from "./graphql/resolvers/"

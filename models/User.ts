@@ -1,9 +1,10 @@
 import mongoose, {Document, Model} from "mongoose";
 import {IRole} from "./Role";
+import IBaseDocument from "./BaseDocument";
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
-export interface IUser extends Document {
+export interface IUser extends IBaseDocument<IUser> {
     code: string;
     firstName: string;
     lastName: string;
