@@ -20,6 +20,9 @@ export enum PERMISSIONS {
 	VERIFY_CURRENT_ORDER = "verifyCurrentOrder",
 	DELETE_USER = "deleteUser",
 	LIST_USER = "listUser",
+	LIST_CUSTOMER = "listCustomer",
+	LIST_SHOP_KEEPER = "listShopKepper",
+  SHOW_USER = "showUser",
 }
 
 export enum ORDER_FIELDS {

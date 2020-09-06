@@ -27,16 +27,19 @@ const queries = {
         await checkPermissions([PERMISSIONS.LIST_USER], context.currentUser)
         return getUsers();
     },
-    user: (obj: any, args: any, context: any) => {
+    async user(obj: any, args: any, context: any) {
         verifyCurrentUser(context)
+        await checkPermissions([PERMISSIONS.SHOW_USER], context.currentUser)
         return getUserById(args._id)
     },
     shopkeepers: async(obj: any, args: any, context: any) => {
         verifyCurrentUser(context)
+        await checkPermissions([PERMISSIONS.LIST_SHOP_KEEPER], context.currentUser)
         return getUsersByRoleName(BASE_ROLES.TENDERO)
     },
     clients: async(obj: any, args: any, context: any) => {
         verifyCurrentUser(context)
+        await checkPermissions([PERMISSIONS.LIST_CUSTOMER], context.currentUser)
         return getUsersByRoleName(BASE_ROLES.CLIENTE)
     },
     currentUser: (obj: any, args: any, context: any) => {
