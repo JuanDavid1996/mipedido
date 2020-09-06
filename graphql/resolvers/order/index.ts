@@ -1,4 +1,5 @@
 import {
+    getOrderByDomiciliary,
     getOrderByDomiciliaryWithStatus,
     getOrderById,
     getOrders,
@@ -25,6 +26,11 @@ import {BASE_ROLES, ORDER_FIELDS, ORDER_STATUS, ORDER_STATUS_FIELDS, PERMISSIONS
 const queries = {
     orders: (obj: any, args: any, context: any) => {
         verifyCurrentUser(context)
+
+        if (args.domiciliary) {
+            return getOrderByDomiciliary(args.domiciliary);
+        }
+
         return getOrders();
     },
     order: (obj: any, args: any, context: any) => {
