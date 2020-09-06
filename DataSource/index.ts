@@ -9,7 +9,7 @@ import Store from "../models/Store";
 import Client from "../models/Client";
 import {DocumentQuery} from "mongoose";
 import UserDevice from "../models/UserDevice";
-import {ORDER_STATUS} from "../constants";
+import {BASE_ROLES, ORDER_STATUS} from "../constants";
 import SuggestedStore from "../models/SuggestedStore";
 
 export function getUserById(id: string) {
@@ -111,6 +111,10 @@ export function getOrderById(id: string) {
 
 export function getOrders() {
     return Order.find({});
+}
+
+export function getOrdersByStore(store: string) {
+    return Order.find({ store });
 }
 
 export function getOrdersByDomiciliary(domiciliary: string) {

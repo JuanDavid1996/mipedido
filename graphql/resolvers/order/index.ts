@@ -99,6 +99,14 @@ const mutations = {
         await newOrder.save();
 
         const uDevices: any = await getUserDevices()
+          .populate({
+              path: "user",
+              populate: {
+                  path: "role",
+                  match: { name: BASE_ROLES.DOMICILIARIO }
+              }
+          }).exec()
+
         const registrationIds = uDevices.map((ud: any) => ud.firebaseToken);
 
         await notifyNewOrder(registrationIds, newOrder);
