@@ -45,10 +45,7 @@ const queries = {
         const orderTaken = await getOrderByDomiciliaryWithStatus(args.domiciliary, ORDER_STATUS.TOMADO)
         const orderInProgress = await getOrderByDomiciliaryWithStatus(args.domiciliary, ORDER_STATUS.EN_CURSO)
 
-        console.log("orderTaken ", orderTaken)
-        console.log("orderInProgress", orderInProgress)
-
-        if (!orderInProgress || !orderTaken) {
+        if (!orderInProgress && !orderTaken) {
             throw Error("No tiene pedido en curso");
         }
 
