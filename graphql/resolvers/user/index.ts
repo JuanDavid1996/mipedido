@@ -1,6 +1,6 @@
 import User from "../../../models/User";
 import {getRoleById, getUserById, getUsers, getUsersByRoleName} from "../../../DataSource";
-import {checkPermission, verifyCurrentUser} from "../../../helpers/authHelpers";
+import {checkPermission, checkPermissions, verifyCurrentUser} from "../../../helpers/authHelpers";
 import {BASE_ROLES, PERMISSIONS} from "../../../constants";
 
 interface BaseUserInput {
@@ -22,24 +22,25 @@ interface UserInput<T> {
 }
 
 const queries = {
-    users: (obj: any, args: any, context: any) => {
-        verifyCurrentUser(context.currentUser)
+    async users(obj: any, args: any, context: any) {
+        verifyCurrentUser(context)
+        await checkPermissions([PERMISSIONS.LIST_USER], context.currentUser)
         return getUsers();
     },
     user: (obj: any, args: any, context: any) => {
-        verifyCurrentUser(context.currentUser)
+        verifyCurrentUser(context)
         return getUserById(args._id)
     },
     shopkeepers: async(obj: any, args: any, context: any) => {
-        verifyCurrentUser(context.currentUser)
+        verifyCurrentUser(context)
         return getUsersByRoleName(BASE_ROLES.TENDERO)
     },
     clients: async(obj: any, args: any, context: any) => {
-        verifyCurrentUser(context.currentUser)
+        verifyCurrentUser(context)
         return getUsersByRoleName(BASE_ROLES.CLIENTE)
     },
     currentUser: (obj: any, args: any, context: any) => {
-        verifyCurrentUser(context.currentUser)
+        verifyCurrentUser(context)
         return context.currentUser
     },
 }
