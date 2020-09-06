@@ -35,14 +35,10 @@ export async function checkPermission(name: string, currentUser: any) {
 }
 
 export async function checkPermissions(names: string[], currentUser: any) {
-  console.log("check permissions: ", names);
   const permissions = await getPermissions(currentUser);
-  console.log("user permissions: ", permissions)
-  for (let index = 0; index < permissions.length; index++) {
+  for (let index = 0; index < names.length; index++) {
     const name = names[index];
-    console.log("checking permissions with name ", names)
     const hasPermission = permissions.includes(name);
-    console.log("with permissions?: ", hasPermission)
     if (!hasPermission) noAuthorized()
   }
 }
