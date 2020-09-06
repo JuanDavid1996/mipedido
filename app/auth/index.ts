@@ -22,7 +22,10 @@ export const login = async (req: any, res: any) => {
   }
   if (role.name === BASE_ROLES.DOMICILIARIO) {
     jsonResponse.orders = await getOrdersByDomiciliary(user._id)
-      .populate("store")
+      .populate({
+        path: "store",
+        populate: "owner"
+      })
       .populate("client")
       .populate("status")
       .exec()
