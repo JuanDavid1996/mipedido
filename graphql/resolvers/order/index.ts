@@ -40,7 +40,7 @@ const queries = {
         await checkPermission(PERMISSIONS.CURRENT_ORDER, context.currentUser)
         if (args.domiciliary !== context.currentUser._id) {
             const permissions = [PERMISSIONS.CURRENT_ORDER, PERMISSIONS.VERIFY_CURRENT_ORDER]
-            await checkPermissions(permissions, context.currentUser())
+            await checkPermissions(permissions, context.currentUser)
         }
         const orderTaken = await getOrderByDomiciliaryWithStatus(args.domiciliary, ORDER_STATUS.TOMADO)
         const orderInProgress = await getOrderByDomiciliaryWithStatus(args.domiciliary, ORDER_STATUS.EN_CURSO)

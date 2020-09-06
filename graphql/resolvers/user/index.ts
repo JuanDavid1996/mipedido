@@ -1,6 +1,7 @@
 import User from "../../../models/User";
 import {getRoleById, getUserById, getUsers, getUsersByRoleName} from "../../../DataSource";
 import {checkPermission, verifyCurrentUser} from "../../../helpers/authHelpers";
+import {BASE_ROLES} from "../../../constants";
 
 interface BaseUserInput {
     code: string,
@@ -23,8 +24,8 @@ interface UserInput<T> {
 const queries = {
     users: () => getUsers(),
     user: (context: any, args: any) => getUserById(args._id),
-    shopkeepers: async() => getUsersByRoleName("Tendero"),
-    clients: async() => getUsersByRoleName("Cliente"),
+    shopkeepers: async() => getUsersByRoleName(BASE_ROLES.TENDERO),
+    clients: async() => getUsersByRoleName(BASE_ROLES.CLIENTE),
     currentUser: (obj: any, args: any, context: any) => context.currentUser,
 }
 
