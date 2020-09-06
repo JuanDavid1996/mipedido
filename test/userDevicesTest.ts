@@ -1,3 +1,5 @@
+import UserDevice from "../models/UserDevice";
+
 require('dotenv').config({
   path: "../.env"
 })
