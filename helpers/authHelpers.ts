@@ -21,11 +21,24 @@ export async function verifyIfStoreBelongsToUser(user: any, storeId: string) {
     }
 }
 
+const getPermissions = async (currentUser: any) => {
+  const user: any = await getUserWithPermissions(currentUser._id);
+  return await user.role.permissions.map((p: any) => p.resource);
+}
+
 export async function checkPermission(name: string, currentUser: any) {
-	const user: any = await getUserWithPermissions(currentUser._id);
-	const permissions = user.role.permissions.map((p: any) => p.resource);
+  const permissions = await getPermissions(currentUser);
 	const hasPermission = permissions.includes(name);
 	if (!hasPermission) {
 	 	noAuthorized();
 	}
+}
+
+export async function checkPermissions(names: string[], currentUser: any) {
+  const permissions = await getPermissions(currentUser);
+  for (let index = 0; index < permissions.length; index++) {
+    const name = names[index];
+    const hasPermission = permissions.includes(name);
+    if (!hasPermission) noAuthorized()
+  }
 }

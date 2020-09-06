@@ -1,29 +1,52 @@
 import {
+    getOrderByDomiciliaryWithStatus,
     getOrderById,
     getOrders,
+    getOrdersAvailable,
     getOrderStatusById,
     getOrderStatusByName,
     getRoleById,
     getStoreById,
     getStoreClientById,
     getUserById,
-    getUserDevices,
-    getOrdersAvailable,
     getUserDeviceByIds,
+    getUserDevices,
 } from "../../../DataSource";
 import {
+    checkPermission,
+    checkPermissions,
     verifyCurrentUser,
-    verifyIfStoreBelongsToUser,
-    checkPermission
+    verifyIfStoreBelongsToUser
 } from "../../../helpers/authHelpers";
 import {notifyNewOrder, notifyOrderTaken} from "../../../helpers/notification";
 import Order, {IOrder} from "../../../models/Order";
 import {BASE_ROLES, ORDER_FIELDS, ORDER_STATUS, ORDER_STATUS_FIELDS, PERMISSIONS} from "../../../constants";
 
 const queries = {
-    orders: () => getOrders(),
-    order: (obj: any, args: any) => getOrderById(args._id),
-    ordersAvailable: (obj: any, args: any, context: any) => getOrdersAvailable(),
+    orders: (obj: any, args: any, context: any) => {
+        verifyCurrentUser(context)
+        return getOrders();
+    },
+    order: (obj: any, args: any, context: any) => {
+        verifyCurrentUser(context)
+        return getOrderById(args._id)
+    },
+    ordersAvailable: (obj: any, args: any, context: any) => {
+        verifyCurrentUser(context);
+        return getOrdersAvailable()
+    },
+    async currentOrder(obj: any, args: any, context: any) {
+        verifyCurrentUser(context)
+        await checkPermission(PERMISSIONS.CURRENT_ORDER, context.currentUser)
+        if (args.domiciliary !== context.currentUser._id) {
+            const permissions = [PERMISSIONS.CURRENT_ORDER, PERMISSIONS.VERIFY_CURRENT_ORDER]
+            await checkPermissions(permissions, context.currentUser())
+        }
+        const orderTaken = await getOrderByDomiciliaryWithStatus(args.domiciliary, ORDER_STATUS.TOMADO)
+        const orderInProgress = await getOrderByDomiciliaryWithStatus(args.domiciliary, ORDER_STATUS.EN_CURSO)
+        if (orderTaken) return orderTaken
+        return orderInProgress
+    }
 }
 
 const resolvers = {
