@@ -26,7 +26,7 @@ export const login = async (req: any, res: any) => {
         path: "store",
         populate: {
           patch: "owner",
-          select: "_id code firstName lastName phone"
+          select: "-password"
         }
       })
       .populate("client")
