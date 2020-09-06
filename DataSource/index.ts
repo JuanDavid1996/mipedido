@@ -120,7 +120,7 @@ export async function getOrdersAvailable() {
 
 export async function getOrderByDomiciliaryWithStatus(domiciliary: string, statusName: ORDER_STATUS) {
     const status: IOrderStatus = await getOrderStatusByName(statusName) as IOrderStatus;
-    return Order.find({ status: status._id, domiciliary });
+    return Order.findOne({ status: status._id, domiciliary });
 }
 
 
