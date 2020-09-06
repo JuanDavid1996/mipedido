@@ -23,23 +23,23 @@ interface UserInput<T> {
 
 const queries = {
     users: (obj: any, args: any, context: any) => {
-        verifyCurrentUser(context.currentUser)
+        // verifyCurrentUser(context.currentUser)
         return getUsers();
     },
     user: (obj: any, args: any, context: any) => {
-        verifyCurrentUser(context.currentUser)
+        // verifyCurrentUser(context.currentUser)
         return getUserById(args._id)
     },
     shopkeepers: async(obj: any, args: any, context: any) => {
-        verifyCurrentUser(context.currentUser)
+        // verifyCurrentUser(context.currentUser)
         return getUsersByRoleName(BASE_ROLES.TENDERO)
     },
     clients: async(obj: any, args: any, context: any) => {
-        verifyCurrentUser(context.currentUser)
+        // verifyCurrentUser(context.currentUser)
         return getUsersByRoleName(BASE_ROLES.CLIENTE)
     },
     currentUser: (obj: any, args: any, context: any) => {
-        verifyCurrentUser(context.currentUser)
+        // verifyCurrentUser(context.currentUser)
         context.currentUser
     },
 }
