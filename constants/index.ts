@@ -18,6 +18,7 @@ export enum PERMISSIONS {
   UPDATE_PERMISSIONS = "updatePermission",
 	CURRENT_ORDER = "currentOrder",
 	VERIFY_CURRENT_ORDER = "verifyCurrentOrder",
+	DELETE_USER = "deleteUser",
 }
 
 export enum ORDER_FIELDS {
