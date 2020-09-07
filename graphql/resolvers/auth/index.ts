@@ -1,6 +1,6 @@
 import User from "../../../models/User";
 import jwt from "jsonwebtoken";
-import {getUserById} from "../../../DataSource";
+import {getUserCache} from "../../../DataSource/cache";
 
 const KEY = "¡¡KEY!!";
 
@@ -31,7 +31,7 @@ export async function getUserByToken(token?: string) {
     if (token) {
         const decoded: any = await verify(token);
         if (decoded.user) {
-            return getUserById(decoded.user);
+            return getUserCache(decoded.user);
         }
     }
     return undefined;

@@ -1,5 +1,5 @@
 import {Document} from "mongoose";
-import {getUserWithPermissions} from "./index";
+import {getUserById, getUserWithPermissions} from "./index";
 import {IUser} from "../models/User";
 
 const redis = require("redis")
@@ -38,15 +38,10 @@ export function getUserWithPermissionsCache(userId: any): Promise<IUser> {
     return getOrUpdateCache<IUser>(key, async () => {
         return await getUserWithPermissions(userId) as IUser;
     })
-    // return new Promise(async (resolve: any, rejected: any) => {
-    //     redisClient.get(key, async (err: any, data?: string) => {
-    //         if (err || !data) {
-    //             const userWithPermission = await getUserWithPermissions(userId);
-    //             redisClient.set(key, userWithPermission, redis.print)
-    //             resolve(userWithPermission)
-    //         } else {
-    //             resolve(JSON.parse(data) as IUser)
-    //         }
-    //     })
-    // })
+}
+
+export function getUserCache(userId: any): Promise<IUser> {
+    return getOrUpdateCache<IUser>(userId, async () => {
+        return await getUserById(userId) as IUser;
+    })
 }
