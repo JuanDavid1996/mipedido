@@ -16,13 +16,13 @@ export function getUserById(id: string) {
     return User.findById(id, { password: 0 });
 }
 
-export function getUserWithPermissions(id: string): Promise<IUser> {
+export function getUserWithPermissions(id: string) {
     return User.findById(id).populate({
         path: "role",
         populate: {
             path: "permissions"
         }
-    }).exec() as Promise<IUser>;
+    }).exec()
 }
 
 export function getUsers() : DocumentQuery<IUser[], IUser> {

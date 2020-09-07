@@ -24,7 +24,7 @@ export async function verifyIfStoreBelongsToUser(user: any, storeId: string) {
 
 const getPermissions = async (currentUser: any) => {
   const key = currentUser._id + "_permissions";
-  const user: IUser = (await getUserWithPermissions(currentUser._id)).cache(120, key)
+  const user: any = (await getUserWithPermissions(currentUser._id) as any).cache(120, key)
   return await user.role.permissions.map((p: any) => p.resource);
 }
 
