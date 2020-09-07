@@ -1,6 +1,5 @@
 import {getOrderStatusByName, getRoles} from "../DataSource";
 import connectDB from "../config/db";
-import Permission, {IPermission} from "../models/Permission";
 import {IRole} from "../models/Role";
 
 (function main() {
