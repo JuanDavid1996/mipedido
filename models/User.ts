@@ -1,8 +1,10 @@
-import mongoose, {Document, Model} from "mongoose";
+import mongoose, {Document, Model, Schema} from "mongoose";
 import {IRole} from "./Role";
-import IBaseDocument from "./BaseDocument";
+import IBaseDocument, {BaseModel} from "./BaseModel";
+import {Mode} from "fs";
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+
 
 export interface IUser extends IBaseDocument<IUser> {
     code: string;
@@ -15,11 +17,10 @@ export interface IUser extends IBaseDocument<IUser> {
     role: IRole["_id"];
 }
 
-export interface IUserModel extends Model<IUser> {
+export interface IUserModel extends BaseModel<IUser> {
     validatePassword: (password: string) => Promise<boolean>;
 }
 
-const Schema = mongoose.Schema;
 const UserSchema = new Schema({
     code: {
         type: String,
