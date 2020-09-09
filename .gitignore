@@ -118,3 +118,5 @@ dist
 nodemon.json
 .env
 processes.json
+nohup.out
+.idea/
