@@ -14,18 +14,22 @@ export enum ORDER_STATUS {
 }
 
 export enum PERMISSIONS {
-	TAKE_ORDER = "takeOrder",
-  UPDATE_PERMISSIONS = "updatePermission",
-	CURRENT_ORDER = "currentOrder",
-	VERIFY_CURRENT_ORDER = "verifyCurrentOrder",
-	DELETE_USER = "deleteUser",
-	LIST_USER = "listUser",
-	LIST_CUSTOMER = "listCustomer",
-	LIST_SHOP_KEEPER = "listShopKepper",
-  SHOW_USER = "showUser",
-  DELETE_ORDER = "deleteOrder",
-  UPDATE_ORDER = "updateOrder",
-  ADD_ORDER = "addOrder",
+    TAKE_ORDER = "takeOrder",
+    UPDATE_PERMISSIONS = "updatePermission",
+    CURRENT_ORDER = "currentOrder",
+    VERIFY_CURRENT_ORDER = "verifyCurrentOrder",
+    DELETE_USER = "deleteUser",
+    LIST_USER = "listUser",
+    LIST_CUSTOMER = "listCustomer",
+    LIST_SHOP_KEEPER = "listShopKepper",
+    SHOW_USER = "showUser",
+    DELETE_ORDER = "deleteOrder",
+    UPDATE_ORDER = "updateOrder",
+    ADD_ORDER = "addOrder",
+    LIST_ORDERS_BY_DOMICILIARY = "listOrdersByDomiciliary",
+    LIST_ORDERS_BY_STORE = "listOrdersByStore",
+    LIST_ORDERS_BY_CLIENT = "listOrdersByClient",
+    SHOW_ORDER = "showOrder"
 }
 
 export enum ORDER_FIELDS {

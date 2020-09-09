@@ -12,6 +12,7 @@ import {
     getUserById,
     getUserDeviceByIds,
     getUserDevices,
+    getOrdersByStore,
 } from "../../../DataSource";
 import {
     checkPermission,
@@ -24,17 +25,35 @@ import Order, {IOrder} from "../../../models/Order";
 import {BASE_ROLES, ORDER_FIELDS, ORDER_STATUS, ORDER_STATUS_FIELDS, PERMISSIONS} from "../../../constants";
 
 const queries = {
-    orders: (obj: any, args: any, context: any) => {
+    orders: async (obj: any, args: any, context: any) => {
         verifyCurrentUser(context)
 
         if (args.domiciliary) {
+            await checkPermission(PERMISSIONS.LIST_ORDERS_BY_DOMICILIARY, context)
             return getOrdersByDomiciliary(args.domiciliary);
         }
 
+        if (args.store) {
+            await checkPermission(PERMISSIONS.LIST_ORDERS_BY_STORE, context)
+            return getOrdersByStore(args.store);
+        }
+
+        if (args.client) {
+            await checkPermission(PERMISSIONS.LIST_ORDERS_BY_CLIENT, context)
+            return getOrdersByStore(args.store);
+        }
+
+        await checkPermissions([
+            PERMISSIONS.LIST_ORDERS_BY_STORE,
+            PERMISSIONS.LIST_ORDERS_BY_DOMICILIARY,
+            PERMISSIONS.LIST_ORDERS_BY_CLIENT
+        ], context);
+
         return getOrders();
     },
-    order: (obj: any, args: any, context: any) => {
+    order: async (obj: any, args: any, context: any) => {
         verifyCurrentUser(context)
+        await checkPermission(PERMISSIONS.SHOW_ORDER, context);
         return getOrderById(args._id)
     },
     async ordersAvailable(obj: any, args: any, context: any) {
