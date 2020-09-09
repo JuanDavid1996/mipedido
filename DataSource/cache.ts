@@ -35,7 +35,7 @@ function getOrUpdateCache<T extends Document>(
 }
 
 function clearCache(key:string) {
-    redisClient.set(key, undefined, redis.print)
+    redisClient.del(key)
 }
 
 export function getUserWithPermissionsCache(userId: string): Promise<IUser> {
