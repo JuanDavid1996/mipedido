@@ -596,3 +596,2827 @@ params  juanz   3188580746
 [0mPOST /graphql [32m200 [0m79.182 ms - 512[0m
 [0mPOST /graphql [32m200 [0m243.213 ms - 4094[0m
 [0mPOST /graphql [32m200 [0m238.829 ms - 1405[0m
+(node:11224) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+connected to db
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m212.683 ms - 194[0m
+[0mPOST /graphql [32m200 [0m248.348 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m244.561 ms - 483[0m
+[0mPOST /graphql [32m200 [0m239.934 ms - 534[0m
+[0mPOST /graphql [32m200 [0m242.378 ms - 483[0m
+[0mPOST /graphql [32m200 [0m242.943 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m92.011 ms - 512[0m
+{ category: '5f3bef5695e4f30017797d66' }
+[0mPOST /graphql [32m200 [0m249.709 ms - 298[0m
+{ category: '5f3b46805900310017300fef' }
+[0mPOST /graphql [32m200 [0m237.403 ms - 277[0m
+[0mPOST /graphql [32m200 [0m79.826 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m239.367 ms - 544[0m
+{ category: '5f3bef5695e4f30017797d66' }
+[0mPOST /graphql [32m200 [0m236.326 ms - 298[0m
+{}
+[0mPOST /graphql [32m200 [0m238.778 ms - 544[0m
+{ category: '5f3b46805900310017300fef' }
+[0mPOST /graphql [32m200 [0m235.954 ms - 277[0m
+{ category: '5f1556882ffa2b2dfb52fa23' }
+[0mPOST /graphql [32m200 [0m158.449 ms - 32[0m
+{ category: '5f1556992ffa2b2dfb52fa24' }
+[0mPOST /graphql [32m200 [0m156.760 ms - 32[0m
+{}
+[0mPOST /graphql [32m200 [0m237.093 ms - 544[0m
+[0mPOST /graphql [32m200 [0m79.711 ms - 512[0m
+[0mOPTIONS /graphql [32m204 [0m0.714 ms - 0[0m
+[0mPOST /graphql [32m200 [0m488.899 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.623 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m470.181 ms - 544[0m
+{ category: '5f15567a2ffa2b2dfb52fa22' }
+[0mPOST /graphql [32m200 [0m156.451 ms - 32[0m
+{}
+[0mPOST /graphql [32m200 [0m237.583 ms - 544[0m
+[0mPOST /graphql [32m200 [0m78.879 ms - 512[0m
+[0mPOST /graphql [32m200 [0m476.849 ms - 512[0m
+(node:12020) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+connected to db
+[0mPOST /graphql [32m200 [0m270.242 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.815 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m249.984 ms - 544[0m
+{ category: '5f15567a2ffa2b2dfb52fa22' }
+[0mPOST /graphql [32m200 [0m159.431 ms - 32[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m173.991 ms - 194[0m
+[0mPOST /graphql [32m200 [0m275.340 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m251.055 ms - 483[0m
+[0mPOST /graphql [32m200 [0m244.997 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m164.816 ms - 311[0m
+[0mPOST /graphql [32m200 [0m238.721 ms - 534[0m
+[0mPOST /graphql [32m200 [0m157.550 ms - 512[0m
+[0mPOST /graphql [32m200 [0m238.026 ms - 1133[0m
+before to send to pn:  {
+  to: 'duUK6Ge9SxW9gXqy_RjJM-:APA91bEicOlZ-jmqEeMy7P8nJegmx6EkBTMncc5UohmiGxhzkpEVjwur5IP7b7gSFZqXTmE8V29qb3EH75T2ldAnqgiKe2X88XksN6vr5S5ZCOy58A2qfVSZXTvxPNrUUpw-VQLNaXfX',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m169.983 ms - 156[0m
+[0mPOST /graphql [32m200 [0m164.192 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m235.259 ms - 483[0m
+[0mPOST /graphql [32m200 [0m158.333 ms - 512[0m
+[0mPOST /graphql [32m200 [0m236.678 ms - 1133[0m
+before to send to pn:  {
+  to: 'duUK6Ge9SxW9gXqy_RjJM-:APA91bEicOlZ-jmqEeMy7P8nJegmx6EkBTMncc5UohmiGxhzkpEVjwur5IP7b7gSFZqXTmE8V29qb3EH75T2ldAnqgiKe2X88XksN6vr5S5ZCOy58A2qfVSZXTvxPNrUUpw-VQLNaXfX',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m121.868 ms - 155[0m
+[0mPOST /graphql/ [32m200 [0m243.369 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m394.382 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m167.492 ms - 90[0m
+[0mPOST /graphql [32m200 [0m163.133 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m158.729 ms - 311[0m
+[0mPOST /graphql [32m200 [0m235.324 ms - 483[0m
+[0mPOST /graphql [32m200 [0m158.056 ms - 512[0m
+[0mPOST /graphql [32m200 [0m235.246 ms - 483[0m
+[0mPOST /graphql [32m200 [0m239.794 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m236.534 ms - 534[0m
+[0mPOST /graphql [32m200 [0m162.053 ms - 311[0m
+[0mPOST /graphql [32m200 [0m161.639 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m235.730 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m161.006 ms - 512[0m
+[0mPOST /graphql [32m200 [0m236.599 ms - 483[0m
+[0mPOST /graphql [32m200 [0m86.095 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.571 ms - 512[0m
+[0mOPTIONS /graphql [32m204 [0m0.738 ms - 0[0m
+[0mPOST /graphql [32m200 [0m80.125 ms - 512[0m
+[0mPOST /graphql/ [32m200 [0m469.655 ms - 559[0m
+[0mPOST /graphql [32m200 [0m78.779 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.724 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.342 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.596 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.571 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.498 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.512 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.629 ms - 512[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m169.810 ms - 194[0m
+[0mPOST /graphql [32m200 [0m250.455 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m239.495 ms - 483[0m
+[0mOPTIONS /graphql [32m204 [0m0.181 ms - 0[0m
+[0mPOST /graphql [32m200 [0m483.333 ms - 512[0m
+[0mOPTIONS /graphql [32m204 [0m0.146 ms - 0[0m
+[0mPOST /graphql [32m200 [0m477.747 ms - 512[0m
+[0mPOST /graphql [32m200 [0m570.042 ms - 512[0m
+[0mPOST /graphql [32m200 [0m157.127 ms - 512[0m
+[0mPOST /graphql [32m200 [0m157.215 ms - 512[0m
+[0mPOST /graphql [32m200 [0m157.338 ms - 512[0m
+[0mPOST /graphql [32m200 [0m158.710 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m545.114 ms - 544[0m
+{ category: '5f3b46805900310017300fef' }
+[0mPOST /graphql [32m200 [0m314.849 ms - 277[0m
+{}
+[0mPOST /graphql [32m200 [0m313.977 ms - 544[0m
+{ category: '5f1556882ffa2b2dfb52fa23' }
+[0mPOST /graphql [32m200 [0m252.679 ms - 32[0m
+{}
+[0mPOST /graphql [32m200 [0m314.534 ms - 544[0m
+{ category: '5f3b46805900310017300fef' }
+[0mPOST /graphql [32m200 [0m328.316 ms - 277[0m
+{}
+[0mPOST /graphql [32m200 [0m313.623 ms - 544[0m
+[0mPOST /graphql [32m200 [0m158.116 ms - 512[0m
+[0mPOST /graphql/ [32m200 [0m647.163 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m802.436 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m801.297 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m388.214 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m239.886 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m394.975 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m157.908 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m156.839 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m313.288 ms - 623[0m
+[0mPOST /graphql [32m200 [0m471.796 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.548 ms - 512[0m
+[0mPOST /graphql [32m200 [0m80.060 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.557 ms - 512[0m
+params  juanz   3188580746
+[0mPOST /graphql/ [32m200 [0m565.541 ms - 194[0m
+[0mPOST /graphql/ [32m200 [0m465.515 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m242.392 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m167.177 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m314.199 ms - 623[0m
+[0mPOST /graphql/ [32m200 [0m249.547 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m156.651 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m312.069 ms - 623[0m
+[0mPOST /graphql/ [32m200 [0m238.621 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m156.834 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m313.219 ms - 623[0m
+[0mPOST /graphql/ [32m200 [0m242.109 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m157.035 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m239.476 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m390.606 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m156.141 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m390.572 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m398.390 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m242.035 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m393.515 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m156.979 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m312.669 ms - 623[0m
+[0mPOST /graphql/ [32m200 [0m633.211 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m164.011 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m465.852 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m313.750 ms - 623[0m
+before to send to pn:  {
+  data: {
+    notification: {
+      title: 'Pedido tomado',
+      body: 'El domiciliario esta en camino a recogerlo!',
+      priority: 'hight'
+    }
+  },
+  android: { priority: 'hight' },
+  registration_ids: [
+    'eJ-dA5nMRyiPfZlqXWIxc0:APA91bHmGu25TSx1hsdX7-BNXK1RD3lnS8I_yuI8XYS0tWwuhATkfjXs3DosQgbjoxnHlb503E_Q6r6krGTbbw6gULGZxR7ee7RK2YUXGjObzrepCQAPrCmzAQwX3p0Igr871RpuPJzw'
+  ]
+}
+[0mPOST /graphql/ [32m200 [0m1170.120 ms - 551[0m
+[0mPOST /graphql/ [32m200 [0m321.642 ms - 716[0m
+[0mPOST /graphql/ [32m200 [0m242.423 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m156.803 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m235.259 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m237.926 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m237.527 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m157.010 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m244.588 ms - 31[0m
+[0mPOST /graphql [32m200 [0m158.134 ms - 512[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m245.959 ms - 194[0m
+[0mPOST /graphql [32m200 [0m239.752 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m235.963 ms - 617[0m
+[0mPOST /graphql [32m200 [0m162.073 ms - 80[0m
+[0mPOST /graphql [32m200 [0m156.777 ms - 22[0m
+[0mPOST /graphql/ [32m200 [0m233.912 ms - 31[0m
+[0mPOST /graphql [32m200 [0m951.854 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m158.328 ms - 512[0m
+[0mPOST /graphql [32m200 [0m163.021 ms - 22[0m
+[0mPOST /graphql [32m200 [0m236.704 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m237.107 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.458 ms - 311[0m
+[0mPOST /graphql [32m200 [0m166.359 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m235.973 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m157.710 ms - 512[0m
+[0mPOST /graphql [32m200 [0m161.714 ms - 22[0m
+[0mPOST /graphql [32m200 [0m237.041 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m236.939 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.177 ms - 311[0m
+[0mPOST /graphql [32m200 [0m162.438 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m240.991 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m165.273 ms - 512[0m
+[0mPOST /graphql [32m200 [0m244.373 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m172.502 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m156.531 ms - 311[0m
+[0mPOST /graphql [32m200 [0m166.403 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m157.935 ms - 311[0m
+[0mPOST /graphql [32m200 [0m236.275 ms - 534[0m
+[0mPOST /graphql [32m200 [0m236.111 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m156.382 ms - 22[0m
+[0mPOST /graphql [32m200 [0m236.786 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m156.890 ms - 512[0m
+[0mPOST /graphql [32m200 [0m238.192 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m155.895 ms - 22[0m
+params  juanz   3188580746
+[0mPOST /graphql/ [32m200 [0m168.628 ms - 194[0m
+[0mPOST /graphql/ [32m200 [0m244.789 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m234.170 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m156.761 ms - 90[0m
+[0mPOST /graphql [32m200 [0m236.979 ms - 534[0m
+[0mPOST /graphql [32m200 [0m158.064 ms - 360[0m
+registrationIds  [
+  'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA',
+  'fB1W1JPLQBaJ1EaUjnNw27:APA91bG8C-cH-9FsngqHUjp5385SJ58auyPD-qb6Gjxfzz8GrJ6Ni32KytnLf2dTdiK-cFRhRqTgKKFy-_ftaYwsk-G2f6mK7tDua-QgA0Xor2TGbn2a9ZFYDzyDGQVLU5T6veQkFvcO',
+  'dCw1ia43TtuxfB15XYBh_o:APA91bGmh20a9N9UnL9qJkkmOSABj6HewY8gb3SmM4ob6UGqfintV45ZKzx_wcrBERdnS-xurREHZwRZyqmnKpZv0lp7MWb5d5RH6H5cCYMmokx28HvsYGn-F4xEYJVE6AB32zo2_s4M'
+]
+before to send to pn:  {
+  data: {
+    notification: {
+      title: 'Nuevo pedido',
+      body: 'Desde Carrera 27 Calle 22 a CRA 20 # 15 89',
+      priority: 'hight',
+      order: 5f431586096bce2ef440f0ca
+    }
+  },
+  android: { priority: 'hight' },
+  registration_ids: [
+    'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA',
+    'fB1W1JPLQBaJ1EaUjnNw27:APA91bG8C-cH-9FsngqHUjp5385SJ58auyPD-qb6Gjxfzz8GrJ6Ni32KytnLf2dTdiK-cFRhRqTgKKFy-_ftaYwsk-G2f6mK7tDua-QgA0Xor2TGbn2a9ZFYDzyDGQVLU5T6veQkFvcO',
+    'dCw1ia43TtuxfB15XYBh_o:APA91bGmh20a9N9UnL9qJkkmOSABj6HewY8gb3SmM4ob6UGqfintV45ZKzx_wcrBERdnS-xurREHZwRZyqmnKpZv0lp7MWb5d5RH6H5cCYMmokx28HvsYGn-F4xEYJVE6AB32zo2_s4M'
+  ]
+}
+[0mPOST /graphql [32m200 [0m572.443 ms - 77[0m
+[0mPOST /graphql/ [32m200 [0m393.170 ms - 557[0m
+before to send to pn:  {
+  data: {
+    notification: {
+      title: 'Pedido tomado',
+      body: 'El domiciliario esta en camino a recogerlo!',
+      priority: 'hight'
+    }
+  },
+  android: { priority: 'hight' },
+  registration_ids: [
+    'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA'
+  ]
+}
+[0mPOST /graphql/ [32m200 [0m1159.646 ms - 636[0m
+[0mPOST /graphql/ [32m200 [0m233.741 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m323.078 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m236.836 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m158.489 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m233.147 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m644.127 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m244.051 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m233.785 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m156.563 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m642.978 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m234.795 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m155.953 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m648.856 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.118 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.844 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.857 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m242.888 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m638.912 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m234.337 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m159.250 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m234.456 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.211 ms - 31[0m
+[0mPOST /graphql [32m200 [0m936.326 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m236.838 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.899 ms - 311[0m
+[0mPOST /graphql [32m200 [0m160.791 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m238.707 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m157.120 ms - 512[0m
+[0mOPTIONS /graphql [32m204 [0m0.144 ms - 0[0m
+[0mPOST /graphql [32m200 [0m488.196 ms - 512[0m
+[0mOPTIONS /graphql [32m204 [0m0.141 ms - 0[0m
+[0mPOST /graphql [32m200 [0m157.342 ms - 512[0m
+[0mPOST /graphql [32m200 [0m157.237 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m549.519 ms - 544[0m
+[0mPOST /graphql [32m200 [0m156.707 ms - 512[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m248.591 ms - 194[0m
+[0mPOST /graphql [32m200 [0m239.181 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m237.743 ms - 615[0m
+[0mPOST /graphql [32m200 [0m240.710 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m235.746 ms - 615[0m
+[0mOPTIONS /graphql [32m204 [0m0.149 ms - 0[0m
+[0mPOST /graphql [32m200 [0m80.610 ms - 512[0m
+[0mPOST /graphql [32m200 [0m238.578 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m311.919 ms - 1015[0m
+[0mPOST /graphql/ [32m200 [0m235.519 ms - 31[0m
+[0mPOST /graphql [32m200 [0m260.257 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m238.563 ms - 615[0m
+[0mOPTIONS /graphql [32m204 [0m0.132 ms - 0[0m
+[0mPOST /graphql [32m200 [0m78.458 ms - 512[0m
+[0mPOST /graphql [32m200 [0m243.916 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m236.175 ms - 615[0m
+[0mPOST /graphql [32m200 [0m236.147 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m238.222 ms - 534[0m
+[0mOPTIONS /graphql [32m204 [0m0.128 ms - 0[0m
+[0mPOST /graphql [32m200 [0m81.845 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.223 ms - 311[0m
+[0mPOST /graphql [32m200 [0m163.316 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m235.016 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m157.428 ms - 512[0m
+[0mPOST /graphql [32m200 [0m235.229 ms - 615[0m
+[0mPOST /graphql [32m200 [0m248.615 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m235.480 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.441 ms - 311[0m
+[0mPOST /graphql [32m200 [0m156.455 ms - 512[0m
+[0mPOST /graphql [32m200 [0m235.924 ms - 615[0m
+[0mPOST /graphql [32m200 [0m240.999 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m156.620 ms - 311[0m
+[0mPOST /graphql [32m200 [0m160.620 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m246.386 ms - 615[0m
+[0mPOST /graphql [32m200 [0m235.900 ms - 615[0m
+[0mPOST /graphql [32m200 [0m242.310 ms - 615[0m
+[0mPOST /graphql [32m200 [0m236.148 ms - 612[0m
+[0mPOST /graphql [32m200 [0m234.957 ms - 615[0m
+[0mPOST /graphql [32m200 [0m244.241 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m156.517 ms - 311[0m
+[0mPOST /graphql [32m200 [0m239.870 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m234.704 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.324 ms - 179[0m
+[0mPOST /graphql [32m200 [0m154.933 ms - 512[0m
+[0mPOST /graphql [32m200 [0m233.992 ms - 385[0m
+[0mPOST /graphql [32m200 [0m235.239 ms - 449[0m
+[0mPOST /graphql [32m200 [0m157.820 ms - 311[0m
+[0mPOST /graphql [32m200 [0m234.797 ms - 615[0m
+[0mPOST /graphql [32m200 [0m236.711 ms - 615[0m
+[0mPOST /graphql [32m200 [0m235.014 ms - 615[0m
+[0mPOST /graphql [32m200 [0m257.672 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m234.741 ms - 534[0m
+[0mPOST /graphql [32m200 [0m236.463 ms - 615[0m
+[0mPOST /graphql [32m200 [0m237.700 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m235.562 ms - 615[0m
+[0mPOST /graphql [32m200 [0m243.513 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m235.912 ms - 615[0m
+[0mPOST /graphql [32m200 [0m236.689 ms - 615[0m
+[0mPOST /graphql [32m200 [0m237.436 ms - 615[0m
+[0mPOST /graphql [32m200 [0m240.165 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m235.134 ms - 534[0m
+[0mPOST /graphql [32m200 [0m157.967 ms - 311[0m
+[0mPOST /graphql [32m200 [0m158.568 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m239.717 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m157.084 ms - 512[0m
+[0mPOST /graphql [32m200 [0m234.768 ms - 615[0m
+[0mPOST /graphql [32m200 [0m237.040 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m235.338 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.959 ms - 311[0m
+[0mPOST /graphql [32m200 [0m159.209 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m236.825 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m156.307 ms - 512[0m
+[0mPOST /graphql [32m200 [0m235.175 ms - 615[0m
+[0mPOST /graphql [32m200 [0m236.641 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.700 ms - 360[0m
+[0mPOST /graphql [32m200 [0m78.877 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m243.743 ms - 544[0m
+{ category: '5f3b46805900310017300fef' }
+[0mPOST /graphql [32m200 [0m241.149 ms - 277[0m
+{ category: '5f1556992ffa2b2dfb52fa24' }
+[0mPOST /graphql [32m200 [0m156.881 ms - 32[0m
+{}
+[0mPOST /graphql [32m200 [0m234.896 ms - 544[0m
+[0mPOST /graphql [32m200 [0m79.062 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.255 ms - 512[0m
+[0mPOST /graphql [32m200 [0m80.611 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.237 ms - 512[0m
+[0mPOST /graphql/ [32m200 [0m234.682 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m238.473 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m235.540 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m157.906 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m315.040 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m240.415 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m156.218 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m238.543 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m314.878 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m312.506 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m238.335 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m156.643 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m234.339 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m319.931 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m237.585 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m155.845 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m235.241 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m313.233 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m237.677 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m156.299 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m233.813 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m311.689 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m244.430 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m155.321 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m233.644 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.962 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m234.675 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m156.416 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m237.493 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m234.488 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m156.043 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m242.155 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m239.296 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m156.368 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m315.563 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m237.189 ms - 2549[0m
+[0mPOST /graphql/ [32m200 [0m156.521 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m233.578 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m154.693 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m234.426 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m319.101 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m159.646 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m234.339 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m312.377 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m157.996 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m238.595 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m313.713 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m156.172 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m232.190 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m317.723 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m234.298 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m172.755 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m317.981 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m156.437 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m237.949 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m329.079 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m158.224 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m233.267 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m637.128 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m538.400 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m232.532 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m316.006 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m234.503 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m630.761 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.300 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m549.424 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m248.778 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m315.830 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m234.114 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.315 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m312.615 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m232.503 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m312.311 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m233.167 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m310.471 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m232.844 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m318.732 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m232.868 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m310.925 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m236.331 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m315.127 ms - 747[0m
+[0mPOST /graphql/ [32m200 [0m232.375 ms - 31[0m
+params  juanz   188580746
+Error: Usuario o contraseña errada
+    at /home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:23
+    at step (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:5:58) {
+  message: 'Usuario o contraseña errada',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'login' ]
+}
+[0mPOST /graphql [32m200 [0m627.705 ms - 130[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m165.923 ms - 194[0m
+[0mPOST /graphql [32m200 [0m238.811 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m387.597 ms - 615[0m
+[0mPOST /graphql [32m200 [0m312.327 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m156.343 ms - 311[0m
+[0mPOST /graphql [32m200 [0m234.127 ms - 255[0m
+params  luisag   12345678
+[0mPOST /graphql/ [32m200 [0m166.334 ms - 194[0m
+[0mPOST /graphql/ [32m200 [0m235.576 ms - 669[0m
+[0mPOST /graphql/ [32m200 [0m234.597 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.796 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m241.700 ms - 669[0m
+[0mPOST /graphql/ [32m200 [0m238.000 ms - 31[0m
+params  luisag   12345678
+[0mPOST /graphql/ [32m200 [0m166.548 ms - 194[0m
+[0mPOST /graphql/ [32m200 [0m236.057 ms - 669[0m
+[0mPOST /graphql/ [32m200 [0m234.355 ms - 31[0m
+[0mPOST /graphql [32m200 [0m948.519 ms - 1015[0m
+[0mPOST /graphql/ [32m200 [0m641.131 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m612.125 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.858 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.262 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.904 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m232.364 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m237.922 ms - 702[0m
+params  juanz   3188580746
+[0mPOST /graphql/ [32m200 [0m167.975 ms - 194[0m
+[0mPOST /graphql/ [32m200 [0m235.495 ms - 2582[0m
+[0mPOST /graphql/ [32m200 [0m243.613 ms - 2582[0m
+[0mPOST /graphql/ [32m200 [0m232.708 ms - 31[0m
+params  luisag   12345678
+[0mPOST /graphql/ [32m200 [0m166.788 ms - 194[0m
+[0mPOST /graphql/ [32m200 [0m237.282 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m232.515 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m238.822 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m230.793 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.086 ms - 31[0m
+params  juanz   3188580746
+[0mPOST /graphql/ [32m200 [0m166.689 ms - 194[0m
+[0mPOST /graphql/ [32m200 [0m236.884 ms - 2582[0m
+[0mPOST /graphql/ [32m200 [0m237.229 ms - 31[0m
+params  luisag   12345678
+[0mPOST /graphql/ [32m200 [0m167.131 ms - 194[0m
+[0mPOST /graphql/ [32m200 [0m233.651 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m232.756 ms - 31[0m
+[0mPOST /graphql [32m200 [0m488.298 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m464.534 ms - 544[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m169.590 ms - 194[0m
+[0mPOST /graphql [32m200 [0m238.923 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m236.119 ms - 615[0m
+[0mPOST /graphql [32m200 [0m312.158 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m239.336 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.200 ms - 311[0m
+[0mPOST /graphql [32m200 [0m160.917 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m234.352 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m157.189 ms - 512[0m
+[0mPOST /graphql [32m200 [0m234.510 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m235.066 ms - 615[0m
+[0mPOST /graphql [32m200 [0m235.624 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m238.677 ms - 615[0m
+[0mPOST /graphql [32m200 [0m78.205 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.768 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.741 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.449 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.736 ms - 512[0m
+[0mPOST /graphql [32m200 [0m479.878 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.547 ms - 512[0m
+[0mPOST /graphql [32m200 [0m82.350 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.724 ms - 512[0m
+[0mPOST /graphql [32m200 [0m80.972 ms - 512[0m
+[0mPOST /graphql [32m200 [0m84.882 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.730 ms - 512[0m
+[0mPOST /graphql [32m200 [0m84.310 ms - 512[0m
+[0mPOST /graphql [32m200 [0m80.065 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.618 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.591 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.405 ms - 512[0m
+[0mPOST /graphql [32m200 [0m146.299 ms - 512[0m
+[0mPOST /graphql [32m200 [0m490.941 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.354 ms - 512[0m
+[0mPOST /graphql [32m200 [0m483.666 ms - 512[0m
+[0mPOST /graphql [32m200 [0m564.260 ms - 512[0m
+[0mPOST /graphql [32m200 [0m559.225 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.227 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.606 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m544.132 ms - 544[0m
+{ category: '5f1556882ffa2b2dfb52fa23' }
+[0mPOST /graphql [32m200 [0m233.380 ms - 32[0m
+{ category: '5f3bef5695e4f30017797d66' }
+[0mPOST /graphql [32m200 [0m314.543 ms - 298[0m
+{ category: '5f3b46805900310017300fef' }
+[0mPOST /graphql [32m200 [0m311.651 ms - 277[0m
+{ category: '5f15567a2ffa2b2dfb52fa22' }
+[0mPOST /graphql [32m200 [0m233.319 ms - 32[0m
+{}
+[0mPOST /graphql [32m200 [0m313.739 ms - 544[0m
+[0mPOST /graphql [32m200 [0m156.013 ms - 512[0m
+[0mPOST /graphql [32m200 [0m157.631 ms - 512[0m
+params  rtorrenegra   12345678
+Error: Usuario o contraseña errada
+    at /home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:23
+    at step (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:5:58)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Usuario o contraseña errada',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'login' ]
+}
+[0mPOST /graphql [32m200 [0m164.593 ms - 130[0m
+params  rtorrenegra   12345678
+Error: Usuario o contraseña errada
+    at /home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:23
+    at step (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:5:58)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Usuario o contraseña errada',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'login' ]
+}
+[0mPOST /graphql [32m200 [0m156.750 ms - 130[0m
+params  rafeaelt   12345678
+Error: Usuario o contraseña errada
+    at /home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:23
+    at step (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:5:58)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Usuario o contraseña errada',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'login' ]
+}
+[0mPOST /graphql [32m200 [0m156.247 ms - 130[0m
+params  rafaelt   12345678
+[0mPOST /graphql [32m200 [0m250.915 ms - 194[0m
+[0mPOST /graphql [32m200 [0m234.597 ms - 1062[0m
+{ owner: '5f32352047bc520017004061' }
+[0mPOST /graphql [32m200 [0m236.330 ms - 459[0m
+[0mPOST /graphql [32m200 [0m246.977 ms - 615[0m
+[0mOPTIONS /graphql [32m204 [0m0.227 ms - 0[0m
+[0mOPTIONS /graphql [32m204 [0m0.136 ms - 0[0m
+[0mOPTIONS /graphql [32m204 [0m0.149 ms - 0[0m
+[0mPOST /graphql [32m200 [0m495.364 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.937 ms - 512[0m
+[0mPOST /graphql [32m200 [0m158.562 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.755 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.511 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.485 ms - 512[0m
+[0mPOST /graphql [32m200 [0m158.067 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.583 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.593 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.672 ms - 512[0m
+[0mPOST /graphql [32m200 [0m158.158 ms - 512[0m
+[0mPOST /graphql [32m200 [0m160.113 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.631 ms - 512[0m
+[0mPOST /graphql [32m200 [0m157.726 ms - 512[0m
+[0mPOST /graphql [32m200 [0m80.370 ms - 512[0m
+[0mPOST /graphql [32m200 [0m112.575 ms - 512[0m
+[0mOPTIONS /graphql [32m204 [0m0.141 ms - 0[0m
+[0mPOST /graphql [32m200 [0m84.142 ms - 512[0m
+[0mOPTIONS /graphql [32m204 [0m0.115 ms - 0[0m
+[0mPOST /graphql [32m200 [0m78.795 ms - 512[0m
+[0mOPTIONS /graphql [32m204 [0m0.117 ms - 0[0m
+{}
+[0mPOST /graphql [32m200 [0m312.172 ms - 544[0m
+[0mOPTIONS /graphql [32m204 [0m0.118 ms - 0[0m
+[0mPOST /graphql [32m200 [0m78.753 ms - 512[0m
+[0mPOST /graphql [32m200 [0m80.375 ms - 512[0m
+[0mOPTIONS /graphql [32m204 [0m0.118 ms - 0[0m
+[0mPOST /graphql [32m200 [0m79.560 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.834 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.863 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.905 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.018 ms - 512[0m
+[0mPOST /graphql [32m200 [0m167.494 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.137 ms - 512[0m
+[0mPOST /graphql [32m200 [0m158.091 ms - 512[0m
+[0mPOST /graphql [32m200 [0m155.868 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.978 ms - 512[0m
+[0mPOST /graphql [32m200 [0m155.873 ms - 512[0m
+[0mPOST /graphql [32m200 [0m80.248 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.422 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.439 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.570 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.899 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m319.564 ms - 544[0m
+{ category: '5f1556992ffa2b2dfb52fa24' }
+[0mPOST /graphql [32m200 [0m233.475 ms - 32[0m
+{}
+[0mPOST /graphql [32m200 [0m313.775 ms - 544[0m
+[0mOPTIONS /graphql [32m204 [0m0.124 ms - 0[0m
+[0mOPTIONS /graphql [32m204 [0m0.113 ms - 0[0m
+[0mOPTIONS /graphql [32m204 [0m0.115 ms - 0[0m
+[0mPOST /graphql [32m200 [0m474.627 ms - 512[0m
+[0mPOST /graphql [32m200 [0m161.118 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m538.730 ms - 544[0m
+{ category: '5f1556992ffa2b2dfb52fa24' }
+[0mPOST /graphql [32m200 [0m235.706 ms - 32[0m
+{ category: '5f3bef5695e4f30017797d66' }
+[0mPOST /graphql [32m200 [0m311.410 ms - 298[0m
+{}
+[0mPOST /graphql [32m200 [0m316.710 ms - 544[0m
+[0mPOST /graphql [32m200 [0m156.061 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.576 ms - 512[0m
+[0mPOST /graphql [32m200 [0m155.863 ms - 512[0m
+[0mPOST /graphql [32m200 [0m157.787 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.052 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.438 ms - 512[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m243.866 ms - 194[0m
+[0mPOST /graphql [32m200 [0m237.549 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m236.797 ms - 615[0m
+[0mPOST /graphql [32m200 [0m236.124 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m238.031 ms - 615[0m
+[0mPOST /graphql [32m200 [0m311.466 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m238.116 ms - 534[0m
+[0mPOST /graphql [32m200 [0m237.154 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m235.081 ms - 534[0m
+[0mPOST /graphql [32m200 [0m157.413 ms - 311[0m
+[0mPOST /graphql [32m200 [0m164.390 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m235.737 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m156.138 ms - 512[0m
+[0mPOST /graphql [32m200 [0m235.419 ms - 615[0m
+[0mPOST /graphql [32m200 [0m236.695 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m234.482 ms - 615[0m
+[0mPOST /graphql [32m200 [0m235.806 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.044 ms - 311[0m
+[0mPOST /graphql [32m200 [0m234.887 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m160.531 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m234.504 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m235.767 ms - 615[0m
+[0mPOST /graphql [32m200 [0m237.034 ms - 612[0m
+[0mPOST /graphql [32m200 [0m236.599 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m239.238 ms - 1015[0m
+(node:1512) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+connected to db
+[0mPOST /graphql [32m200 [0m209.092 ms - 512[0m
+[0mPOST /graphql [32m200 [0m159.754 ms - 512[0m
+[0mPOST /graphql [32m200 [0m158.909 ms - 512[0m
+[0mPOST /graphql [32m200 [0m157.629 ms - 512[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m255.174 ms - 194[0m
+[0mPOST /graphql [32m200 [0m248.136 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m238.697 ms - 615[0m
+[0mOPTIONS /graphql [32m204 [0m0.697 ms - 0[0m
+[0mOPTIONS /graphql [32m204 [0m0.142 ms - 0[0m
+[0mPOST /graphql [0m- [0m- ms - -[0m
+[0mPOST /graphql [0m- [0m- ms - -[0m
+[0mPOST /graphql [32m200 [0m255.174 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m245.260 ms - 615[0m
+[0mPOST /graphql [32m200 [0m242.162 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m237.990 ms - 615[0m
+[0mPOST /graphql [32m200 [0m242.315 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m236.735 ms - 615[0m
+[0mOPTIONS /graphql [32m204 [0m0.179 ms - 0[0m
+[0mOPTIONS /graphql [32m204 [0m0.160 ms - 0[0m
+[0mOPTIONS /graphql [32m204 [0m0.157 ms - 0[0m
+[0mPOST /graphql [32m200 [0m79.871 ms - 512[0m
+[0mPOST /graphql [32m200 [0m241.491 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m238.270 ms - 615[0m
+[0mPOST /graphql [32m200 [0m242.286 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m238.296 ms - 534[0m
+[0mPOST /graphql [32m200 [0m159.912 ms - 311[0m
+[0mPOST /graphql [32m200 [0m179.060 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m236.146 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m158.111 ms - 512[0m
+[0mPOST /graphql [32m200 [0m237.263 ms - 615[0m
+[0mPOST /graphql [32m200 [0m653.645 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m156.281 ms - 512[0m
+[0mPOST /graphql [32m200 [0m388.616 ms - 615[0m
+[0mPOST /graphql [32m200 [0m240.041 ms - 615[0m
+[0mPOST /graphql [32m200 [0m238.511 ms - 612[0m
+[0mPOST /graphql [32m200 [0m236.600 ms - 615[0m
+[0mPOST /graphql [32m200 [0m319.242 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m237.179 ms - 534[0m
+[0mPOST /graphql [32m200 [0m157.006 ms - 311[0m
+[0mPOST /graphql [32m200 [0m161.931 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m156.940 ms - 512[0m
+[0mPOST /graphql [32m200 [0m239.519 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m79.361 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m252.887 ms - 544[0m
+[0mPOST /graphql [32m200 [0m78.802 ms - 512[0m
+[0mOPTIONS /graphql [32m204 [0m0.868 ms - 0[0m
+[0mOPTIONS /graphql [32m204 [0m0.120 ms - 0[0m
+[0mPOST /graphql [0m- [0m- ms - -[0m
+[0mPOST /graphql [0m- [0m- ms - -[0m
+[0mPOST /graphql [32m200 [0m80.455 ms - 512[0m
+[0mPOST /graphql [32m200 [0m85.859 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.362 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.379 ms - 512[0m
+[0mPOST /graphql [32m200 [0m80.380 ms - 512[0m
+GraphQLError [Object]: Syntax Error: Expected Name, found "{".
+    at syntaxError (/home/ubuntu/mipedido/node_modules/graphql/error/syntaxError.js:15:10)
+    at Parser.expectToken (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1423:40)
+    at Parser.parseName (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:92:22)
+    at Parser.parseField (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:295:19)
+    at Parser.parseSelection (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:278:81)
+    at Parser.many (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1537:26)
+    at Parser.parseSelectionSet (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:265:24)
+    at Parser.parseOperationDefinition (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:175:28)
+    at Parser.parseDefinition (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:150:19)
+    at Parser.many (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1537:26)
+    at Parser.parseDocument (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:109:25)
+    at parse (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:36:17)
+    at graphqlMiddleware (/home/ubuntu/mipedido/node_modules/express-graphql/index.js:124:23) {
+  message: 'Syntax Error: Expected Name, found "{".',
+  locations: [ { line: 2, column: 10 } ]
+}
+[0mGET /graphql?query=%7B%0A%20%20users%3A%20%7B%0A%20%20%09_id%0A%09%7D%0A%7D [33m400 [0m108.152 ms - 975822[0m
+[0mPOST /graphql [32m200 [0m44.652 ms - 52513[0m
+[0mPOST /graphql [32m200 [0m78.953 ms - 31[0m
+[0mPOST /graphql [32m200 [0m80.711 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.466 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.098 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m317.810 ms - 544[0m
+{ category: '5f3b46805900310017300fef' }
+[0mPOST /graphql [32m200 [0m241.565 ms - 277[0m
+{ category: '5f15567a2ffa2b2dfb52fa22' }
+[0mPOST /graphql [32m200 [0m159.874 ms - 32[0m
+{}
+[0mPOST /graphql [32m200 [0m242.557 ms - 544[0m
+{ name: { '$regex': '.*paul.*', '$options': 'i' } }
+[0mPOST /graphql [32m200 [0m236.993 ms - 277[0m
+{}
+[0mPOST /graphql [32m200 [0m242.381 ms - 544[0m
+[0mPOST /graphql [32m200 [0m78.780 ms - 512[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m191.927 ms - 194[0m
+[0mPOST /graphql [32m200 [0m243.218 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m238.025 ms - 615[0m
+[0mPOST /graphql [32m200 [0m314.127 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m237.366 ms - 534[0m
+[0mPOST /graphql [32m200 [0m161.040 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m238.062 ms - 615[0m
+[0mPOST /graphql [32m200 [0m237.528 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m235.901 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.183 ms - 512[0m
+[0mPOST /graphql [32m200 [0m238.256 ms - 615[0m
+[0mPOST /graphql [32m200 [0m249.025 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m235.443 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.398 ms - 311[0m
+[0mPOST /graphql [32m200 [0m160.840 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m235.325 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m156.555 ms - 512[0m
+[0mPOST /graphql [32m200 [0m235.839 ms - 615[0m
+[0mPOST /graphql [32m200 [0m239.591 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m244.894 ms - 615[0m
+[0mPOST /graphql [32m200 [0m239.600 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m238.132 ms - 534[0m
+[0mPOST /graphql [32m200 [0m157.215 ms - 311[0m
+[0mPOST /graphql [32m200 [0m236.377 ms - 615[0m
+[0mOPTIONS /graphql [32m204 [0m0.142 ms - 0[0m
+[0mOPTIONS /graphql [32m204 [0m0.099 ms - 0[0m
+[0mPOST /graphql [0m- [0m- ms - -[0m
+[0mPOST /graphql [0m- [0m- ms - -[0m
+[0mOPTIONS /graphql [32m204 [0m0.142 ms - 0[0m
+[0mPOST /graphql [32m200 [0m78.728 ms - 512[0m
+[0mPOST /graphql [32m200 [0m946.365 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m236.676 ms - 615[0m
+[0mPOST /graphql [32m200 [0m236.578 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.949 ms - 311[0m
+[0mPOST /graphql [32m200 [0m156.822 ms - 512[0m
+[0mPOST /graphql [32m200 [0m550.453 ms - 311[0m
+[0mPOST /graphql [32m200 [0m189.377 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m558.180 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m158.638 ms - 311[0m
+[0mPOST /graphql [32m200 [0m159.906 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m158.030 ms - 311[0m
+[0mPOST /graphql [32m200 [0m234.729 ms - 526[0m
+[0mPOST /graphql [32m200 [0m159.956 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m321.098 ms - 87[0m
+[0mPOST /graphql [32m200 [0m319.782 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m399.476 ms - 609[0m
+[0mPOST /graphql [32m200 [0m158.363 ms - 311[0m
+[0mPOST /graphql [32m200 [0m161.633 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m237.552 ms - 622[0m
+[0mPOST /graphql [32m200 [0m157.749 ms - 311[0m
+[0mPOST /graphql [32m200 [0m798.463 ms - 615[0m
+[0mPOST /graphql [32m200 [0m312.339 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m234.973 ms - 534[0m
+[0mPOST /graphql [32m200 [0m162.042 ms - 311[0m
+[0mPOST /graphql [32m200 [0m159.508 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m240.062 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m156.041 ms - 512[0m
+[0mPOST /graphql [32m200 [0m239.024 ms - 615[0m
+[0mPOST /graphql [32m200 [0m483.200 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m471.159 ms - 544[0m
+params  juanz   318880746
+Error: Usuario o contraseña errada
+    at /home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:23
+    at step (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:5:58) {
+  message: 'Usuario o contraseña errada',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'login' ]
+}
+[0mPOST /graphql [32m200 [0m186.309 ms - 130[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m175.890 ms - 194[0m
+[0mPOST /graphql [32m200 [0m260.412 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m250.681 ms - 615[0m
+[0mPOST /graphql [32m200 [0m311.842 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m234.902 ms - 534[0m
+[0mPOST /graphql [32m200 [0m158.109 ms - 311[0m
+[0mPOST /graphql [32m200 [0m166.676 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m235.797 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m162.092 ms - 512[0m
+[0mPOST /graphql [32m200 [0m496.687 ms - 512[0m
+[0mPOST /graphql [32m200 [0m644.756 ms - 1062[0m
+[0mPOST /graphql [32m200 [0m482.789 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.634 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.560 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m463.370 ms - 544[0m
+{ category: '5f3b46805900310017300fef' }
+[0mPOST /graphql [32m200 [0m237.794 ms - 277[0m
+{}
+[0mPOST /graphql [32m200 [0m234.868 ms - 544[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m168.892 ms - 194[0m
+[0mPOST /graphql [32m200 [0m238.595 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m239.537 ms - 615[0m
+[0mPOST /graphql [32m200 [0m311.355 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m236.306 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.536 ms - 311[0m
+[0mPOST /graphql [32m200 [0m165.449 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m234.555 ms - 1133[0m
+before to send to pn:  {
+  to: 'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m171.398 ms - 128[0m
+before to send to pn:  {
+  to: 'fB1W1JPLQBaJ1EaUjnNw27:APA91bG8C-cH-9FsngqHUjp5385SJ58auyPD-qb6Gjxfzz8GrJ6Ni32KytnLf2dTdiK-cFRhRqTgKKFy-_ftaYwsk-G2f6mK7tDua-QgA0Xor2TGbn2a9ZFYDzyDGQVLU5T6veQkFvcO',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m331.216 ms - 156[0m
+before to send to pn:  {
+  to: 'dCw1ia43TtuxfB15XYBh_o:APA91bGmh20a9N9UnL9qJkkmOSABj6HewY8gb3SmM4ob6UGqfintV45ZKzx_wcrBERdnS-xurREHZwRZyqmnKpZv0lp7MWb5d5RH6H5cCYMmokx28HvsYGn-F4xEYJVE6AB32zo2_s4M',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m133.279 ms - 155[0m
+[0mPOST /graphql [32m200 [0m156.783 ms - 512[0m
+[0mPOST /graphql [32m200 [0m237.814 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m234.964 ms - 615[0m
+[0mPOST /graphql [32m200 [0m237.603 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m240.549 ms - 615[0m
+[0mPOST /graphql [32m200 [0m246.580 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m234.688 ms - 615[0m
+[0mPOST /graphql [32m200 [0m237.330 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m155.934 ms - 512[0m
+[0mPOST /graphql [32m200 [0m236.210 ms - 615[0m
+[0mPOST /graphql [32m200 [0m78.848 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m240.945 ms - 544[0m
+{}
+[0mPOST /graphql [32m200 [0m235.088 ms - 544[0m
+{ category: '5f3b46805900310017300fef' }
+[0mPOST /graphql [32m200 [0m234.139 ms - 277[0m
+{ category: '5f15567a2ffa2b2dfb52fa22' }
+[0mPOST /graphql [32m200 [0m156.413 ms - 32[0m
+{}
+[0mPOST /graphql [32m200 [0m234.577 ms - 544[0m
+{ category: '5f3b46805900310017300fef' }
+[0mPOST /graphql [32m200 [0m234.080 ms - 277[0m
+{ category: '5f15567a2ffa2b2dfb52fa22' }
+[0mPOST /graphql [32m200 [0m157.457 ms - 32[0m
+{}
+[0mPOST /graphql [32m200 [0m236.082 ms - 544[0m
+[0mPOST /graphql [32m200 [0m479.610 ms - 512[0m
+{ category: '5f15567a2ffa2b2dfb52fa22' }
+[0mPOST /graphql [32m200 [0m157.928 ms - 32[0m
+{}
+[0mPOST /graphql [32m200 [0m464.476 ms - 544[0m
+[0mPOST /graphql [32m200 [0m488.751 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.534 ms - 512[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m168.558 ms - 194[0m
+[0mPOST /graphql [32m200 [0m277.779 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m391.979 ms - 615[0m
+[0mPOST /graphql [32m200 [0m316.684 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m155.937 ms - 512[0m
+[0mPOST /graphql [32m200 [0m235.198 ms - 615[0m
+[0mPOST /graphql [32m200 [0m235.440 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m238.706 ms - 534[0m
+[0mPOST /graphql [32m200 [0m161.604 ms - 311[0m
+[0mPOST /graphql [32m200 [0m165.678 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m237.463 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m157.028 ms - 512[0m
+[0mPOST /graphql [32m200 [0m235.311 ms - 615[0m
+[0mPOST /graphql [32m200 [0m656.409 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m386.248 ms - 615[0m
+[0mGET /graphql [32m200 [0m4.834 ms - 975590[0m
+[0mPOST /graphql [32m200 [0m11.183 ms - 52513[0m
+[0mPOST /graphql [32m200 [0m483.013 ms - 31[0m
+[0mPOST /graphql [32m200 [0m480.021 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m639.544 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m643.931 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.273 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m634.519 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m234.438 ms - 31[0m
+params  andresz   12345678
+Error: Usuario o contraseña errada
+    at /home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:23
+    at step (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:5:58) {
+  message: 'Usuario o contraseña errada',
+  locations: [ { line: 1, column: 59 } ],
+  path: [ 'login' ]
+}
+[0mPOST /graphql/ [32m200 [0m179.365 ms - 131[0m
+params  rafaelt   12345678
+[0mPOST /graphql/ [32m200 [0m167.994 ms - 194[0m
+[0mPOST /graphql/ [32m200 [0m234.925 ms - 704[0m
+[0mPOST /graphql/ [32m200 [0m234.399 ms - 31[0m
+[0mPOST /graphql [32m200 [0m79.076 ms - 512[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m166.952 ms - 194[0m
+[0mPOST /graphql [32m200 [0m239.307 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m390.191 ms - 615[0m
+[0mPOST /graphql [32m200 [0m315.544 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m157.215 ms - 311[0m
+[0mPOST /graphql [32m200 [0m235.443 ms - 260[0m
+[0mPOST /graphql [32m200 [0m235.826 ms - 1015[0m
+params  andresz   12345678
+Error: Usuario o contraseña errada
+    at /home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:23
+    at step (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:5:58) {
+  message: 'Usuario o contraseña errada',
+  locations: [ { line: 1, column: 59 } ],
+  path: [ 'login' ]
+}
+[0mPOST /graphql/ [32m200 [0m169.831 ms - 131[0m
+params  andresz   3188580746
+[0mPOST /graphql/ [32m200 [0m169.330 ms - 194[0m
+[0mPOST /graphql/ [32m200 [0m234.610 ms - 535[0m
+[0mPOST /graphql/ [32m200 [0m234.640 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m637.727 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m639.041 ms - 535[0m
+[0mPOST /graphql/ [32m200 [0m233.410 ms - 535[0m
+[0mPOST /graphql/ [32m200 [0m239.062 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.433 ms - 535[0m
+[0mPOST /graphql/ [32m200 [0m233.666 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.699 ms - 535[0m
+[0mPOST /graphql/ [32m200 [0m236.127 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m626.177 ms - 535[0m
+[0mPOST /graphql/ [32m200 [0m629.184 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.927 ms - 535[0m
+[0mPOST /graphql/ [32m200 [0m234.200 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.315 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.981 ms - 535[0m
+[0mPOST /graphql/ [32m200 [0m232.929 ms - 535[0m
+[0mPOST /graphql/ [32m200 [0m231.844 ms - 31[0m
+[0mPOST /graphql [32m200 [0m569.239 ms - 311[0m
+[0mPOST /graphql [32m200 [0m642.496 ms - 255[0m
+params  luisag   12345678
+[0mPOST /graphql/ [32m200 [0m167.041 ms - 194[0m
+[0mPOST /graphql/ [32m200 [0m233.813 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m233.842 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.489 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.242 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m231.913 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m629.954 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m624.910 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m635.455 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m638.041 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m638.854 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m615.046 ms - 702[0m
+[0mPOST /graphql [32m200 [0m644.868 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m409.325 ms - 615[0m
+[0mPOST /graphql [32m200 [0m156.030 ms - 512[0m
+[0mPOST /graphql/ [32m200 [0m661.007 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m627.121 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.965 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m231.761 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m235.451 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m650.936 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m644.734 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.495 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m235.245 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.322 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.628 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m638.118 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m636.833 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m637.595 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m232.570 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m384.479 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m431.777 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.454 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.647 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m232.656 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.442 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.367 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.143 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m231.934 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.322 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m234.083 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.165 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.753 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m644.806 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m644.399 ms - 702[0m
+[0mPOST /graphql [32m200 [0m156.870 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m392.468 ms - 544[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m246.704 ms - 194[0m
+[0mPOST /graphql [32m200 [0m244.405 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m243.526 ms - 615[0m
+[0mPOST /graphql [32m200 [0m156.416 ms - 311[0m
+[0mPOST /graphql [32m200 [0m235.027 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.067 ms - 311[0m
+[0mPOST /graphql [32m200 [0m236.786 ms - 534[0m
+[0mPOST /graphql [32m200 [0m234.585 ms - 615[0m
+[0mPOST /graphql [32m200 [0m236.105 ms - 534[0m
+[0mPOST /graphql/ [32m200 [0m233.306 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.681 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m235.692 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m232.836 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m641.042 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m642.155 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m629.603 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m613.473 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m239.172 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.433 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m235.148 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m232.081 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.342 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m230.946 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.362 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m240.818 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.668 ms - 702[0m
+[0mPOST /graphql/ [32m200 [0m234.483 ms - 31[0m
+[0mGET /graphql [32m200 [0m4.962 ms - 975590[0m
+[0mPOST /graphql [32m200 [0m14.673 ms - 52513[0m
+[0mPOST /graphql [32m200 [0m482.269 ms - 31[0m
+[0mPOST /graphql [32m200 [0m15.294 ms - 52513[0m
+(node:18124) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+connected to db
+[0mPOST /graphql [32m200 [0m197.903 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m345.017 ms - 544[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m251.026 ms - 194[0m
+[0mPOST /graphql [32m200 [0m267.486 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m242.816 ms - 615[0m
+[0mPOST /graphql [32m200 [0m247.618 ms - 1133[0m
+before to send to pn:  {
+  to: 'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m153.339 ms - 129[0m
+before to send to pn:  {
+  to: 'fB1W1JPLQBaJ1EaUjnNw27:APA91bG8C-cH-9FsngqHUjp5385SJ58auyPD-qb6Gjxfzz8GrJ6Ni32KytnLf2dTdiK-cFRhRqTgKKFy-_ftaYwsk-G2f6mK7tDua-QgA0Xor2TGbn2a9ZFYDzyDGQVLU5T6veQkFvcO',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m126.331 ms - 156[0m
+before to send to pn:  {
+  to: 'dCw1ia43TtuxfB15XYBh_o:APA91bGmh20a9N9UnL9qJkkmOSABj6HewY8gb3SmM4ob6UGqfintV45ZKzx_wcrBERdnS-xurREHZwRZyqmnKpZv0lp7MWb5d5RH6H5cCYMmokx28HvsYGn-F4xEYJVE6AB32zo2_s4M',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m137.960 ms - 156[0m
+[0mPOST /graphql/ [31m500 [0m1.325 ms - 40[0m
+[0mPOST /graphql/ [31m500 [0m0.760 ms - 40[0m
+[0mPOST /graphql/ [31m500 [0m0.753 ms - 40[0m
+[0mPOST /graphql [32m200 [0m487.823 ms - 512[0m
+{ category: '5f3b46805900310017300fef' }
+[0mPOST /graphql [32m200 [0m329.583 ms - 277[0m
+{ category: '5f1556992ffa2b2dfb52fa24' }
+[0mPOST /graphql [32m200 [0m156.537 ms - 32[0m
+{ category: '5f1556882ffa2b2dfb52fa23' }
+[0mPOST /graphql [32m200 [0m156.616 ms - 32[0m
+{}
+[0mPOST /graphql [32m200 [0m313.624 ms - 544[0m
+[0mPOST /graphql [32m200 [0m80.647 ms - 512[0m
+{ category: '5f1556882ffa2b2dfb52fa23' }
+[0mPOST /graphql [32m200 [0m159.843 ms - 32[0m
+{ category: '5f15567a2ffa2b2dfb52fa22' }
+[0mPOST /graphql [32m200 [0m156.892 ms - 32[0m
+{ category: '5f1556992ffa2b2dfb52fa24' }
+[0mPOST /graphql [32m200 [0m157.825 ms - 32[0m
+{ category: '5f3bef5695e4f30017797d66' }
+[0mPOST /graphql [32m200 [0m236.984 ms - 298[0m
+[0mPOST /graphql/ [31m500 [0m0.673 ms - 40[0m
+[0mPOST /graphql/ [31m500 [0m0.662 ms - 40[0m
+[0mPOST /graphql/ [31m500 [0m0.670 ms - 40[0m
+[0mPOST /graphql/ [31m500 [0m1.797 ms - 40[0m
+[0mPOST /graphql/ [31m500 [0m0.702 ms - 40[0m
+[0mPOST /graphql/ [31m500 [0m0.467 ms - 40[0m
+[0mPOST /login [32m200 [0m734.847 ms - 3067[0m
+[0mPOST /login [32m200 [0m729.915 ms - 3067[0m
+[0mPOST /login [32m200 [0m326.593 ms - 3067[0m
+[0mPOST /graphql/ [32m200 [0m236.128 ms - 31[0m
+[0mPOST /login [32m200 [0m333.328 ms - 3067[0m
+[0mPOST /login [32m200 [0m328.804 ms - 3067[0m
+[0mPOST /jsonws/invoke [33m404 [0m1.464 ms - 136[0m
+NotFoundError: Not Found
+    at /home/ubuntu/mipedido/app.ts:92:8
+    at Layer.handle [as handle_request] (/home/ubuntu/mipedido/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ubuntu/mipedido/node_modules/express/lib/router/index.js:317:13)
+    at /home/ubuntu/mipedido/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/ubuntu/mipedido/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/ubuntu/mipedido/node_modules/express/lib/router/index.js:275:10)
+    at cors (/home/ubuntu/mipedido/node_modules/cors/lib/index.js:188:7)
+    at /home/ubuntu/mipedido/node_modules/cors/lib/index.js:224:17
+    at originCallback (/home/ubuntu/mipedido/node_modules/cors/lib/index.js:214:15)
+    at /home/ubuntu/mipedido/node_modules/cors/lib/index.js:219:13
+    at optionsCallback (/home/ubuntu/mipedido/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/home/ubuntu/mipedido/node_modules/cors/lib/index.js:204:7)
+    at Layer.handle [as handle_request] (/home/ubuntu/mipedido/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ubuntu/mipedido/node_modules/express/lib/router/index.js:317:13)
+    at /home/ubuntu/mipedido/node_modules/express/lib/router/index.js:284:7
+    at param (/home/ubuntu/mipedido/node_modules/express/lib/router/index.js:354:14)
+[0mPOST /graphql [32m200 [0m487.262 ms - 512[0m
+[0mPOST /graphql/ [32m200 [0m650.847 ms - 31[0m
+[0mPOST /login [32m200 [0m362.337 ms - 3067[0m
+[0mPOST /login [32m200 [0m796.486 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m637.487 ms - 31[0m
+[0mPOST /login [32m200 [0m400.261 ms - 1195[0m
+[0mPOST /login [32m200 [0m809.998 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m234.559 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.206 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m638.045 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.082 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.534 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m713.475 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m542.199 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m237.945 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m241.830 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.596 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.662 ms - 31[0m
+[0mPOST /graphql [32m200 [0m805.835 ms - 615[0m
+[0mPOST /graphql/ [32m200 [0m232.935 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m648.518 ms - 31[0m
+[0mPOST /graphql [32m200 [0m274.874 ms - 512[0m
+[0mPOST /graphql [32m200 [0m549.587 ms - 1015[0m
+[0mPOST /graphql/ [32m200 [0m232.941 ms - 31[0m
+[0mPOST /login [32m200 [0m324.911 ms - 3067[0m
+[0mPOST /login [32m200 [0m794.226 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m234.276 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m239.149 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.087 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.508 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.451 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.715 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m636.370 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m636.791 ms - 31[0m
+[0mPOST /login [32m200 [0m808.365 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m234.500 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.949 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m649.886 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m622.706 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.604 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m630.364 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m650.613 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.588 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m642.334 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m629.902 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.679 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m627.534 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m634.165 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m636.725 ms - 31[0m
+[0mPOST /login [32m200 [0m804.170 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m234.481 ms - 31[0m
+[0mPOST /login [32m200 [0m400.370 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m234.387 ms - 31[0m
+[0mPOST /graphql [32m200 [0m577.550 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m548.495 ms - 544[0m
+{ category: '5f1556882ffa2b2dfb52fa23' }
+[0mPOST /graphql [32m200 [0m233.962 ms - 32[0m
+{ category: '5f3bef5695e4f30017797d66' }
+[0mPOST /graphql [32m200 [0m313.884 ms - 298[0m
+{ category: '5f1556992ffa2b2dfb52fa24' }
+[0mPOST /graphql [32m200 [0m233.712 ms - 32[0m
+{ category: '5f15567a2ffa2b2dfb52fa22' }
+[0mPOST /graphql [32m200 [0m249.733 ms - 32[0m
+{ category: '5f3b46805900310017300fef' }
+[0mPOST /graphql [32m200 [0m314.979 ms - 277[0m
+{}
+[0mPOST /graphql [32m200 [0m317.554 ms - 544[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m243.318 ms - 194[0m
+[0mPOST /graphql [32m200 [0m239.092 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m236.979 ms - 615[0m
+[0mPOST /graphql [32m200 [0m314.685 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m236.402 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.564 ms - 311[0m
+[0mPOST /graphql [32m200 [0m163.273 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m241.512 ms - 1133[0m
+before to send to pn:  {
+  to: 'fB1W1JPLQBaJ1EaUjnNw27:APA91bG8C-cH-9FsngqHUjp5385SJ58auyPD-qb6Gjxfzz8GrJ6Ni32KytnLf2dTdiK-cFRhRqTgKKFy-_ftaYwsk-G2f6mK7tDua-QgA0Xor2TGbn2a9ZFYDzyDGQVLU5T6veQkFvcO',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m126.206 ms - 156[0m
+before to send to pn:  {
+  to: 'dCw1ia43TtuxfB15XYBh_o:APA91bGmh20a9N9UnL9qJkkmOSABj6HewY8gb3SmM4ob6UGqfintV45ZKzx_wcrBERdnS-xurREHZwRZyqmnKpZv0lp7MWb5d5RH6H5cCYMmokx28HvsYGn-F4xEYJVE6AB32zo2_s4M',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m140.510 ms - 156[0m
+before to send to pn:  {
+  to: 'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m105.497 ms - 128[0m
+[0mPOST /graphql [32m200 [0m157.479 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.235 ms - 100[0m
+[0mPOST /graphql [32m200 [0m161.178 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m238.122 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m235.006 ms - 615[0m
+[0mPOST /graphql [32m200 [0m243.930 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m235.202 ms - 534[0m
+[0mPOST /graphql [32m200 [0m157.648 ms - 179[0m
+[0mPOST /graphql [32m200 [0m156.784 ms - 512[0m
+[0mPOST /graphql [32m200 [0m235.342 ms - 385[0m
+[0mPOST /graphql [32m200 [0m240.998 ms - 449[0m
+[0mPOST /graphql [32m200 [0m239.328 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m156.898 ms - 179[0m
+[0mPOST /graphql [32m200 [0m156.176 ms - 512[0m
+[0mPOST /graphql [32m200 [0m234.947 ms - 385[0m
+[0mPOST /graphql [32m200 [0m234.452 ms - 449[0m
+[0mPOST /graphql [32m200 [0m238.858 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m156.367 ms - 179[0m
+[0mPOST /graphql [32m200 [0m156.050 ms - 512[0m
+[0mPOST /graphql [32m200 [0m235.961 ms - 449[0m
+[0mPOST /graphql [32m200 [0m235.065 ms - 385[0m
+params  luisag   12345678
+[0mPOST /graphql [32m200 [0m167.691 ms - 194[0m
+[0mPOST /graphql [32m200 [0m237.702 ms - 1060[0m
+{ owner: '5f3b36b654164100174a6c52' }
+[0mPOST /graphql [32m200 [0m236.537 ms - 440[0m
+[0mPOST /graphql [32m200 [0m276.344 ms - 615[0m
+[0mPOST /graphql [32m200 [0m158.033 ms - 360[0m
+[0mPOST /graphql [32m200 [0m234.749 ms - 615[0m
+[0mPOST /graphql [32m200 [0m158.929 ms - 360[0m
+[0mPOST /graphql [32m200 [0m156.633 ms - 179[0m
+[0mPOST /graphql [32m200 [0m159.021 ms - 512[0m
+[0mPOST /graphql [32m200 [0m236.522 ms - 385[0m
+[0mPOST /graphql [32m200 [0m237.032 ms - 430[0m
+[0mPOST /graphql [32m200 [0m236.369 ms - 615[0m
+[0mPOST /graphql [32m200 [0m156.978 ms - 179[0m
+[0mPOST /graphql [32m200 [0m154.822 ms - 512[0m
+[0mPOST /graphql [32m200 [0m234.560 ms - 385[0m
+[0mPOST /graphql [32m200 [0m233.028 ms - 430[0m
+[0mPOST /graphql [32m200 [0m156.998 ms - 360[0m
+[0mPOST /graphql [32m200 [0m156.342 ms - 179[0m
+[0mPOST /graphql [32m200 [0m154.729 ms - 512[0m
+[0mPOST /graphql [32m200 [0m235.006 ms - 385[0m
+[0mPOST /graphql [32m200 [0m235.548 ms - 430[0m
+[0mPOST /graphql [32m200 [0m235.990 ms - 615[0m
+[0mPOST /graphql [32m200 [0m156.863 ms - 360[0m
+[0mPOST /graphql [32m200 [0m157.879 ms - 179[0m
+[0mPOST /graphql [32m200 [0m158.718 ms - 512[0m
+[0mPOST /graphql [32m200 [0m235.395 ms - 430[0m
+[0mPOST /graphql [32m200 [0m235.421 ms - 385[0m
+[0mPOST /graphql [32m200 [0m236.092 ms - 615[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m167.167 ms - 194[0m
+[0mPOST /graphql [32m200 [0m239.844 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m235.530 ms - 615[0m
+[0mPOST /graphql [32m200 [0m236.902 ms - 534[0m
+[0mPOST /graphql [32m200 [0m157.890 ms - 512[0m
+[0mPOST /graphql [32m200 [0m157.569 ms - 179[0m
+[0mPOST /graphql [32m200 [0m234.220 ms - 385[0m
+[0mPOST /graphql [32m200 [0m235.722 ms - 449[0m
+[0mPOST /graphql [32m200 [0m239.792 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m235.770 ms - 615[0m
+[0mPOST /graphql/ [32m200 [0m674.050 ms - 31[0m
+[0mPOST /graphql [32m200 [0m657.127 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m157.049 ms - 512[0m
+[0mPOST /graphql [32m200 [0m393.319 ms - 615[0m
+[0mPOST /graphql [32m200 [0m79.106 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.510 ms - 512[0m
+[0mPOST /graphql [32m200 [0m80.494 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.084 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m313.180 ms - 544[0m
+[0mPOST /graphql [32m200 [0m479.879 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m471.855 ms - 544[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m169.110 ms - 194[0m
+[0mPOST /graphql [32m200 [0m239.220 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m235.994 ms - 615[0m
+[0mPOST /graphql [32m200 [0m311.028 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m158.315 ms - 311[0m
+[0mPOST /graphql [32m200 [0m234.036 ms - 257[0m
+[0mPOST /graphql [32m200 [0m235.238 ms - 534[0m
+[0mPOST /graphql [32m200 [0m164.309 ms - 512[0m
+[0mPOST /graphql [32m200 [0m162.314 ms - 179[0m
+[0mPOST /graphql [32m200 [0m236.578 ms - 385[0m
+[0mPOST /graphql [32m200 [0m255.256 ms - 449[0m
+[0mPOST /graphql [32m200 [0m235.957 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m156.447 ms - 311[0m
+[0mPOST /graphql [32m200 [0m235.971 ms - 257[0m
+[0mPOST /graphql [32m200 [0m239.808 ms - 78[0m
+[0mPOST /graphql [32m200 [0m238.051 ms - 615[0m
+[0mPOST /graphql [32m200 [0m78.701 ms - 512[0m
+[0mPOST /graphql [32m200 [0m78.964 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m235.280 ms - 544[0m
+[0mPOST /graphql/ [32m200 [0m644.494 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m642.920 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m644.556 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m239.122 ms - 31[0m
+[0mPOST /graphql/ [0m- [0m- ms - -[0m
+[0mPOST /graphql/ [32m200 [0m241.683 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.964 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m632.887 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.834 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.058 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.117 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.975 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.438 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m633.281 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.847 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.797 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.391 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.028 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.947 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.297 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.935 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.314 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m250.360 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.391 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.137 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.483 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.417 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.142 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.380 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.894 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.162 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.524 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.459 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.859 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.342 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.422 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.692 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.916 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m241.463 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.045 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.346 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m237.150 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m241.182 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.076 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.801 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.182 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.182 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.094 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m249.485 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.570 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m634.812 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m242.779 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.430 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.041 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.489 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.686 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.102 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.595 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.210 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.851 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.953 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.102 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m636.854 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.190 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m642.672 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.345 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.566 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.806 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.582 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.935 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m249.705 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.026 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.115 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.738 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.526 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.878 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.445 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.109 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m241.832 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.895 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.907 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.762 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.052 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.724 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m235.140 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m643.486 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m634.190 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m635.184 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m632.252 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.974 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m628.057 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.411 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.399 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m631.070 ms - 31[0m
+[0mPOST /graphql [32m200 [0m544.249 ms - 512[0m
+[0mPOST /graphql [32m200 [0m488.710 ms - 512[0m
+[0mPOST /graphql/ [32m200 [0m237.101 ms - 31[0m
+{
+  client: {
+    code: '4448584888888',
+    firstName: 'Jejejehehhhh',
+    lastName: 'Jej3heheh',
+    phone: '3186302988',
+    store: '5f3bee8895e4f30017797d65',
+    address: 'Tsgwgwgeggsgwge hdvwve'
+  }
+}
+[0mPOST /graphql/ [32m200 [0m369.457 ms - 84[0m
+[0mPOST /graphql/ [32m200 [0m234.208 ms - 31[0m
+{
+  client: {
+    code: '55855585855',
+    firstName: 'Hyhhhju',
+    lastName: 'Ttthtyy',
+    phone: '3004566585',
+    store: '5f3bee8895e4f30017797d65',
+    address: 'CRA 23 hgf 3543 free'
+  }
+}
+[0mPOST /graphql/ [32m200 [0m715.786 ms - 84[0m
+[0mPOST /graphql/ [32m200 [0m235.750 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.632 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m633.108 ms - 31[0m
+{
+  client: {
+    code: '10452563636',
+    firstName: 'RESTREPO ',
+    lastName: 'Zone ',
+    phone: '3004562525',
+    store: '5f3bee8895e4f30017797d65',
+    address: 'CRA 56 565 433 6765'
+  }
+}
+[0mPOST /graphql/ [32m200 [0m314.347 ms - 84[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m168.967 ms - 194[0m
+[0mPOST /graphql [32m200 [0m385.589 ms - 4094[0m
+[0mPOST /graphql [32m200 [0m392.039 ms - 615[0m
+[0mPOST /graphql [32m200 [0m335.318 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m238.065 ms - 615[0m
+[0mPOST /graphql [32m200 [0m234.962 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m156.467 ms - 512[0m
+[0mPOST /graphql [32m200 [0m164.625 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m238.088 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m162.177 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m156.353 ms - 311[0m
+[0mPOST /graphql [32m200 [0m174.789 ms - 3842[0m
+[0mPOST /graphql [32m200 [0m165.865 ms - 120[0m
+[0mPOST /graphql [32m200 [0m161.839 ms - 3936[0m
+[0mPOST /graphql [32m200 [0m159.114 ms - 311[0m
+[0mPOST /graphql [32m200 [0m237.881 ms - 3919[0m
+[0mPOST /graphql [32m200 [0m158.841 ms - 3936[0m
+[0mPOST /graphql [32m200 [0m322.195 ms - 87[0m
+[0mPOST /graphql [32m200 [0m160.403 ms - 3936[0m
+[0mPOST /graphql [32m200 [0m236.869 ms - 4013[0m
+[0mPOST /graphql [32m200 [0m157.681 ms - 311[0m
+[0mPOST /graphql [32m200 [0m236.163 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m238.106 ms - 534[0m
+[0mPOST /graphql [32m200 [0m235.184 ms - 615[0m
+[0mPOST /graphql [32m200 [0m573.759 ms - 3936[0m
+[0mPOST /graphql [32m200 [0m166.654 ms - 311[0m
+[0mPOST /graphql [32m200 [0m163.611 ms - 3936[0m
+[0mPOST /graphql [32m200 [0m155.668 ms - 117[0m
+[0mPOST /graphql [32m200 [0m234.051 ms - 123[0m
+[0mPOST /graphql [32m200 [0m160.103 ms - 3936[0m
+[0mPOST /graphql [32m200 [0m238.570 ms - 4188[0m
+[0mPOST /graphql [32m200 [0m160.580 ms - 3936[0m
+[0mPOST /graphql [32m200 [0m162.932 ms - 117[0m
+[0mPOST /graphql [32m200 [0m157.258 ms - 123[0m
+[0mPOST /graphql [32m200 [0m157.274 ms - 123[0m
+[0mPOST /graphql [32m200 [0m169.628 ms - 3936[0m
+[0mOPTIONS /graphql [32m204 [0m0.685 ms - 0[0m
+[0mOPTIONS /graphql [32m204 [0m0.112 ms - 0[0m
+[0mPOST /graphql [0m- [0m- ms - -[0m
+[0mPOST /graphql [0m- [0m- ms - -[0m
+[0mOPTIONS /graphql [32m204 [0m0.129 ms - 0[0m
+[0mPOST /graphql [32m200 [0m78.975 ms - 512[0m
+(node:14080) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+connected to db
+[0mPOST /graphql [31m500 [0m41.857 ms - 38[0m
+[0mPOST /graphql [31m500 [0m1.552 ms - 38[0m
+[0mPOST /graphql [31m500 [0m1.003 ms - 38[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m205.008 ms - 194[0m
+[0mPOST /graphql [32m200 [0m251.305 ms - 4188[0m
+[0mPOST /graphql [32m200 [0m244.818 ms - 615[0m
+[0mPOST /graphql [32m200 [0m242.554 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m241.896 ms - 534[0m
+[0mPOST /graphql [32m200 [0m169.840 ms - 311[0m
+[0mPOST /graphql [32m200 [0m242.274 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m256.988 ms - 534[0m
+[0mPOST /graphql [32m200 [0m159.165 ms - 189[0m
+[0mPOST /graphql [32m200 [0m237.958 ms - 534[0m
+[0mPOST /graphql [32m200 [0m160.041 ms - 895[0m
+[0mPOST /graphql [32m200 [0m238.316 ms - 615[0m
+[0mPOST /graphql [32m200 [0m238.438 ms - 534[0m
+[0mPOST /graphql [32m200 [0m158.567 ms - 311[0m
+[0mPOST /graphql [32m200 [0m238.977 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m158.443 ms - 512[0m
+[0mPOST /graphql [32m200 [0m237.492 ms - 1133[0m
+before to send to pn:  {
+  to: 'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m142.500 ms - 129[0m
+before to send to pn:  {
+  to: 'fB1W1JPLQBaJ1EaUjnNw27:APA91bG8C-cH-9FsngqHUjp5385SJ58auyPD-qb6Gjxfzz8GrJ6Ni32KytnLf2dTdiK-cFRhRqTgKKFy-_ftaYwsk-G2f6mK7tDua-QgA0Xor2TGbn2a9ZFYDzyDGQVLU5T6veQkFvcO',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m128.849 ms - 156[0m
+before to send to pn:  {
+  to: 'dCw1ia43TtuxfB15XYBh_o:APA91bGmh20a9N9UnL9qJkkmOSABj6HewY8gb3SmM4ob6UGqfintV45ZKzx_wcrBERdnS-xurREHZwRZyqmnKpZv0lp7MWb5d5RH6H5cCYMmokx28HvsYGn-F4xEYJVE6AB32zo2_s4M',
+  data: {
+    notification: {
+      title: 'Ping',
+      body: 'Verificación de dispositivo',
+      priority: 'hight',
+      content_available: true
+    }
+  },
+  android: { priority: 'hight' }
+}
+[0mPOST /send_notification_to [32m200 [0m127.785 ms - 156[0m
+[0mPOST /graphql [32m200 [0m247.750 ms - 615[0m
+[0mPOST /graphql/ [32m200 [0m639.903 ms - 31[0m
+[0mPOST /graphql [32m200 [0m872.905 ms - 534[0m
+[0mPOST /graphql [32m200 [0m156.817 ms - 311[0m
+[0mPOST /graphql [32m200 [0m238.488 ms - 615[0m
+[0mGET /graphql [32m200 [0m14.092 ms - 975590[0m
+[0mPOST /graphql [32m200 [0m35.207 ms - 52513[0m
+GraphQLError [Object]: Syntax Error: Expected Name, found "}".
+    at syntaxError (/home/ubuntu/mipedido/node_modules/graphql/error/syntaxError.js:15:10)
+    at Parser.expectToken (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1423:40)
+    at Parser.parseName (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:92:22)
+    at Parser.parseField (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:289:28)
+    at Parser.parseSelection (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:278:81)
+    at Parser.many (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1537:26)
+    at Parser.parseSelectionSet (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:265:24)
+    at Parser.parseField (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:306:68)
+    at Parser.parseSelection (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:278:81)
+    at Parser.many (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1537:26)
+    at Parser.parseSelectionSet (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:265:24)
+    at Parser.parseOperationDefinition (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:175:28)
+    at Parser.parseDefinition (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:150:19)
+    at Parser.many (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1537:26)
+    at Parser.parseDocument (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:109:25)
+    at parse (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:36:17) {
+  message: 'Syntax Error: Expected Name, found "}".',
+  locations: [ { line: 4, column: 3 } ]
+}
+[0mPOST /graphql [33m400 [0m4.844 ms - 104[0m
+[0mPOST /graphql [32m200 [0m477.046 ms - 307[0m
+Error: Cannot return null for non-nullable field Store.name.
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:595:13)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:592:21)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at /home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:651:25 {
+  message: 'Cannot return null for non-nullable field Store.name.',
+  locations: [ { line: 6, column: 7 } ],
+  path: [ 'storeClients', 0, 'store', 'name' ]
+}
+Error: Cannot return null for non-nullable field Store.name.
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:595:13)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:592:21)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at /home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:651:25 {
+  message: 'Cannot return null for non-nullable field Store.name.',
+  locations: [ { line: 6, column: 7 } ],
+  path: [ 'storeClients', 1, 'store', 'name' ]
+}
+Error: Cannot return null for non-nullable field Store.name.
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:595:13)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:592:21)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at /home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:651:25 {
+  message: 'Cannot return null for non-nullable field Store.name.',
+  locations: [ { line: 6, column: 7 } ],
+  path: [ 'storeClients', 2, 'store', 'name' ]
+}
+Error: Cannot return null for non-nullable field Store.name.
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:595:13)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:592:21)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at /home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:651:25 {
+  message: 'Cannot return null for non-nullable field Store.name.',
+  locations: [ { line: 6, column: 7 } ],
+  path: [ 'storeClients', 3, 'store', 'name' ]
+}
+Error: Cannot return null for non-nullable field Store.name.
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:595:13)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:592:21)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at /home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:651:25 {
+  message: 'Cannot return null for non-nullable field Store.name.',
+  locations: [ { line: 6, column: 7 } ],
+  path: [ 'storeClients', 4, 'store', 'name' ]
+}
+Error: Cannot return null for non-nullable field Store.name.
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:595:13)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:592:21)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at /home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:651:25 {
+  message: 'Cannot return null for non-nullable field Store.name.',
+  locations: [ { line: 6, column: 7 } ],
+  path: [ 'storeClients', 5, 'store', 'name' ]
+}
+Error: Cannot return null for non-nullable field Store.name.
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:595:13)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:592:21)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at /home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:651:25 {
+  message: 'Cannot return null for non-nullable field Store.name.',
+  locations: [ { line: 6, column: 7 } ],
+  path: [ 'storeClients', 6, 'store', 'name' ]
+}
+Error: Cannot return null for non-nullable field Store.name.
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:595:13)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:592:21)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:461:10)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at collectAndExecuteSubfields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:748:10)
+    at completeObjectValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:738:10)
+    at completeValue (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:626:12)
+    at completeValueCatchingError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:530:19)
+    at /home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:651:25 {
+  message: 'Cannot return null for non-nullable field Store.name.',
+  locations: [ { line: 6, column: 7 } ],
+  path: [ 'storeClients', 7, 'store', 'name' ]
+}
+[0mPOST /graphql [32m200 [0m94.589 ms - 1238[0m
+[0mPOST /graphql [32m200 [0m79.827 ms - 488[0m
+[0mPOST /graphql [32m200 [0m79.797 ms - 655[0m
+[0mPOST /graphql [32m200 [0m82.075 ms - 999[0m
+[0mPOST /graphql [32m200 [0m80.058 ms - 153[0m
+[0mPOST /graphql [32m200 [0m81.637 ms - 999[0m
+[0mPOST /graphql [32m200 [0m78.962 ms - 153[0m
+[0mPOST /graphql/ [32m200 [0m643.798 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m158.471 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m242.604 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m158.445 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m234.399 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.808 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m167.406 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m241.916 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m158.133 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m233.482 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m158.085 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m642.073 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m156.846 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m232.852 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m156.537 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m157.800 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m158.358 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m156.764 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m156.772 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m625.733 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m157.129 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m632.123 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.008 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.871 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m237.527 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m249.200 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m239.361 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.682 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.899 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m245.425 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.367 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.676 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.832 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.532 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m158.532 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m156.990 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m157.048 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m158.494 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m238.188 ms - 31[0m
+[0mPOST /graphql [32m200 [0m78.817 ms - 512[0m
+{ category: '5f15567a2ffa2b2dfb52fa22' }
+[0mPOST /graphql [32m200 [0m158.052 ms - 32[0m
+{}
+[0mPOST /graphql [32m200 [0m464.114 ms - 544[0m
+[0mPOST /graphql [32m200 [0m78.749 ms - 512[0m
+[0mPOST /graphql [32m200 [0m80.559 ms - 512[0m
+[0mPOST /graphql [32m200 [0m79.135 ms - 512[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m166.829 ms - 194[0m
+[0mPOST /graphql [32m200 [0m244.520 ms - 4188[0m
+[0mPOST /graphql [32m200 [0m238.563 ms - 615[0m
+[0mPOST /graphql [32m200 [0m312.896 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m238.101 ms - 534[0m
+[0mPOST /graphql [32m200 [0m157.346 ms - 512[0m
+[0mPOST /graphql [32m200 [0m236.128 ms - 615[0m
+[0mPOST /graphql/ [32m200 [0m637.511 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.616 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m243.892 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m636.678 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.504 ms - 31[0m
+[0mPOST /graphql [32m200 [0m547.803 ms - 1015[0m
+[0mPOST /graphql/ [32m200 [0m635.986 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.165 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m234.501 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m159.143 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m234.481 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m165.260 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m636.571 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m637.626 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m233.017 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m232.743 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m236.816 ms - 31[0m
+registrationIds  [
+  'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA',
+  'fB1W1JPLQBaJ1EaUjnNw27:APA91bG8C-cH-9FsngqHUjp5385SJ58auyPD-qb6Gjxfzz8GrJ6Ni32KytnLf2dTdiK-cFRhRqTgKKFy-_ftaYwsk-G2f6mK7tDua-QgA0Xor2TGbn2a9ZFYDzyDGQVLU5T6veQkFvcO',
+  'dCw1ia43TtuxfB15XYBh_o:APA91bGmh20a9N9UnL9qJkkmOSABj6HewY8gb3SmM4ob6UGqfintV45ZKzx_wcrBERdnS-xurREHZwRZyqmnKpZv0lp7MWb5d5RH6H5cCYMmokx28HvsYGn-F4xEYJVE6AB32zo2_s4M'
+]
+before to send to pn:  {
+  data: {
+    notification: {
+      title: 'Nuevo pedido',
+      body: 'Desde Carrera 27 Calle 22 a Tsgwgwgeggsgwge hdvwve',
+      priority: 'hight',
+      order: 5f53f75b5961b23700ce372a
+    }
+  },
+  android: { priority: 'hight' },
+  registration_ids: [
+    'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA',
+    'fB1W1JPLQBaJ1EaUjnNw27:APA91bG8C-cH-9FsngqHUjp5385SJ58auyPD-qb6Gjxfzz8GrJ6Ni32KytnLf2dTdiK-cFRhRqTgKKFy-_ftaYwsk-G2f6mK7tDua-QgA0Xor2TGbn2a9ZFYDzyDGQVLU5T6veQkFvcO',
+    'dCw1ia43TtuxfB15XYBh_o:APA91bGmh20a9N9UnL9qJkkmOSABj6HewY8gb3SmM4ob6UGqfintV45ZKzx_wcrBERdnS-xurREHZwRZyqmnKpZv0lp7MWb5d5RH6H5cCYMmokx28HvsYGn-F4xEYJVE6AB32zo2_s4M'
+  ]
+}
+[0mPOST /graphql/ [32m200 [0m713.457 ms - 134[0m
+[0mPOST /graphql/ [32m200 [0m466.967 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m389.679 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m392.050 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m391.027 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m389.139 ms - 587[0m
+[0mPOST /graphql [32m200 [0m313.747 ms - 1100[0m
+[0mPOST /graphql/ [32m200 [0m389.440 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m312.771 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m390.948 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m314.876 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m390.488 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m314.343 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m391.018 ms - 587[0m
+[0mPOST /graphql [32m200 [0m948.733 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m236.569 ms - 534[0m
+[0mPOST /graphql [32m200 [0m157.525 ms - 512[0m
+[0mPOST /graphql [32m200 [0m243.148 ms - 1133[0m
+[0mPOST /login [32m200 [0m417.098 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m388.898 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m862.343 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m390.939 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m316.561 ms - 684[0m
+[0mPOST /graphql [32m200 [0m157.399 ms - 311[0m
+[0mPOST /graphql [32m200 [0m163.979 ms - 3936[0m
+[0mPOST /graphql [32m200 [0m156.670 ms - 311[0m
+[0mPOST /graphql [32m200 [0m236.773 ms - 887[0m
+[0mPOST /graphql [32m200 [0m164.992 ms - 3936[0m
+[0mPOST /graphql/ [32m200 [0m400.980 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m311.732 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m389.347 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m314.207 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m393.371 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m312.906 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m391.903 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m318.402 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m388.538 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m314.560 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m388.939 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m321.215 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m391.316 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m316.567 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m398.111 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m323.493 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m393.576 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m312.655 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m388.897 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m313.682 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m388.144 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m313.936 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m389.639 ms - 587[0m
+[0mPOST /graphql/ [32m200 [0m156.464 ms - 895[0m
+[0mPOST /graphql/ [32m200 [0m400.893 ms - 587[0m
+registrationIds  [
+  'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA',
+  'fB1W1JPLQBaJ1EaUjnNw27:APA91bG8C-cH-9FsngqHUjp5385SJ58auyPD-qb6Gjxfzz8GrJ6Ni32KytnLf2dTdiK-cFRhRqTgKKFy-_ftaYwsk-G2f6mK7tDua-QgA0Xor2TGbn2a9ZFYDzyDGQVLU5T6veQkFvcO',
+  'dCw1ia43TtuxfB15XYBh_o:APA91bGmh20a9N9UnL9qJkkmOSABj6HewY8gb3SmM4ob6UGqfintV45ZKzx_wcrBERdnS-xurREHZwRZyqmnKpZv0lp7MWb5d5RH6H5cCYMmokx28HvsYGn-F4xEYJVE6AB32zo2_s4M'
+]
+before to send to pn:  {
+  data: {
+    notification: {
+      title: 'Nuevo pedido',
+      body: 'Desde Carrera 27 Calle 22 a CRA 20 # 19 112',
+      priority: 'hight',
+      order: 5f5401c25961b23700ce372b
+    }
+  },
+  android: { priority: 'hight' },
+  registration_ids: [
+    'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA',
+    'fB1W1JPLQBaJ1EaUjnNw27:APA91bG8C-cH-9FsngqHUjp5385SJ58auyPD-qb6Gjxfzz8GrJ6Ni32KytnLf2dTdiK-cFRhRqTgKKFy-_ftaYwsk-G2f6mK7tDua-QgA0Xor2TGbn2a9ZFYDzyDGQVLU5T6veQkFvcO',
+    'dCw1ia43TtuxfB15XYBh_o:APA91bGmh20a9N9UnL9qJkkmOSABj6HewY8gb3SmM4ob6UGqfintV45ZKzx_wcrBERdnS-xurREHZwRZyqmnKpZv0lp7MWb5d5RH6H5cCYMmokx28HvsYGn-F4xEYJVE6AB32zo2_s4M'
+  ]
+}
+[0mPOST /graphql/ [32m200 [0m695.537 ms - 134[0m
+[0mPOST /graphql/ [32m200 [0m394.069 ms - 1116[0m
+[0mPOST /graphql/ [32m200 [0m312.970 ms - 656[0m
+[0mPOST /graphql/ [32m200 [0m398.332 ms - 1116[0m
+[0mPOST /graphql/ [32m200 [0m314.840 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m390.719 ms - 1116[0m
+[0mPOST /login [32m200 [0m401.302 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m390.147 ms - 1116[0m
+[0mPOST /graphql [32m200 [0m565.256 ms - 512[0m
+[0mPOST /graphql [32m200 [0m160.765 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.989 ms - 512[0m
+[0mPOST /graphql [32m200 [0m159.265 ms - 512[0m
+[0mPOST /graphql [32m200 [0m157.066 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m543.703 ms - 544[0m
+[0mPOST /graphql [32m200 [0m157.203 ms - 512[0m
+[0mPOST /graphql [32m200 [0m162.246 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m314.025 ms - 544[0m
+[0mPOST /graphql/ [32m200 [0m389.153 ms - 1116[0m
+[0mPOST /graphql/ [32m200 [0m314.742 ms - 656[0m
+[0mPOST /graphql/ [32m200 [0m392.261 ms - 1116[0m
+[0mPOST /graphql/ [32m200 [0m311.569 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m390.448 ms - 1116[0m
+[0mPOST /graphql/ [32m200 [0m313.063 ms - 656[0m
+[0mPOST /graphql/ [32m200 [0m389.134 ms - 1116[0m
+[0mPOST /graphql/ [32m200 [0m318.209 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m390.657 ms - 1116[0m
+[0mPOST /login [32m200 [0m323.031 ms - 754[0m
+[0mPOST /graphql/ [32m200 [0m390.701 ms - 1116[0m
+[0mPOST /graphql/ [32m200 [0m311.346 ms - 684[0m
+[0mPOST /graphql/ [32m200 [0m391.030 ms - 1116[0m
+[0mPOST /graphql/ [32m200 [0m391.112 ms - 1116[0m
+[0mPOST /graphql/ [32m200 [0m314.275 ms - 684[0m
+before to send to pn:  {
+  data: {
+    notification: {
+      title: 'Pedido tomado',
+      body: 'El domiciliario esta en camino a recogerlo!',
+      priority: 'hight'
+    }
+  },
+  android: { priority: 'hight' },
+  registration_ids: [
+    'dCw1ia43TtuxfB15XYBh_o:APA91bGmh20a9N9UnL9qJkkmOSABj6HewY8gb3SmM4ob6UGqfintV45ZKzx_wcrBERdnS-xurREHZwRZyqmnKpZv0lp7MWb5d5RH6H5cCYMmokx28HvsYGn-F4xEYJVE6AB32zo2_s4M'
+  ]
+}
+[0mPOST /graphql/ [32m200 [0m1160.665 ms - 666[0m
+[0mPOST /graphql/ [32m200 [0m312.372 ms - 773[0m
+[0mPOST /graphql/ [32m200 [0m390.580 ms - 559[0m
+[0mPOST /graphql [32m200 [0m156.140 ms - 512[0m
+[0mPOST /graphql [32m200 [0m156.474 ms - 512[0m
+{}
+[0mPOST /graphql [32m200 [0m312.557 ms - 544[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m244.780 ms - 194[0m
+[0mPOST /graphql [32m200 [0m241.128 ms - 4188[0m
+[0mPOST /graphql [32m200 [0m389.696 ms - 1690[0m
+[0mPOST /login [32m200 [0m805.767 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m473.064 ms - 559[0m
+[0mPOST /login [32m200 [0m167.343 ms - 56[0m
+[0mPOST /login [32m200 [0m168.365 ms - 56[0m
+[0mPOST /login [32m200 [0m331.112 ms - 754[0m
+[0mPOST /graphql/ [32m200 [0m398.285 ms - 559[0m
+GraphQLError [Object]: Syntax Error: Expected Name, found ")".
+    at syntaxError (/home/ubuntu/mipedido/node_modules/graphql/error/syntaxError.js:15:10)
+    at Parser.expectToken (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1423:40)
+    at Parser.parseName (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:92:22)
+    at Parser.parseArgument (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:326:21)
+    at Parser.optionalMany (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1516:28)
+    at Parser.parseArguments (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:317:17)
+    at Parser.parseField (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:304:23)
+    at Parser.parseSelection (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:278:81)
+    at Parser.many (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1537:26)
+    at Parser.parseSelectionSet (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:265:24)
+    at Parser.parseOperationDefinition (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:193:26)
+    at Parser.parseDefinition (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:131:23)
+    at Parser.many (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1537:26)
+    at Parser.parseDocument (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:109:25)
+    at parse (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:36:17)
+    at graphqlMiddleware (/home/ubuntu/mipedido/node_modules/express-graphql/index.js:124:23) {
+  message: 'Syntax Error: Expected Name, found ")".',
+  locations: [ { line: 3, column: 10 } ]
+}
+[0mPOST /graphql [33m400 [0m3.964 ms - 105[0m
+GraphQLError [Object]: Syntax Error: Expected Name, found ")".
+    at syntaxError (/home/ubuntu/mipedido/node_modules/graphql/error/syntaxError.js:15:10)
+    at Parser.expectToken (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1423:40)
+    at Parser.parseName (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:92:22)
+    at Parser.parseArgument (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:326:21)
+    at Parser.optionalMany (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1516:28)
+    at Parser.parseArguments (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:317:17)
+    at Parser.parseField (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:304:23)
+    at Parser.parseSelection (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:278:81)
+    at Parser.many (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1537:26)
+    at Parser.parseSelectionSet (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:265:24)
+    at Parser.parseOperationDefinition (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:193:26)
+    at Parser.parseDefinition (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:131:23)
+    at Parser.many (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:1537:26)
+    at Parser.parseDocument (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:109:25)
+    at parse (/home/ubuntu/mipedido/node_modules/graphql/language/parser.js:36:17)
+    at graphqlMiddleware (/home/ubuntu/mipedido/node_modules/express-graphql/index.js:124:23) {
+  message: 'Syntax Error: Expected Name, found ")".',
+  locations: [ { line: 3, column: 10 } ]
+}
+[0mGET /graphql?query=%0Aquery%20%7B%0A%20%20orders()%20%7B%0A%20%20%20%20_id%0A%20%20%7D%0A%7D&variables=%7B%0A%20%20%22store%22%3A%20%225f28e6cb7649b2431221ad9d%22%0A%7D [33m400 [0m6.245 ms - 975872[0m
+[0mPOST /graphql [32m200 [0m557.393 ms - 3936[0m
+[0mPOST /graphql [32m200 [0m38.983 ms - 52513[0m
+[0mPOST /graphql [32m200 [0m463.261 ms - 328[0m
+[0mPOST /graphql [32m200 [0m864.710 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m462.122 ms - 512[0m
+[0mPOST /graphql [32m200 [0m234.795 ms - 1133[0m
+[0mPOST /graphql [32m200 [0m162.712 ms - 3936[0m
+[0mPOST /graphql [32m200 [0m158.340 ms - 113[0m
+[0mPOST /graphql [32m200 [0m163.927 ms - 311[0m
+[0mPOST /graphql [32m200 [0m162.579 ms - 4023[0m
+[0mPOST /graphql [32m200 [0m244.490 ms - 4013[0m
+[0mPOST /graphql [32m200 [0m324.458 ms - 87[0m
+[0mPOST /graphql [32m200 [0m159.631 ms - 4023[0m
+[0mPOST /graphql [32m200 [0m239.284 ms - 4100[0m
+[0mPOST /graphql [32m200 [0m156.416 ms - 311[0m
+[0mPOST /graphql [32m200 [0m160.395 ms - 4023[0m
+[0mPOST /graphql [32m200 [0m234.007 ms - 622[0m
+[0mPOST /graphql [32m200 [0m311.559 ms - 87[0m
+[0mPOST /graphql [32m200 [0m159.992 ms - 4023[0m
+[0mPOST /graphql [32m200 [0m238.501 ms - 709[0m
+[0mPOST /graphql [32m200 [0m165.138 ms - 4023[0m
+[0mPOST /graphql [32m200 [0m156.536 ms - 119[0m
+[0mPOST /graphql [32m200 [0m164.265 ms - 311[0m
+[0mPOST /graphql [32m200 [0m250.721 ms - 4100[0m
+[0mPOST /graphql [32m200 [0m157.991 ms - 4116[0m
+[0mPOST /graphql [32m200 [0m314.746 ms - 87[0m
+[0mPOST /graphql [32m200 [0m159.933 ms - 4116[0m
+[0mPOST /graphql [32m200 [0m235.902 ms - 4193[0m
+[0mPOST /login [32m200 [0m799.459 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m465.354 ms - 559[0m
+[0mPOST /login [32m200 [0m399.774 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m391.672 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m325.291 ms - 656[0m
+[0mPOST /graphql/ [32m200 [0m391.510 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m317.123 ms - 656[0m
+[0mPOST /graphql/ [32m200 [0m390.683 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m389.434 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m390.359 ms - 559[0m
+[0mPOST /login [32m200 [0m401.997 ms - 1205[0m
+[0mPOST /graphql/ [32m200 [0m389.427 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m388.855 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m313.836 ms - 656[0m
+[0mPOST /graphql/ [32m200 [0m389.569 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m314.615 ms - 656[0m
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:4:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:29:4)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 1, column: 75 } ],
+  path: [ 'takeOrder' ]
+}
+[0mPOST /graphql/ [32m200 [0m320.286 ms - 124[0m
+[0mPOST /graphql/ [32m200 [0m389.018 ms - 559[0m
+[0mPOST /graphql/ [32m200 [0m156.649 ms - 189[0m
+[0mPOST /graphql/ [32m200 [0m390.870 ms - 559[0m
+(node:18969) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+connected to db
+TypeError: Cannot read property 'currentUser' of undefined
+    at Object.verifyCurrentUser (/home/ubuntu/mipedido/helpers/authHelpers.ts:9:18)
+    at users (/home/ubuntu/mipedido/graphql/resolvers/user/index.ts:26:9)
+    at resolveFieldValueOrError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:502:18)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:460:16)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at executeOperation (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:241:122)
+    at executeImpl (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:119:14)
+    at execute (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:63:35)
+    at graphqlMiddleware (/home/ubuntu/mipedido/node_modules/express-graphql/index.js:166:24)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: "Cannot read property 'currentUser' of undefined",
+  locations: [ { line: 3, column: 2 } ],
+  path: [ 'users' ]
+}
+[0mPOST /graphql [32m200 [0m40.384 ms - 149[0m
+[0mPOST /graphql [32m200 [0m175.100 ms - 311[0m
+[0mPOST /graphql [32m200 [0m326.264 ms - 2415[0m
+Error: Please login
+    at Object.verifyCurrentUser (/home/ubuntu/mipedido/helpers/authHelpers.ts:9:37)
+    at users (/home/ubuntu/mipedido/graphql/resolvers/user/index.ts:26:9)
+    at resolveFieldValueOrError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:502:18)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:460:16)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at executeOperation (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:241:122)
+    at executeImpl (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:119:14)
+    at execute (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:63:35)
+    at graphqlMiddleware (/home/ubuntu/mipedido/node_modules/express-graphql/index.js:166:24)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Please login',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'users' ]
+}
+[0mPOST /graphql [32m200 [0m81.588 ms - 114[0m
+Error: Please login
+    at Object.verifyCurrentUser (/home/ubuntu/mipedido/helpers/authHelpers.ts:9:37)
+    at currentUser (/home/ubuntu/mipedido/graphql/resolvers/user/index.ts:42:9)
+    at resolveFieldValueOrError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:502:18)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:460:16)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at executeOperation (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:241:122)
+    at executeImpl (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:119:14)
+    at execute (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:63:35)
+    at graphqlMiddleware (/home/ubuntu/mipedido/node_modules/express-graphql/index.js:166:24)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Please login',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'currentUser' ]
+}
+[0mPOST /graphql [32m200 [0m91.484 ms - 126[0m
+Error: Please login
+    at Object.verifyCurrentUser (/home/ubuntu/mipedido/helpers/authHelpers.ts:9:37)
+    at currentUser (/home/ubuntu/mipedido/graphql/resolvers/user/index.ts:42:9)
+    at resolveFieldValueOrError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:502:18)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:460:16)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at executeOperation (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:241:122)
+    at executeImpl (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:119:14)
+    at execute (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:63:35)
+    at graphqlMiddleware (/home/ubuntu/mipedido/node_modules/express-graphql/index.js:166:24)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Please login',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'currentUser' ]
+}
+[0mPOST /graphql [32m200 [0m81.085 ms - 126[0m
+Error: Please login
+    at Object.verifyCurrentUser (/home/ubuntu/mipedido/helpers/authHelpers.ts:9:37)
+    at currentUser (/home/ubuntu/mipedido/graphql/resolvers/user/index.ts:42:9)
+    at resolveFieldValueOrError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:502:18)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:460:16)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at executeOperation (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:241:122)
+    at executeImpl (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:119:14)
+    at execute (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:63:35)
+    at graphqlMiddleware (/home/ubuntu/mipedido/node_modules/express-graphql/index.js:166:24)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Please login',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'currentUser' ]
+}
+[0mPOST /graphql [32m200 [0m93.719 ms - 126[0m
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m171.468 ms - 194[0m
+Error: Please login
+    at Object.verifyCurrentUser (/home/ubuntu/mipedido/helpers/authHelpers.ts:9:37)
+    at currentUser (/home/ubuntu/mipedido/graphql/resolvers/user/index.ts:42:9)
+    at resolveFieldValueOrError (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:502:18)
+    at resolveField (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:460:16)
+    at executeFields (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:297:18)
+    at executeOperation (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:241:122)
+    at executeImpl (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:119:14)
+    at execute (/home/ubuntu/mipedido/node_modules/graphql/execution/execute.js:63:35)
+    at graphqlMiddleware (/home/ubuntu/mipedido/node_modules/express-graphql/index.js:166:24)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Please login',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'currentUser' ]
+}
+[0mPOST /graphql [32m200 [0m82.174 ms - 126[0m
+(node:18969) UnhandledPromiseRejectionWarning: TypeError: utils.populate: invalid path. Expected string. Got typeof `object`
+    at Object.populate (/home/ubuntu/mipedido/node_modules/mongoose/lib/utils.js:507:11)
+    at _populateObj (/home/ubuntu/mipedido/node_modules/mongoose/lib/utils.js:551:28)
+    at populate (/home/ubuntu/mipedido/node_modules/mongoose/lib/utils.js:510:10)
+    at model.Query.Query.populate (/home/ubuntu/mipedido/node_modules/mongoose/lib/query.js:4616:30)
+    at /home/ubuntu/mipedido/app/auth/index.ts:25:8
+    at step (/home/ubuntu/mipedido/app/auth/index.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/app/auth/index.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/app/auth/index.ts:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+(node:18969) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:18969) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[0mPOST /login [0m- [0m- ms - -[0m
+(node:19535) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+connected to db
+[0mPOST /login [32m200 [0m603.436 ms - 3456[0m
+[0mPOST /login [32m200 [0m408.740 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m251.494 ms - 31[0m
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:4:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:4)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 1, column: 46 } ],
+  path: [ 'currentOrder' ]
+}
+[0mPOST /graphql/ [32m200 [0m334.813 ms - 130[0m
+[0mPOST /graphql/ [32m200 [0m246.851 ms - 90[0m
+[0mPOST /login [32m200 [0m402.486 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m277.280 ms - 31[0m
+[0mPOST /graphql/ [32m200 [0m157.472 ms - 90[0m
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:4:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:4)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 1, column: 46 } ],
+  path: [ 'currentOrder' ]
+}
+[0mPOST /graphql/ [32m200 [0m320.963 ms - 130[0m
+[0mPOST /graphql/ [32m200 [0m158.874 ms - 895[0m
+registrationIds  [
+  'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA',
+  'fB1W1JPLQBaJ1EaUjnNw27:APA91bG8C-cH-9FsngqHUjp5385SJ58auyPD-qb6Gjxfzz8GrJ6Ni32KytnLf2dTdiK-cFRhRqTgKKFy-_ftaYwsk-G2f6mK7tDua-QgA0Xor2TGbn2a9ZFYDzyDGQVLU5T6veQkFvcO',
+  'fE8ZO9TUTRi9iKfgW19wlT:APA91bEvoRfxcz3B0ZnMvasvRiYoax40XdBFLXH7sKfS7yBXpd9zjCdhWfmVW64I6jUK9FooE4bivBiJsFOTE0lZqri1LMvckNvoO8mvjokXjNr0P1lR96AqGm5kTONlEMK45Xzt5m5s',
+  'ck3Dw0j1QpyP1OSf-XITR-:APA91bGz-dXXstsmhEZG2VGT7yl4jJw4EMRXY95G4i3jyh2Cd_ejr8Pvy7wD5IAhyyRMIgubgzewMuSsXAbGT87EaVLYRx2v4txqwHvC9EV7OvgFU6lumfGbIB1kxVpA7YUcI6c8YNOq'
+]
+before to send to pn:  {
+  data: {
+    notification: {
+      title: 'Nuevo pedido',
+      body: 'Desde Carrera 27 Calle 22 a CRA 56 565 433 6765',
+      priority: 'hight',
+      order: 5f547fefd128ed4c4f8e3541
+    }
+  },
+  android: { priority: 'hight' },
+  registration_ids: [
+    'dGKY83uQSDOkx-1TqcZdK5:APA91bFkxcyi3NaD8znCAO56RzCnQxFeTG6nhCrm8hK-3kTGLguLqYs2dpKTzlffDK_ubn5ErilFaVTXu5BHIAo1lQxp5qU_oYae8mR3XzxdD4-aeZvHr2KN-yQLinyFFh0Uk_SVmRhA',
+    'fB1W1JPLQBaJ1EaUjnNw27:APA91bG8C-cH-9FsngqHUjp5385SJ58auyPD-qb6Gjxfzz8GrJ6Ni32KytnLf2dTdiK-cFRhRqTgKKFy-_ftaYwsk-G2f6mK7tDua-QgA0Xor2TGbn2a9ZFYDzyDGQVLU5T6veQkFvcO',
+    'fE8ZO9TUTRi9iKfgW19wlT:APA91bEvoRfxcz3B0ZnMvasvRiYoax40XdBFLXH7sKfS7yBXpd9zjCdhWfmVW64I6jUK9FooE4bivBiJsFOTE0lZqri1LMvckNvoO8mvjokXjNr0P1lR96AqGm5kTONlEMK45Xzt5m5s',
+    'ck3Dw0j1QpyP1OSf-XITR-:APA91bGz-dXXstsmhEZG2VGT7yl4jJw4EMRXY95G4i3jyh2Cd_ejr8Pvy7wD5IAhyyRMIgubgzewMuSsXAbGT87EaVLYRx2v4txqwHvC9EV7OvgFU6lumfGbIB1kxVpA7YUcI6c8YNOq'
+  ]
+}
+[0mPOST /graphql/ [32m200 [0m702.466 ms - 134[0m
+[0mPOST /graphql/ [32m200 [0m395.077 ms - 571[0m
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:4:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:4)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 1, column: 46 } ],
+  path: [ 'currentOrder' ]
+}
+[0mPOST /graphql/ [32m200 [0m317.154 ms - 130[0m
+[0mPOST /graphql/ [32m200 [0m392.086 ms - 571[0m
+[0mPOST /graphql/ [32m200 [0m315.991 ms - 649[0m
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:4:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:4)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 1, column: 46 } ],
+  path: [ 'currentOrder' ]
+}
+[0mPOST /graphql/ [32m200 [0m318.559 ms - 130[0m
+[0mPOST /graphql/ [32m200 [0m390.764 ms - 571[0m
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:4:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:4)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 1, column: 46 } ],
+  path: [ 'currentOrder' ]
+}
+[0mPOST /graphql/ [32m200 [0m316.789 ms - 130[0m
+[0mPOST /graphql/ [32m200 [0m315.788 ms - 649[0m
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:4:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:4)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 1, column: 46 } ],
+  path: [ 'currentOrder' ]
+}
+[0mPOST /graphql/ [32m200 [0m317.605 ms - 130[0m
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:4:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:4)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 1, column: 46 } ],
+  path: [ 'currentOrder' ]
+}
+[0mPOST /graphql/ [32m200 [0m318.687 ms - 130[0m
+[0mPOST /graphql/ [32m200 [0m394.027 ms - 571[0m
+[0mPOST /login [32m200 [0m1121.326 ms - 3456[0m
+[0mPOST /graphql/ [32m200 [0m398.269 ms - 571[0m
+[0mPOST /graphql/ [32m200 [0m171.384 ms - 90[0m
+[0mPOST /graphql/ [32m200 [0m322.615 ms - 649[0m
+[0mPOST /graphql/ [32m200 [0m391.268 ms - 571[0m
+[0mPOST /graphql/ [32m200 [0m329.579 ms - 662[0m
+[0mPOST /graphql/ [32m200 [0m393.826 ms - 571[0m
+[0mPOST /graphql/ [32m200 [0m325.846 ms - 649[0m
+[0mPOST /graphql/ [32m200 [0m391.171 ms - 571[0m
+[0mPOST /graphql/ [32m200 [0m312.895 ms - 662[0m
+[0mPOST /graphql/ [32m200 [0m400.291 ms - 571[0m
+[0mPOST /graphql/ [32m200 [0m314.544 ms - 649[0m
+[0mPOST /graphql/ [32m200 [0m390.392 ms - 571[0m
+[0mPOST /graphql/ [32m200 [0m314.544 ms - 649[0m
+[0mPOST /graphql/ [32m200 [0m860.906 ms - 571[0m
+[0mPOST /graphql/ [32m200 [0m312.806 ms - 649[0m
+[0mPOST /graphql/ [32m200 [0m391.427 ms - 571[0m
+[0mPOST /graphql/ [32m200 [0m321.584 ms - 662[0m
+[0mPOST /graphql/ [32m200 [0m399.785 ms - 571[0m
+[0mPOST /login [32m200 [0m400.181 ms - 1195[0m
+[0mPOST /graphql/ [32m200 [0m392.450 ms - 571[0m
+[0mPOST /graphql/ [32m200 [0m157.903 ms - 90[0m
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:4:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:4)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 1, column: 46 } ],
+  path: [ 'currentOrder' ]
+}
+[0mPOST /graphql/ [32m200 [0m314.074 ms - 130[0m
+[0mPOST /graphql/ [32m200 [0m315.132 ms - 649[0m
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:4:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:4)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 1, column: 46 } ],
+  path: [ 'currentOrder' ]
+}
+[0mPOST /graphql/ [32m200 [0m396.678 ms - 130[0m
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:4:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:4)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 1, column: 46 } ],
+  path: [ 'currentOrder' ]
+}
+[0mPOST /graphql/ [32m200 [0m317.031 ms - 130[0m
+[0mPOST /graphql/ [32m200 [0m392.416 ms - 571[0m
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:4:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:4)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 1, column: 46 } ],
+  path: [ 'currentOrder' ]
+}
+[0mPOST /graphql/ [32m200 [0m317.162 ms - 130[0m
+[0mPOST /graphql/ [32m200 [0m391.615 ms - 571[0m
+[0mPOST /graphql [32m200 [0m875.893 ms - 427[0m
+[0mPOST /graphql [32m200 [0m892.792 ms - 1501[0m
+[0mPOST /graphql [32m200 [0m1051.871 ms - 2885[0m
+[0mPOST /graphql [32m200 [0m243.042 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m157.119 ms - 311[0m
+[0mPOST /graphql [32m200 [0m234.943 ms - 255[0m
+[0mPOST /graphql [32m200 [0m240.240 ms - 1015[0m
+[0mPOST /graphql [32m200 [0m157.704 ms - 311[0m
+[0mPOST /graphql [32m200 [0m232.951 ms - 255[0m
+[0mPOST /graphql [32m200 [0m240.829 ms - 1015[0m
+(node:3536) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+connected to db
+=== FROM CACHE ===
+GET_USER: 0.765ms
+[0mPOST /graphql [32m200 [0m119.814 ms - 512[0m
+=== FROM CACHE ===
+GET_USER: 0.443ms
+{}
+[0mPOST /graphql [32m200 [0m251.934 ms - 544[0m
+=== FROM CACHE ===
+GET_USER: 0.419ms
+params  juanz   3188580746.
+Error: Usuario o contraseña errada
+    at /home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:18:23
+    at step (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:5:58) {
+  message: 'Usuario o contraseña errada',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'login' ]
+}
+[0mPOST /graphql [32m200 [0m182.785 ms - 130[0m
+=== FROM CACHE ===
+GET_USER: 1.242ms
+params  juanz   3188580746
+[0mPOST /graphql [32m200 [0m170.510 ms - 194[0m
+=== FROM CACHE ===
+GET_USER: 0.328ms
+[0mPOST /graphql [32m200 [0m170.934 ms - 4544[0m
+=== FROM CACHE ===
+GET_USER: 0.320ms
+[0mPOST /graphql [32m200 [0m257.678 ms - 2885[0m
+=== FROM CACHE ===
+GET_USER: 1.953ms
+[0mPOST /graphql [32m200 [0m89.291 ms - 4292[0m
+=== FROM CACHE ===
+GET_USER: 0.323ms
+[0mPOST /graphql [32m200 [0m82.280 ms - 311[0m
+=== FROM CACHE ===
+GET_USER: 0.391ms
+[0mPOST /graphql [32m200 [0m91.673 ms - 311[0m
+=== FROM CACHE ===
+GET_USER: 0.349ms
+[0mPOST /graphql [32m200 [0m165.498 ms - 974[0m
+=== FROM CACHE ===
+GET_USER: 0.331ms
+[0mPOST /graphql [32m200 [0m85.332 ms - 4292[0m
+=== FROM CACHE ===
+GET_USER: 0.356ms
+[0mPOST /graphql [32m200 [0m247.084 ms - 87[0m
+=== FROM CACHE ===
+GET_USER: 0.330ms
+[0mPOST /graphql [32m200 [0m160.030 ms - 1060[0m
+=== FROM CACHE ===
+GET_USER: 0.310ms
+[0mPOST /graphql [32m200 [0m86.129 ms - 4292[0m
+=== FROM CACHE ===
+GET_USER: 0.310ms
+[0mPOST /graphql [32m200 [0m238.949 ms - 87[0m
+=== FROM CACHE ===
+GET_USER: 0.469ms
+=== FROM CACHE ===
+GET_USER: 0.233ms
+[0mPOST /graphql [32m200 [0m87.327 ms - 4292[0m
+[0mPOST /graphql [32m200 [0m165.444 ms - 1148[0m
+=== FROM CACHE ===
+GET_USER: 0.321ms
+[0mPOST /graphql [32m200 [0m159.462 ms - 90[0m
+(node:3536) Warning: Label 'GET_USER' already exists for console.time()
+=== FROM CACHE ===
+GET_USER: 1.145ms
+=== FROM CACHE ===
+(node:3536) Warning: No such label 'GET_USER' for console.timeEnd()
+[0mPOST /graphql [32m200 [0m98.352 ms - 4292[0m
+[0mPOST /graphql [32m200 [0m176.546 ms - 1065[0m
+=== FROM CACHE ===
+GET_USER: 0.292ms
+[0mPOST /graphql [32m200 [0m157.887 ms - 90[0m
+(node:3536) Warning: Label 'GET_USER' already exists for console.time()
+=== FROM CACHE ===
+GET_USER: 1.085ms
+=== FROM CACHE ===
+(node:3536) Warning: No such label 'GET_USER' for console.timeEnd()
+[0mPOST /graphql [32m200 [0m87.657 ms - 4292[0m
+[0mPOST /graphql [32m200 [0m175.173 ms - 979[0m
+=== FROM CACHE ===
+GET_USER: 0.294ms
+[0mPOST /graphql [32m200 [0m79.892 ms - 311[0m
+=== FROM CACHE ===
+GET_USER: 0.317ms
+[0mPOST /graphql [32m200 [0m171.183 ms - 534[0m
+=== FROM CACHE ===
+GET_USER: 0.351ms
+[0mPOST /graphql [32m200 [0m81.451 ms - 189[0m
+=== FROM CACHE ===
+GET_USER: 0.321ms
+[0mPOST /graphql [32m200 [0m159.926 ms - 534[0m
+=== FROM CACHE ===
+GET_USER: 0.307ms
+[0mPOST /graphql [32m200 [0m90.152 ms - 895[0m
+=== FROM CACHE ===
+GET_USER: 0.363ms
+=== FROM CACHE ===
+GET_USER_WITH_PERMISSION: 0.388ms
+[0mPOST /graphql [32m200 [0m163.049 ms - 1015[0m
+=== FROM CACHE ===
+GET_USER: 0.317ms
+[0mPOST /graphql [32m200 [0m243.303 ms - 2885[0m
+params  rafaelt   3188580746
+Error: Usuario o contraseña errada
+    at /home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:18:23
+    at step (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/graphql/resolvers/auth/index.ts:5:58) {
+  message: 'Usuario o contraseña errada',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'login' ]
+}
+[0mPOST /graphql [32m200 [0m168.728 ms - 130[0m
+params  rafaelt   12345678
+[0mPOST /graphql [32m200 [0m165.429 ms - 194[0m
+=== FROM CACHE ===
+GET_USER: 0.304ms
+[0mPOST /graphql [32m200 [0m161.263 ms - 1154[0m
+=== FROM CACHE ===
+GET_USER: 0.291ms
+{ owner: '5f32352047bc520017004061' }
+[0mPOST /graphql [32m200 [0m161.088 ms - 459[0m
+=== FROM CACHE ===
+GET_USER: 0.286ms
+[0mPOST /graphql [32m200 [0m244.867 ms - 2885[0m
+=== FROM CACHE ===
+GET_USER: 0.344ms
+=== FROM CACHE ===
+GET_USER: 0.219ms
+[0mPOST /graphql [32m200 [0m79.167 ms - 179[0m
+[0mPOST /graphql [32m200 [0m79.085 ms - 512[0m
+=== FROM CACHE ===
+GET_USER: 0.270ms
+=== FROM CACHE ===
+GET_USER_WITH_PERMISSION: 0.249ms
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:6:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:45:25)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'shopkeepers' ]
+}
+[0mPOST /graphql [32m200 [0m5.286 ms - 127[0m
+=== FROM CACHE ===
+GET_USER: 0.323ms
+[0mPOST /graphql [32m200 [0m162.890 ms - 449[0m
+=== FROM CACHE ===
+GET_USER: 0.292ms
+[0mPOST /graphql [32m200 [0m240.669 ms - 2885[0m
+=== FROM CACHE ===
+GET_USER: 3.972ms
+[0mPOST /graphql [32m200 [0m85.234 ms - 189[0m
+=== FROM CACHE ===
+GET_USER: 0.281ms
+[0mPOST /graphql [32m200 [0m243.442 ms - 2885[0m
+=== FROM CACHE ===
+GET_USER: 0.306ms
+=== FROM CACHE ===
+GET_USER: 0.230ms
+[0mPOST /graphql [32m200 [0m80.166 ms - 179[0m
+[0mPOST /graphql [32m200 [0m83.227 ms - 512[0m
+=== FROM CACHE ===
+GET_USER: 0.287ms
+=== FROM CACHE ===
+GET_USER_WITH_PERMISSION: 0.256ms
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:6:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:45:25)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'shopkeepers' ]
+}
+[0mPOST /graphql [32m200 [0m2.818 ms - 127[0m
+=== FROM CACHE ===
+GET_USER: 0.280ms
+=== FROM CACHE ===
+GET_USER: 0.240ms
+[0mPOST /graphql [32m200 [0m79.940 ms - 189[0m
+[0mPOST /graphql [32m200 [0m173.534 ms - 449[0m
+=== FROM CACHE ===
+GET_USER: 0.320ms
+[0mPOST /graphql [32m200 [0m239.921 ms - 2885[0m
+=== FROM CACHE ===
+GET_USER: 0.717ms
+(node:3536) Warning: Label 'GET_USER' already exists for console.time()
+=== FROM CACHE ===
+GET_USER: 0.926ms
+=== FROM CACHE ===
+(node:3536) Warning: No such label 'GET_USER' for console.timeEnd()
+=== FROM CACHE ===
+GET_USER: 0.275ms
+=== FROM CACHE ===
+GET_USER_WITH_PERMISSION: 6.845ms
+Error: No autorizado
+    at noAuthorized (/home/ubuntu/mipedido/helpers/authHelpers.ts:6:8)
+    at Object.<anonymous> (/home/ubuntu/mipedido/helpers/authHelpers.ts:45:25)
+    at step (/home/ubuntu/mipedido/helpers/authHelpers.ts:33:23)
+    at Object.next (/home/ubuntu/mipedido/helpers/authHelpers.ts:14:53)
+    at fulfilled (/home/ubuntu/mipedido/helpers/authHelpers.ts:5:58)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'No autorizado',
+  locations: [ { line: 2, column: 3 } ],
+  path: [ 'shopkeepers' ]
+}
+[0mPOST /graphql [32m200 [0m9.342 ms - 127[0m
+[0mPOST /graphql [32m200 [0m80.666 ms - 179[0m
+[0mPOST /graphql [32m200 [0m83.284 ms - 512[0m
+[0mPOST /graphql [32m200 [0m169.036 ms - 449[0m
+=== FROM CACHE ===
+GET_USER: 0.289ms
+[0mPOST /graphql [32m200 [0m490.655 ms - 189[0m
+=== FROM CACHE ===
+GET_USER: 0.274ms
+[0mPOST /graphql [32m200 [0m562.163 ms - 2885[0m
