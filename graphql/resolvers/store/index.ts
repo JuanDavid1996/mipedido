@@ -11,6 +11,7 @@ import {
 	checkPermission
 } from "../../../helpers/authHelpers";
 import {ICategory} from "../../../models/Category";
+import { PERMISSIONS } from "../../../constants";
 
 
 interface StoreInput {
@@ -91,7 +92,7 @@ const mutations = {
 	},
 	deleteStore: async(obj: any, {_id}: any, context: any) => {
 		verifyCurrentUser(context);
-		await checkPermission("deleteStore", context);
+		await checkPermission(PERMISSIONS.DELETE_STORE, context);
 		const deleteStore = await Store.findByIdAndRemove(_id)
 		if(!deleteStore) {
          	throw new Error('Error');
