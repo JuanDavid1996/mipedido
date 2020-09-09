@@ -41,7 +41,9 @@ export enum PERMISSIONS {
     DELETE_ROLE = "deleteRole",
     ADD_PERMISSION_TO_ROLE = "addPermissionToRole",
     REMOVE_PERMISSION_TO_ROLE = "removePermissionToRole",
-    DELETE_STORE = "deleteStore"
+    DELETE_STORE = "deleteStore",
+    ADD_USER = "addUser",
+    UPDATE_USER = "updateUser",
 }
 
 export enum ORDER_FIELDS {

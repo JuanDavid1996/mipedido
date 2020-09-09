@@ -54,14 +54,16 @@ const resolvers = {
 
 const mutations = {
 
-    addUser: async  (obj: any, {user}: any, context: any) =>  {
+    addUser: async (obj: any, {user}: any, context: any) =>  {
         verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.ADD_USER, context);
         const exist = await User.findOne({username: user.username})
         if (exist) throw Error("Nombre de usuario en uso")
         return User.create(user);
     },
     updateUser: async (obj: any, {user}: UserInput<BaseUserUpdateInput>, context: any) =>{
         verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.UPDATE_USER, context);
         const params: any = { ...user }
         // if (params.role) params.role = new Schema.Types.ObjectId(params.role)
         delete params._id;
