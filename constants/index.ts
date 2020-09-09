@@ -34,6 +34,13 @@ export enum PERMISSIONS {
     SHOW_PERMISSION = "showPermission",
     ADD_PERMISSION = "addPermission",
     DELETE_PERMISSION = "deletePermission",
+    LIST_ROLE = "listRole",
+    SHOW_ROLE = "showRole",
+    ADD_ROLE = "addRole",
+    UPDATE_ROLE = "updateRole",
+    DELETE_ROLE = "deleteRole",
+    ADD_PERMISSION_TO_ROLE = "addPermissionToRole",
+    REMOVE_PERMISSION_TO_ROLE = "removePermissionToRole",
 }
 
 export enum ORDER_FIELDS {

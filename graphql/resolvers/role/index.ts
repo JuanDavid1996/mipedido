@@ -1,10 +1,19 @@
 import Role from "../../../models/Role";
 import {getPermissionById, getPermissionByKeys, getRoleById, getRoles} from "../../../DataSource";
-import {verifyCurrentUser} from "../../../helpers/authHelpers";
+import {verifyCurrentUser, checkPermission} from "../../../helpers/authHelpers";
+import { PERMISSIONS } from "../../../constants";
 
 const queries = {
-    roles: () => getRoles(),
-    role: (context: any, args: any) => getRoleById(args._id),
+    roles: async (obj: any, args: any, context: any) => {
+        verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.LIST_ROLE, context);
+        return getRoles()
+    },
+    role: async (context: any, args: any) => {
+        verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.SHOW_ROLE, context);
+        return getRoleById(args._id)
+    },
 }
 
 const resolvers = {
@@ -15,21 +24,25 @@ const resolvers = {
 
 const mutations = {
 
-    addRole(obj: any, {name}: any, context: any) {
+    async addRole(obj: any, {name}: any, context: any) {
         verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.ADD_ROLE, context);
         return Role.create({name, permissions: []});
     },
-    updateRole(obj: any, args: any, context: any) {
+    async updateRole(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.UPDATE_ROLE, context);
         if (!args._id) return;
         return Role.findOneAndUpdate({_id: args._id }, { $set: { name: args.name } });
     },
-    deleteRole(obj: any, {_id}: any, context: any) {
+    async deleteRole(obj: any, {_id}: any, context: any) {
         verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.DELETE_ROLE, context);
         return Role.findOneAndDelete({_id: _id})
     },
     async addPermissionToRole(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.ADD_PERMISSION_TO_ROLE, context);
         const role: any = await getRoleById(args._id);
         if ( role.permissions.indexOf(args.permission) === -1) {
             role.permissions.push(await getPermissionById(args.permission))
@@ -39,6 +52,7 @@ const mutations = {
     },
     async removePermissionToRole(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.REMOVE_PERMISSION_TO_ROLE, context);
         const role: any = await getRoleById(args._id);
         let index =  role.permissions.indexOf(args.permission);
         if ( index > -1) {
