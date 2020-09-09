@@ -4,18 +4,26 @@ import {checkPermission, verifyCurrentUser} from "../../../helpers/authHelpers";
 import {PERMISSIONS} from "../../../constants";
 
 const queries = {
-    permissions: () => getPermissions(),
-    permission: (obj: any,  args: any) => getPermissionById(args._id),
+    permissions: async (obj: any, args: any, context: any) => {
+        verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.LIST_PERMISSION, context);
+        return getPermissions()
+    },
+    permission: async (obj: any,  args: any, context: any) => {
+        verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.SHOW_PERMISSION, context);
+        return getPermissionById(args._id)
+    },
 }
 
-const resolvers = {
-    // role: (args: any) => getRoleById(args.role),
-}
+const resolvers = {}
 
 const mutations = {
 
     async addPermission(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.ADD_PERMISSION, context);
+
         const {resource} = args;
         return Permission.create({resource});
     },
@@ -27,8 +35,9 @@ const mutations = {
         return Permission.findOneAndUpdate({_id}, {$set: {name}});
     },
 
-    deletePermission(obj: any, {_id}: any, context: any) {
+    async deletePermission(obj: any, {_id}: any, context: any) {
         verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.DELETE_PERMISSION, context)
         return Permission.findOneAndDelete({_id})
     }
 

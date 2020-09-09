@@ -29,7 +29,11 @@ export enum PERMISSIONS {
     LIST_ORDERS_BY_DOMICILIARY = "listOrdersByDomiciliary",
     LIST_ORDERS_BY_STORE = "listOrdersByStore",
     LIST_ORDERS_BY_CLIENT = "listOrdersByClient",
-    SHOW_ORDER = "showOrder"
+    SHOW_ORDER = "showOrder",
+    LIST_PERMISSION = "listPermission",
+    SHOW_PERMISSION = "showPermission",
+    ADD_PERMISSION = "addPermission",
+    DELETE_PERMISSION = "deletePermission",
 }
 
 export enum ORDER_FIELDS {

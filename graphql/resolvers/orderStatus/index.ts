@@ -3,7 +3,10 @@ import {getOrderStatuses} from "../../../DataSource";
 import {verifyCurrentUser} from "../../../helpers/authHelpers";
 
 const queries = {
-	orderStatuses: () => getOrderStatuses(),
+	orderStatuses: (obj: any, args: any, context: any) => {
+		verifyCurrentUser(context)
+		return getOrderStatuses()
+	},
 }
 
 const mutations = {
