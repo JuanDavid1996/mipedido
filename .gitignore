@@ -117,3 +117,4 @@ dist
 
 nodemon.json
 .env
+processes.json
