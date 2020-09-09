@@ -22,7 +22,7 @@ const mutations = {
 
     async updatePermission(obj: any, {_id, name}: any, context: any) {
         verifyCurrentUser(context);
-        await checkPermission(PERMISSIONS.UPDATE_PERMISSIONS, context.currentUser)
+        await checkPermission(PERMISSIONS.UPDATE_PERMISSIONS, context)
         if (!_id) throw Error("Request no valido")
         return Permission.findOneAndUpdate({_id}, {$set: {name}});
     },

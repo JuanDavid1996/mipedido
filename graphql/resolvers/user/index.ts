@@ -24,22 +24,22 @@ interface UserInput<T> {
 const queries = {
     async users(obj: any, args: any, context: any) {
         verifyCurrentUser(context)
-        await checkPermissions([PERMISSIONS.LIST_USER], context.currentUser)
+        await checkPermissions([PERMISSIONS.LIST_USER], context)
         return getUsers();
     },
     async user(obj: any, args: any, context: any) {
         verifyCurrentUser(context)
-        await checkPermissions([PERMISSIONS.SHOW_USER], context.currentUser)
+        await checkPermissions([PERMISSIONS.SHOW_USER], context)
         return getUserById(args._id)
     },
     shopkeepers: async(obj: any, args: any, context: any) => {
         verifyCurrentUser(context)
-        await checkPermissions([PERMISSIONS.LIST_SHOP_KEEPER], context.currentUser)
+        await checkPermissions([PERMISSIONS.LIST_SHOP_KEEPER], context)
         return getUsersByRoleName(BASE_ROLES.TENDERO)
     },
     clients: async(obj: any, args: any, context: any) => {
         verifyCurrentUser(context)
-        await checkPermissions([PERMISSIONS.LIST_CUSTOMER], context.currentUser)
+        await checkPermissions([PERMISSIONS.LIST_CUSTOMER], context)
         return getUsersByRoleName(BASE_ROLES.CLIENTE)
     },
     currentUser: (obj: any, args: any, context: any) => {
@@ -71,7 +71,7 @@ const mutations = {
     },
     async deleteUser(obj: any, args: any, context: any) {
         verifyCurrentUser(context)
-        await checkPermission(PERMISSIONS.DELETE_USER, context.currentUser);
+        await checkPermission(PERMISSIONS.DELETE_USER, context);
         return User.findByIdAndDelete(args._id)
     }
 }

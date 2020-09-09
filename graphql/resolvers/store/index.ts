@@ -91,7 +91,7 @@ const mutations = {
 	},
 	deleteStore: async(obj: any, {_id}: any, context: any) => {
 		verifyCurrentUser(context);
-		await checkPermission("deleteStore", context.currentUser);
+		await checkPermission("deleteStore", context);
 		const deleteStore = await Store.findByIdAndRemove(_id)
 		if(!deleteStore) {
          	throw new Error('Error');

@@ -75,7 +75,7 @@ app.use('/graphql', graphqlHTTP(async (request: Request, response: Response, par
   return {
     schema: schema,
     rootValue: {},
-    graphiql: true,
+    graphiql: process.env.NODE_ENV !== "production",
     context: {
       currentUser
     },

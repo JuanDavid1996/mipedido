@@ -43,10 +43,10 @@ const queries = {
     },
     async currentOrder(obj: any, args: any, context: any) {
         verifyCurrentUser(context)
-        await checkPermission(PERMISSIONS.CURRENT_ORDER, context.currentUser)
+        await checkPermission(PERMISSIONS.CURRENT_ORDER, context)
         if (args.domiciliary !== context.currentUser._id) {
             const permissions = [PERMISSIONS.CURRENT_ORDER, PERMISSIONS.VERIFY_CURRENT_ORDER]
-            await checkPermissions(permissions, context.currentUser)
+            await checkPermissions(permissions, context)
         }
         const orderTaken = await getOrderByDomiciliaryWithStatus(args.domiciliary, ORDER_STATUS.TOMADO)
         const orderInProgress = await getOrderByDomiciliaryWithStatus(args.domiciliary, ORDER_STATUS.EN_CURSO)
@@ -71,7 +71,7 @@ const mutations = {
 
     async addOrder(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
-        await checkPermission(PERMISSIONS.ADD_ORDER, context.currentUser);
+        await checkPermission(PERMISSIONS.ADD_ORDER, context);
 
         const role: any = await getRoleById(context.currentUser.role);
         let store: string = args.order.store;
@@ -115,7 +115,7 @@ const mutations = {
     },
     async updateOrder(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
-        await checkPermission(PERMISSIONS.UPDATE_ORDER, context.currentUser)
+        await checkPermission(PERMISSIONS.UPDATE_ORDER, context)
         if (!args.order._id) return;
         const _id = args.order._id;
         const params = args.order;
@@ -136,12 +136,12 @@ const mutations = {
     },
     async deleteOrder(obj: any, {_id}: any, context: any) {
         verifyCurrentUser(context);
-        await checkPermission(PERMISSIONS.DELETE_ORDER, context.currentUser)
+        await checkPermission(PERMISSIONS.DELETE_ORDER, context)
         return Order.findOneAndDelete({_id})
     },
     async takeOrder(obj: any, {_id, domiciliary}: any, context: any) {
         verifyCurrentUser(context);
-        await checkPermission(PERMISSIONS.TAKE_ORDER, context.currentUser);
+        await checkPermission(PERMISSIONS.TAKE_ORDER, context);
         const order:IOrder | null = await getOrderById(_id).populate(ORDER_STATUS_FIELDS.STATUS).exec();
 
         if (order === null) {
