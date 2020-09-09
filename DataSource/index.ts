@@ -122,12 +122,13 @@ export function getOrdersByDomiciliary(domiciliary: string) {
 }
 
 export async function getOrdersAvailable() {
-    const status: IOrderStatus = await getOrderStatusByName(ORDER_STATUS.PENDIENTE) as IOrderStatus;
-    return Order.find({ status: status._id });
+    const status: IOrderStatus = await getOrderStatusByName(ORDER_STATUS.PENDIENTE);
+    const conditions: any = { status: status._id }
+    return Order.find(conditions);
 }
 
 export async function getOrderByDomiciliaryWithStatus(domiciliary: string, statusName: ORDER_STATUS) {
-    const status: IOrderStatus = await getOrderStatusByName(statusName) as IOrderStatus;
+    const status = await getOrderStatusByName(statusName);
     return Order.findOne({ status: status._id, domiciliary });
 }
 
@@ -140,8 +141,8 @@ export function getOrderStatuses() {
     return OrderStatus.find();
 }
 
-export function getOrderStatusByName(name: string) {
-    return OrderStatus.findOne({name: name});
+export async function getOrderStatusByName(name: string): Promise<IOrderStatus> {
+    return await OrderStatus.findOne({name: name}) as IOrderStatus;
 }
 
 

@@ -37,8 +37,9 @@ const queries = {
         verifyCurrentUser(context)
         return getOrderById(args._id)
     },
-    ordersAvailable: (obj: any, args: any, context: any) => {
+    async ordersAvailable(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
+        await checkPermission(PERMISSIONS.TAKE_ORDER, context);
         return getOrdersAvailable()
     },
     async currentOrder(obj: any, args: any, context: any) {
