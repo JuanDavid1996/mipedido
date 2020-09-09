@@ -2,6 +2,7 @@ import User from "../../models/User";
 import {getOrdersByDomiciliary, getRoleById, getStoresByOwner} from "../../DataSource";
 import {BASE_ROLES} from "../../constants";
 import {generateToken} from "../../graphql/resolvers/auth";
+import { clearUserCache, clearUserWithPermissionCache } from "../../DataSource/cache";
 
 export const login = async (req: any, res: any) => {
   const { username, password } = req.body;
@@ -13,6 +14,9 @@ export const login = async (req: any, res: any) => {
       error: "Usuario o contraseña errada"
     });
   }
+
+  clearUserCache(user._id);
+  clearUserWithPermissionCache(user._id);
 
   const role: any = await getRoleById(user.role).populate("permissions").exec();
   const jsonResponse: any = {}

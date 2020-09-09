@@ -9,7 +9,7 @@ redisClient.on("error", (error: any) => {
     console.log("REDIS ", error);
 })
 
-const getUserKey = (user: any) => `${user}_permissions`
+const getUserWithPermissionKey = (user: any) => `${user}_permissions`
 
 function getOrUpdateCache<T extends Document>(
     key: string,
@@ -34,15 +34,26 @@ function getOrUpdateCache<T extends Document>(
     })
 }
 
-export function getUserWithPermissionsCache(userId: any): Promise<IUser> {
-    const key = getUserKey(userId);
+function clearCache(key:string) {
+    redisClient.set(key, undefined, redis.print)
+}
+
+export function getUserWithPermissionsCache(userId: string): Promise<IUser> {
+    const key = getUserWithPermissionKey(userId);
     return getOrUpdateCache<IUser>(key, async () => {
         return await getUserWithPermissions(userId) as IUser;
     }, "GET_USER_WITH_PERMISSION")
 }
 
-export function getUserCache(userId: any): Promise<IUser> {
+export function getUserCache(userId: string): Promise<IUser> {
     return getOrUpdateCache<IUser>(userId, async () => {
         return await getUserById(userId) as IUser;
     }, "GET_USER")
+}
+
+export function clearUserCache(userId: string) {
+    clearCache(userId);
+}
+export function clearUserWithPermissionCache(userId: string) {
+    clearCache(getUserWithPermissionKey(userId));
 }
