@@ -28,6 +28,13 @@ const redisClient = redis.createClient()
 
 redisClient.on("error", (error: any) => console.log("REDIS ", error))
 
+function canParse(input: any) {
+    try {
+        JSON.parse(input);
+        return true;
+    } catch (e) { return false; }
+}
+
 function reolveValue(
     key: string,
     getValue: () => Promise<any>,
@@ -36,7 +43,7 @@ function reolveValue(
     return new Promise(async (resolve: any) => {
         console.time(message)
         redisClient.get(key, async (err: any, data?: string) => {
-            if (err || !data) {
+            if ((err || !data) || (data && !canParse(data))) {
                 const value = await getValue();
                 redisClient.set(key, JSON.stringify(value), redis.print)
                 console.log("=== FROM DB ===")
