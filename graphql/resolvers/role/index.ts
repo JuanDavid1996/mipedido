@@ -10,7 +10,7 @@ const queries = {
         await checkPermission(PERMISSIONS.LIST_ROLE, context);
         return getRolesCache()
     },
-    role: async (context: any, args: any) => {
+    role: async (obj: any, args: any, context: any) => {
         verifyCurrentUser(context);
         await checkPermission(PERMISSIONS.SHOW_ROLE, context);
         return getRoleById(args._id)
