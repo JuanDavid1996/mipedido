@@ -1,9 +1,12 @@
 import Category from "../../../models/Category";
 import {getCategories, getCategoryById} from "../../../DataSource";
 import {verifyCurrentUser} from "../../../helpers/authHelpers";
+import { getCategoriesCache } from "../../../DataSource/cache";
 
 const queries = {
-    categories: () => getCategories(),
+    categories: () => {
+        return getCategoriesCache()
+    },
     category: (obj: any, args: any) => getCategoryById(args._id),
 }
 

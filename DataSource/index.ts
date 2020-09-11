@@ -1,7 +1,7 @@
 import User, {IUser} from "../models/User";
 import Permission from "../models/Permission";
 import Role from "../models/Role";
-import Category from "../models/Category";
+import Category, { ICategory } from "../models/Category";
 import StoreType from "../models/StoreType";
 import Order from "../models/Order";
 import OrderStatus, {IOrderStatus} from "../models/OrderStatus";
@@ -71,8 +71,8 @@ export function getCategoryById(id: string) {
     return Category.findById(id);
 }
 
-export function getCategories() {
-    return Category.find();
+export async function getCategories() : Promise<ICategory[]> {
+    return await Category.find() as ICategory[];
 }
 
 
