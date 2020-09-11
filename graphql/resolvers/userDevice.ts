@@ -6,11 +6,17 @@ import {
   getUserDevice,
   getUserDevices
 } from "../../DataSource";
-import {verifyCurrentUser} from "../../helpers/authHelpers";
+import {verifyCurrentUser, checkPermission} from "../../helpers/authHelpers";
 import UserDevice from "../../models/UserDevice";
+import { getUserDevicesCache } from "../../DataSource/cache";
+import { PERMISSIONS } from "../../constants";
 
 const queries = {
-  userDevices: (obj: any, args: any) => getUserDevices()
+  userDevices: async (obj: any, args: any, context: any) => {
+    verifyCurrentUser(context)
+    await checkPermission(PERMISSIONS.LIST_USER_DEVICES, context);
+    return getUserDevicesCache()
+  }
 }
 
 const resolvers = {

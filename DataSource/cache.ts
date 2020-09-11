@@ -107,7 +107,8 @@ enum CACHE_LOGS {
     GET_PERMISSIONS = "GET_PERMISSIONS",
     GET_CATTEGORIES = "GET_CATTEGORIES",
     GET_USERS = "GET_USERS",
-    GET_ORDERS_BY_CLIENT = "GET_ORDERS_BY_CLIENT"
+    GET_ORDERS_BY_CLIENT = "GET_ORDERS_BY_CLIENT",
+    GET_USER_DEVICES = "GET_USER_DEVICES"
 }
 
 //User + Permission
@@ -146,7 +147,7 @@ export function getUserDevicesCache() {
                     match: {name: BASE_ROLES.DOMICILIARIO}
                 }
             }).exec() as IUserDevice[]
-    }, "GET_USER_DEVICES");
+    }, CACHE_LOGS.GET_USER_DEVICES);
 }
 
 export function getCategoriesCache() {

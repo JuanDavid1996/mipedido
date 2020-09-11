@@ -44,6 +44,8 @@ export enum PERMISSIONS {
     DELETE_STORE = "deleteStore",
     ADD_USER = "addUser",
     UPDATE_USER = "updateUser",
+    LIST_USER_DEVICES = "listUserDevice",
+    SHOW_STORE_CLIENT = "showStoreClient"
 }
 
 export enum ORDER_FIELDS {
