@@ -95,10 +95,8 @@ const queries = {
 }
 
 const resolvers = {
-    store: (root: any, args: any, extra: any) => {
-        console.log("ROOT: ", root)
-        console.log("ARGS: ", args)
-        console.log("EXTRA: ", extra)
+    store: (root: any, args: any, context: any) => {
+        //TODO: CHECK PERMISSION
         return getStoreById(root.store)
     },
     domiciliary: (args: any) => getUserById(args.domiciliary),
