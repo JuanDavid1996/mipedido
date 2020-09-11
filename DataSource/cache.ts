@@ -9,7 +9,10 @@ import {
     getOrders,
     getUsers,
     getUserDevices,
-    getOrdersAvailable
+    getOrdersAvailable,
+    getOrdersByStore,
+    getOrdersByClient,
+    getOrdersByDomiciliary
 } from "./index";
 import { IUser } from "../models/User";
 import { ICategory } from "../models/Category";
@@ -24,8 +27,6 @@ const redis = require("redis")
 const redisClient = redis.createClient()
 
 redisClient.on("error", (error: any) => console.log("REDIS ", error))
-
-const getUserWithPermissionKey = (user: any) => `${user}_permissions`
 
 function reolveValue(
     key: string,
@@ -75,11 +76,20 @@ enum CACHE_KEYS {
     USER_DEVICES = "user_devices",
     ROLES = "roles",
     CATEGORIES = "categories",
-    PERMISSIONS = "permissions"
+    PERMISSIONS = "permissions",
+    USERS = "users",
+}
+
+const D_CACHE_KEYS = {
+    GET_ORDERS_BY_DOMICILIARY: (key: string) => `${key}_${BASE_ROLES.DOMICILIARIO}_${CACHE_KEYS.ORDERS}`,
+    GET_ORDERS_BY_STORE: (key: string) => `${key}_${BASE_ROLES.TENDERO}_${CACHE_KEYS.ORDERS}`,
+    GET_ORDERS_BY_CLIENT: (key: string) => `${key}_${BASE_ROLES.CLIENTE}_${CACHE_KEYS.ORDERS}`,
+    GET_USER_WITH_PERMISSIONS: (key: any) => `${key}_${CACHE_KEYS.PERMISSIONS}`
 }
 
 enum CACHE_LOGS {
     GET_ORDERS = "GET_ORDERS",
+    GET_ORDERS_BY_STORE = "GET_ORDERS_BY_STORE",
     GET_STORES = "GET_STORES",
     GET_USER = "GET_USER",
     GET_AVAILABLE_ORDERS = "GET_AVAILABLE_ORDERS",
@@ -87,11 +97,13 @@ enum CACHE_LOGS {
     GET_ROLES = "GET_ROLES",
     GET_PERMISSIONS = "GET_PERMISSIONS",
     GET_CATTEGORIES = "GET_CATTEGORIES",
+    GET_USERS = "GET_USERS",
+    GET_ORDERS_BY_CLIENT = "GET_ORDERS_BY_CLIENT"
 }
 
+//User + Permission
 export function getUserWithPermissionsCache(userId: string): Promise<IUser> {
-    const key = getUserWithPermissionKey(userId);
-    return getOrUpdateValueCache<IUser>(key, async () => {
+    return getOrUpdateValueCache<IUser>(D_CACHE_KEYS.GET_USER_WITH_PERMISSIONS(userId), async () => {
         return await getUserWithPermissions(userId) as IUser;
     }, CACHE_LOGS.GET_USER_WITH_PERMISSION)
 }
@@ -104,37 +116,15 @@ export function getUserCache(userId: string): Promise<IUser> {
 
 export const clearUserCache = (userId: string) => clearCache(userId);
 
-export const clearUserWithPermissionCache = (userId: string) => clearCache(getUserWithPermissionKey(userId));
-
-export function getCategoriesCache() {
-    return getOrUpdateValuesCache<ICategory>(CACHE_KEYS.CATEGORIES, async () => {
-        return await getCategories() as ICategory[]
-    }, CACHE_LOGS.GET_CATTEGORIES)
+export const clearUserWithPermissionCache = (userId: string) => {
+    clearCache(D_CACHE_KEYS.GET_USER_WITH_PERMISSIONS(userId));
 }
 
-export function getPermissionsCache() {
-    return getOrUpdateValuesCache<IPermission>(CACHE_KEYS.PERMISSIONS, async  () => {
-        return await getPermissions() as IPermission[]
-    }, CACHE_LOGS.GET_PERMISSIONS);
-}
-
-export function getRolesCache() {
-    return getOrUpdateValuesCache<IRole>(CACHE_KEYS.ROLES, async  () => {
-        return await getRoles() as IRole[]
-    }, CACHE_LOGS.GET_ROLES);
-}
-
-export function getStoresCache() {
-    return getOrUpdateValuesCache<IStore>(CACHE_KEYS.STORES, async () => {
-        return await getStores() as IStore[]
-    }, CACHE_LOGS.GET_STORES);
-}
 
 export function getUsersCache() {
-    const key = "users";
-    return getOrUpdateValuesCache<IUser>(key, async () => {
+    return getOrUpdateValuesCache<IUser>(CACHE_KEYS.USERS, async () => {
         return await getUsers() as IUser[]
-    }, "GET_USERS");
+    }, CACHE_LOGS.GET_USERS);
 }
 
 export function getUserDevicesCache() {
@@ -148,6 +138,33 @@ export function getUserDevicesCache() {
                 }
             }).exec() as IUserDevice[]
     }, "GET_USER_DEVICES");
+}
+
+export function getCategoriesCache() {
+    return getOrUpdateValuesCache<ICategory>(CACHE_KEYS.CATEGORIES, async () => {
+        return await getCategories() as ICategory[]
+    }, CACHE_LOGS.GET_CATTEGORIES)
+}
+
+
+export function getPermissionsCache() {
+    return getOrUpdateValuesCache<IPermission>(CACHE_KEYS.PERMISSIONS, async  () => {
+        return await getPermissions() as IPermission[]
+    }, CACHE_LOGS.GET_PERMISSIONS);
+}
+
+
+export function getRolesCache() {
+    return getOrUpdateValuesCache<IRole>(CACHE_KEYS.ROLES, async  () => {
+        return await getRoles() as IRole[]
+    }, CACHE_LOGS.GET_ROLES);
+}
+
+
+export function getStoresCache() {
+    return getOrUpdateValuesCache<IStore>(CACHE_KEYS.STORES, async () => {
+        return await getStores() as IStore[]
+    }, CACHE_LOGS.GET_STORES);
 }
 
 //Orders
@@ -175,10 +192,28 @@ export async function addAvailableOrdersCache(order: IOrder) {
     redisClient.set(CACHE_KEYS.AVAILABLE_ORDERS, orders);
 }
 
-export async function removeAvailableOrdersCache(order: IOrder) {
+export async function removeAvailableOrdersCache({ _id }: IOrder) {
     const orders: IOrder[] = await getOrdersCache()
     redisClient.set(
         CACHE_KEYS.AVAILABLE_ORDERS,
-        orders.filter(o => o._id !== order._id)
+        orders.filter(order => order._id !== _id)
     );
+}
+
+export function getOrdersByDomiciliaryCache(domiciliary: string) {
+    return getOrUpdateValuesCache<IOrder>(D_CACHE_KEYS.GET_ORDERS_BY_DOMICILIARY(domiciliary), async () => {
+        return await getOrdersByDomiciliary(domiciliary) as IOrder[]
+    }, CACHE_LOGS.GET_ORDERS_BY_STORE);
+}
+
+export async function getOrdersByStoreCache(store: string) {
+    return getOrUpdateValuesCache<IOrder>(D_CACHE_KEYS.GET_ORDERS_BY_STORE(store), async () => {
+        return await getOrdersByStore(store) as IOrder[]
+    }, CACHE_LOGS.GET_ORDERS_BY_STORE);
+}
+
+export async function getOrdersByClientCache(client: string) {
+    return getOrUpdateValuesCache<IOrder>(D_CACHE_KEYS.GET_ORDERS_BY_CLIENT(client), async () => {
+        return await getOrdersByClient(client) as IOrder[]
+    }, CACHE_LOGS.GET_ORDERS_BY_CLIENT);
 }

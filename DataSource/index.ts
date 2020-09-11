@@ -121,6 +121,10 @@ export function getOrdersByDomiciliary(domiciliary: string) {
     return Order.find({ domiciliary });
 }
 
+export function getOrdersByClient(client: string) {
+    return Order.find({ client })
+}
+
 export async function getOrdersAvailable() {
     const status: IOrderStatus = await getOrderStatusByName(ORDER_STATUS.PENDIENTE);
     const conditions: any = { status: status._id }

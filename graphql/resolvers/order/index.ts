@@ -29,7 +29,10 @@ import {
     addOrdersCache,
     addAvailableOrdersCache,
     getAvailableOrdersCache,
-    removeAvailableOrdersCache
+    removeAvailableOrdersCache,
+    getOrdersByStoreCache,
+    getOrdersByClientCache,
+    getOrdersByDomiciliaryCache
 } from "../../../DataSource/cache";
 
 const queries = {
@@ -38,17 +41,17 @@ const queries = {
 
         if (args.domiciliary) {
             await checkPermission(PERMISSIONS.LIST_ORDERS_BY_DOMICILIARY, context)
-            return getOrdersByDomiciliary(args.domiciliary);
+            return getOrdersByDomiciliaryCache(args.domiciliary);
         }
 
         if (args.store) {
             await checkPermission(PERMISSIONS.LIST_ORDERS_BY_STORE, context)
-            return getOrdersByStore(args.store);
+            return getOrdersByStoreCache(args.store);
         }
 
         if (args.client) {
             await checkPermission(PERMISSIONS.LIST_ORDERS_BY_CLIENT, context)
-            return getOrdersByStore(args.store);
+            return getOrdersByClientCache(args.client);
         }
 
         await checkPermissions([
