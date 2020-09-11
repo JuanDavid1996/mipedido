@@ -23,7 +23,14 @@ import {
 import {notifyNewOrder, notifyOrderTaken} from "../../../helpers/notification";
 import Order, {IOrder} from "../../../models/Order";
 import {BASE_ROLES, ORDER_FIELDS, ORDER_STATUS, ORDER_STATUS_FIELDS, PERMISSIONS} from "../../../constants";
-import { getOrdersCache } from "../../../DataSource/cache";
+import {
+    getOrdersCache,
+    getUserDevicesCache,
+    addOrdersCache,
+    addAvailableOrdersCache,
+    getAvailableOrdersCache,
+    removeAvailableOrdersCache
+} from "../../../DataSource/cache";
 
 const queries = {
     orders: async (obj: any, args: any, context: any) => {
@@ -60,13 +67,14 @@ const queries = {
     async ordersAvailable(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
         await checkPermission(PERMISSIONS.TAKE_ORDER, context);
-        return getOrdersAvailable()
+        return getAvailableOrdersCache()
     },
     async currentOrder(obj: any, args: any, context: any) {
         verifyCurrentUser(context)
         await checkPermission(PERMISSIONS.CURRENT_ORDER, context)
+
         if (args.domiciliary !== context.currentUser._id) {
-            const permissions = [PERMISSIONS.CURRENT_ORDER, PERMISSIONS.VERIFY_CURRENT_ORDER]
+            const permissions = [PERMISSIONS.VERIFY_CURRENT_ORDER]
             await checkPermissions(permissions, context)
         }
         const orderTaken = await getOrderByDomiciliaryWithStatus(args.domiciliary, ORDER_STATUS.TOMADO)
@@ -121,14 +129,10 @@ const mutations = {
         const newOrder = new Order({client, store, description, destination, status, origin})
         await newOrder.save();
 
-        const uDevices: any = await getUserDevices()
-          .populate({
-              path: "user",
-              populate: {
-                  path: "role",
-                  match: { name: BASE_ROLES.DOMICILIARIO }
-              }
-          }).exec()
+        await addOrdersCache(newOrder);
+        await addAvailableOrdersCache(newOrder);
+
+        const uDevices: any = await getUserDevicesCache()
 
         const registrationIds = uDevices.filter((uDevice: any) => uDevice.user.role).map((ud: any) => ud.firebaseToken);
         await notifyNewOrder(registrationIds, newOrder);
@@ -176,6 +180,8 @@ const mutations = {
         order.status = (await getOrderStatusByName(ORDER_STATUS.TOMADO) as any)._id;
         order.domiciliary = (await  getUserById(domiciliary) as any)._id;
         await order.save()
+
+        await removeAvailableOrdersCache(order)
 
         const store: any = await getStoreById(order.store).populate(ORDER_FIELDS.OWNER).exec()
         const owner = store.owner._id
