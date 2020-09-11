@@ -217,3 +217,15 @@ export async function getOrdersByClientCache(client: string) {
         return await getOrdersByClient(client) as IOrder[]
     }, CACHE_LOGS.GET_ORDERS_BY_CLIENT);
 }
+
+export async function addOrdersByDomiciliaryCache(domiciliary: string, order: IOrder) {
+    const orders = await getOrdersByDomiciliaryCache(domiciliary);
+    orders.push(order);
+    redisClient.set(D_CACHE_KEYS.GET_ORDERS_BY_DOMICILIARY(domiciliary), orders);
+}
+
+export async function addOrdersByStoreCache(store: string, order: IOrder) {
+    const orders = await getOrdersByDomiciliaryCache(store);
+    orders.push(order);
+    redisClient.set(D_CACHE_KEYS.GET_ORDERS_BY_STORE(store), orders);
+}

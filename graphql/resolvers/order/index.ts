@@ -32,7 +32,9 @@ import {
     removeAvailableOrdersCache,
     getOrdersByStoreCache,
     getOrdersByClientCache,
-    getOrdersByDomiciliaryCache
+    getOrdersByDomiciliaryCache,
+    addOrdersByDomiciliaryCache,
+    addOrdersByStoreCache
 } from "../../../DataSource/cache";
 
 const queries = {
@@ -133,6 +135,7 @@ const mutations = {
         await newOrder.save();
 
         await addOrdersCache(newOrder);
+        await addOrdersByStoreCache(store, newOrder);
         await addAvailableOrdersCache(newOrder);
 
         const uDevices: any = await getUserDevicesCache()
@@ -150,14 +153,8 @@ const mutations = {
         delete params._id;
 
         return Order.findOneAndUpdate(
-            {
-                _id
-            },{
-                $set: { ...params }
-            }, {new: true}, (err: any, order: any) => {
-                if (err) {
-                    throw new Error("Se produjo un error al actualizar la categoria")
-                }
+            { _id },{ $set: { ...params } }, {new: true}, (err: any, order: any) => {
+                if (err) throw new Error("Se produjo un error el pedido")
                 return order;
             }
         )
@@ -185,6 +182,7 @@ const mutations = {
         await order.save()
 
         await removeAvailableOrdersCache(order)
+        await addOrdersByDomiciliaryCache(domiciliary, order);
 
         const store: any = await getStoreById(order.store).populate(ORDER_FIELDS.OWNER).exec()
         const owner = store.owner._id
