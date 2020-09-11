@@ -1,13 +1,14 @@
-import {getPermissionById, getPermissions} from "../../../DataSource";
+import {getPermissionById} from "../../../DataSource";
 import Permission from "../../../models/Permission";
 import {checkPermission, verifyCurrentUser} from "../../../helpers/authHelpers";
 import {PERMISSIONS} from "../../../constants";
+import { getPermissionsCache } from "../../../DataSource/cache";
 
 const queries = {
     permissions: async (obj: any, args: any, context: any) => {
         verifyCurrentUser(context);
         await checkPermission(PERMISSIONS.LIST_PERMISSION, context);
-        return getPermissions()
+        return getPermissionsCache()
     },
     permission: async (obj: any,  args: any, context: any) => {
         verifyCurrentUser(context);

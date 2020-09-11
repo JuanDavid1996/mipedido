@@ -1,7 +1,9 @@
 import {Document} from "mongoose";
-import {getUserById, getUserWithPermissions, getCategories} from "./index";
+import {getUserById, getUserWithPermissions, getCategories, getPermissions, getRoles} from "./index";
 import { IUser } from "../models/User";
 import { ICategory } from "../models/Category";
+import { IPermission } from "../models/Permission";
+import { IRole } from "../models/Role";
 
 const redis = require("redis")
 const redisClient = redis.createClient()
@@ -73,4 +75,18 @@ export function getCategoriesCache() {
     return getOrUpdateValuesCache<ICategory>(key, async () => {
         return await getCategories() as ICategory[]
     }, "GET_CATTEGORIES")
+}
+
+export function getPermissionsCache() {
+    const key = "permissions";
+    return getOrUpdateValuesCache<IPermission>(key, async  () => {
+        return await getPermissions() as IPermission[]
+    }, "GET_PERMISSIONS");
+}
+
+export function getRolesCache() {
+    const key = "roles";
+    return getOrUpdateValuesCache<IRole>(key, async  () => {
+        return await getRoles() as IRole[]
+    }, "GET_ROLES");
 }

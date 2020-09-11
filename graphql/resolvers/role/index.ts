@@ -2,12 +2,13 @@ import Role from "../../../models/Role";
 import {getPermissionById, getPermissionByKeys, getRoleById, getRoles} from "../../../DataSource";
 import {verifyCurrentUser, checkPermission} from "../../../helpers/authHelpers";
 import { PERMISSIONS } from "../../../constants";
+import { getRolesCache } from "../../../DataSource/cache";
 
 const queries = {
     roles: async (obj: any, args: any, context: any) => {
         verifyCurrentUser(context);
         await checkPermission(PERMISSIONS.LIST_ROLE, context);
-        return getRoles()
+        return getRolesCache()
     },
     role: async (context: any, args: any) => {
         verifyCurrentUser(context);
