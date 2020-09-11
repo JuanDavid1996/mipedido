@@ -74,7 +74,9 @@ function getOrUpdateValuesCache<T extends Document>(
     return reolveValue(key, getValue, message) as Promise<Array<T>>
 }
 
-const clearCache = (key:string) => redisClient.del(key)
+const clearCache = (key: string) => redisClient.del(key)
+
+const updateCache = (key: string, value: any) => redisClient.set(key, JSON.stringify(value), redis.print);
 
 enum CACHE_KEYS {
     ORDERS = "orders",
@@ -190,18 +192,18 @@ export function getAvailableOrdersCache() {
 export async function addOrdersCache(order: IOrder) {
     const orders: IOrder[] = await getOrdersCache()
     orders.push(order);
-    redisClient.set(CACHE_KEYS.ORDERS, orders);
+    updateCache(CACHE_KEYS.ORDERS, orders);
 }
 
 export async function addAvailableOrdersCache(order: IOrder) {
     const orders: IOrder[] = await getOrdersCache()
     orders.push(order);
-    redisClient.set(CACHE_KEYS.AVAILABLE_ORDERS, orders);
+    updateCache(CACHE_KEYS.AVAILABLE_ORDERS, orders);
 }
 
 export async function removeAvailableOrdersCache({ _id }: IOrder) {
     const orders: IOrder[] = await getOrdersCache()
-    redisClient.set(
+    updateCache(
         CACHE_KEYS.AVAILABLE_ORDERS,
         orders.filter(order => order._id !== _id)
     );
@@ -228,11 +230,11 @@ export async function getOrdersByClientCache(client: string) {
 export async function addOrdersByDomiciliaryCache(domiciliary: string, order: IOrder) {
     const orders = await getOrdersByDomiciliaryCache(domiciliary);
     orders.push(order);
-    redisClient.set(D_CACHE_KEYS.GET_ORDERS_BY_DOMICILIARY(domiciliary), orders);
+    updateCache(D_CACHE_KEYS.GET_ORDERS_BY_DOMICILIARY(domiciliary), orders);
 }
 
 export async function addOrdersByStoreCache(store: string, order: IOrder) {
     const orders = await getOrdersByDomiciliaryCache(store);
     orders.push(order);
-    redisClient.set(D_CACHE_KEYS.GET_ORDERS_BY_STORE(store), orders);
+    updateCache(D_CACHE_KEYS.GET_ORDERS_BY_STORE(store), orders);
 }

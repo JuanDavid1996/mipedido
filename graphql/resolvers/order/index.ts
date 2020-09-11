@@ -135,7 +135,7 @@ const mutations = {
         await newOrder.save();
 
         await addOrdersCache(newOrder);
-        await addOrdersByStoreCache(store, newOrder);
+        await addOrdersByStoreCache(storeModel._id, newOrder);
         await addAvailableOrdersCache(newOrder);
 
         const uDevices: any = await getUserDevicesCache()

@@ -5,7 +5,7 @@ import Category, { ICategory } from "../models/Category";
 import StoreType from "../models/StoreType";
 import Order from "../models/Order";
 import OrderStatus, {IOrderStatus} from "../models/OrderStatus";
-import Store from "../models/Store";
+import Store, { IStore } from "../models/Store";
 import Client from "../models/Client";
 import {DocumentQuery} from "mongoose";
 import UserDevice from "../models/UserDevice";
