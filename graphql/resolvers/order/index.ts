@@ -8,6 +8,7 @@ import {
     getOrderStatusByName,
     getRoleById,
     getStoreById,
+    getStoreClientById,
     getUserById,
     getUserDeviceByIds,
     getUserDevices,
@@ -35,7 +36,6 @@ import {
     addOrdersByDomiciliaryCache,
     addOrdersByStoreCache
 } from "../../../DataSource/cache";
-import helper from "../helpers";
 
 const queries = {
     orders: async (obj: any, args: any, context: any) => {
@@ -95,9 +95,14 @@ const queries = {
 }
 
 const resolvers = {
-    store: (args: any) => getStoreById(args.store),
+    store: (root: any, args: any, extra: any) => {
+        console.log("ROOT: ", root)
+        console.log("ARGS: ", args)
+        console.log("EXTRA: ", extra)
+        return getStoreById(root.store)
+    },
     domiciliary: (args: any) => getUserById(args.domiciliary),
-    client: (args: any, context: any) => helper.client(args.client, context),
+    client: (args: any) => getStoreClientById(args.client),
     status: (args: any) => getOrderStatusById(args.status),
 }
 
