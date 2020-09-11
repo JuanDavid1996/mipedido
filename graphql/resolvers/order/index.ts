@@ -34,7 +34,8 @@ import {
     getOrdersByClientCache,
     getOrdersByDomiciliaryCache,
     addOrdersByDomiciliaryCache,
-    addOrdersByStoreCache
+    addOrdersByStoreCache,
+    removeOrdersCache
 } from "../../../DataSource/cache";
 
 const queries = {
@@ -165,7 +166,10 @@ const mutations = {
     async deleteOrder(obj: any, {_id}: any, context: any) {
         verifyCurrentUser(context);
         await checkPermission(PERMISSIONS.DELETE_ORDER, context)
-        return Order.findOneAndDelete({_id})
+        const order = await Order.findOneAndDelete({_id}) as IOrder;
+        await removeOrdersCache(order);
+        await removeAvailableOrdersCache(order);
+        return order;
     },
     async takeOrder(obj: any, {_id, domiciliary}: any, context: any) {
         verifyCurrentUser(context);

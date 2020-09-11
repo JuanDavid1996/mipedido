@@ -239,3 +239,11 @@ export async function addOrdersByStoreCache(store: string, order: IOrder) {
     orders.push(order);
     updateCache(D_CACHE_KEYS.GET_ORDERS_BY_STORE(store), orders);
 }
+
+export async function removeOrdersCache({ _id }: IOrder) {
+    const orders = await getOrdersCache();
+    updateCache(
+        CACHE_KEYS.ORDERS,
+        orders.filter(order => order._id !== _id)
+    );
+}
