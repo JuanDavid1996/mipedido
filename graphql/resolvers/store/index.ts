@@ -12,6 +12,7 @@ import {
 } from "../../../helpers/authHelpers";
 import {ICategory} from "../../../models/Category";
 import { PERMISSIONS } from "../../../constants";
+import { getStoresCache } from "../../../DataSource/cache";
 
 
 interface StoreInput {
@@ -43,7 +44,9 @@ const validateParams = (store: StoreInput) => new Promise(async(resolve, rejecte
 });
 
 const queries = {
-	stores: async () => getStores(),
+	stores: async () => {
+		return getStoresCache()
+	},
 	store: async(obj: any, args: any, context: any) => {
 		verifyCurrentUser(context);
 		return getStoreById(args._id)

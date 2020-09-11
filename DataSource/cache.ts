@@ -1,9 +1,20 @@
 import {Document} from "mongoose";
-import {getUserById, getUserWithPermissions, getCategories, getPermissions, getRoles} from "./index";
+import {
+    getUserById,
+    getUserWithPermissions,
+    getCategories,
+    getPermissions,
+    getRoles,
+    getStores,
+    getOrders,
+    getUsers
+} from "./index";
 import { IUser } from "../models/User";
 import { ICategory } from "../models/Category";
 import { IPermission } from "../models/Permission";
 import { IRole } from "../models/Role";
+import { IStore } from "../models/Store";
+import { IOrder } from "../models/Order";
 
 const redis = require("redis")
 const redisClient = redis.createClient()
@@ -89,4 +100,25 @@ export function getRolesCache() {
     return getOrUpdateValuesCache<IRole>(key, async  () => {
         return await getRoles() as IRole[]
     }, "GET_ROLES");
+}
+
+export function getStoresCache() {
+    const key = "stores";
+    return getOrUpdateValuesCache<IStore>(key, async () => {
+        return await getStores() as IStore[]
+    }, "GET_STORES");
+}
+
+export function getOrdersCache() {
+    const key = "orders";
+    return getOrUpdateValuesCache<IOrder>(key, async () => {
+        return await getOrders() as IOrder[]
+    }, "GET_ORDERS");
+}
+
+export function getUsersCache() {
+    const key = "users";
+    return getOrUpdateValuesCache<IUser>(key, async () => {
+        return await getUsers() as IUser[]
+    }, "GET_USERS");
 }

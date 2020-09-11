@@ -2,6 +2,7 @@ import User from "../../../models/User";
 import {getRoleById, getUserById, getUsers, getUsersByRoleName} from "../../../DataSource";
 import {checkPermission, checkPermissions, verifyCurrentUser} from "../../../helpers/authHelpers";
 import {BASE_ROLES, PERMISSIONS} from "../../../constants";
+import { getUsersCache } from "../../../DataSource/cache";
 
 interface BaseUserInput {
     code: string,
@@ -25,7 +26,7 @@ const queries = {
     async users(obj: any, args: any, context: any) {
         verifyCurrentUser(context)
         await checkPermissions([PERMISSIONS.LIST_USER], context)
-        return getUsers();
+        return getUsersCache();
     },
     async user(obj: any, args: any, context: any) {
         verifyCurrentUser(context)

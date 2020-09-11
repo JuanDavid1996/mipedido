@@ -23,6 +23,7 @@ import {
 import {notifyNewOrder, notifyOrderTaken} from "../../../helpers/notification";
 import Order, {IOrder} from "../../../models/Order";
 import {BASE_ROLES, ORDER_FIELDS, ORDER_STATUS, ORDER_STATUS_FIELDS, PERMISSIONS} from "../../../constants";
+import { getOrdersCache } from "../../../DataSource/cache";
 
 const queries = {
     orders: async (obj: any, args: any, context: any) => {
@@ -49,7 +50,7 @@ const queries = {
             PERMISSIONS.LIST_ORDERS_BY_CLIENT
         ], context);
 
-        return getOrders();
+        return getOrdersCache();
     },
     order: async (obj: any, args: any, context: any) => {
         verifyCurrentUser(context)
