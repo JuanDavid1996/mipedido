@@ -210,6 +210,14 @@ export async function removeAvailableOrdersCache({ _id }: IOrder) {
     );
 }
 
+export async function clearAvailableOrdersCache() {
+    clearCache(CACHE_KEYS.AVAILABLE_ORDERS)
+}
+
+export async function clearOrdersCache() {
+    clearCache(CACHE_KEYS.ORDERS)
+}
+
 export function getOrdersByDomiciliaryCache(domiciliary: string) {
     return getOrUpdateValuesCache<IOrder>(D_CACHE_KEYS.GET_ORDERS_BY_DOMICILIARY(domiciliary), async () => {
         return await getOrdersByDomiciliary(domiciliary) as IOrder[]
