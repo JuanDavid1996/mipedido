@@ -8,7 +8,7 @@ import {
 } from "../../DataSource";
 import {verifyCurrentUser, checkPermission} from "../../helpers/authHelpers";
 import UserDevice from "../../models/UserDevice";
-import { getUserDevicesCache } from "../../DataSource/cache";
+import { getUserDevicesCache, addToUserDevicesCache, updateUserDevicesCache } from "../../DataSource/cache";
 import { PERMISSIONS } from "../../constants";
 
 const queries = {
@@ -29,11 +29,13 @@ const mutations = {
     const token = args.firebaseToken;
     let userDevice: any = await getUserDevice(context.currentUser._id)
     if (!userDevice) {
-      return await UserDevice.create({ user: context.currentUser._id, firebaseToken: token  })
+      userDevice = await UserDevice.create({ user: context.currentUser._id, firebaseToken: token  })
+      await addToUserDevicesCache(userDevice);
+    } else {
+      userDevice.firebaseToken = token;
+      await userDevice.save();
+      await updateUserDevicesCache(userDevice);
     }
-    userDevice.firebaseToken = token;
-    userDevice.save()
-
     return userDevice
   }
 }

@@ -150,6 +150,19 @@ export function getUserDevicesCache() {
     }, CACHE_LOGS.GET_USER_DEVICES);
 }
 
+export async function addToUserDevicesCache(userDevice: IUserDevice) {
+    const userDevices = await getUserDevices();
+    userDevices.push(userDevice);
+    updateCache(CACHE_KEYS.USER_DEVICES, userDevices);
+}
+
+export async function updateUserDevicesCache(userDevice: IUserDevice) {
+    let userDevices = await getUserDevices();
+    userDevices = userDevices.filter(u => u._id !== userDevice._id);
+    userDevices.push(userDevice);
+    updateCache(CACHE_KEYS.USER_DEVICES, userDevices);
+}
+
 export function getCategoriesCache() {
     return getOrUpdateValuesCache<ICategory>(CACHE_KEYS.CATEGORIES, async () => {
         return await getCategories() as ICategory[]
