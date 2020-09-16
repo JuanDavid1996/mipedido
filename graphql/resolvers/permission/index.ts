@@ -1,8 +1,8 @@
 import {getPermissionById} from "../../../DataSource";
-import Permission from "../../../models/Permission";
+import Permission, { IPermission } from "../../../models/Permission";
 import {checkPermission, verifyCurrentUser} from "../../../helpers/authHelpers";
 import {PERMISSIONS} from "../../../constants";
-import { getPermissionsCache } from "../../../DataSource/cache";
+import { getPermissionsCache, addToPermissionsCache } from "../../../DataSource/cache";
 
 const queries = {
     permissions: async (obj: any, args: any, context: any) => {
@@ -26,7 +26,9 @@ const mutations = {
         await checkPermission(PERMISSIONS.ADD_PERMISSION, context);
 
         const {resource} = args;
-        return Permission.create({resource});
+        const permission = await Permission.create({resource});
+        await addToPermissionsCache(permission);
+        return permission;
     },
 
     async updatePermission(obj: any, {_id, name}: any, context: any) {

@@ -2,7 +2,7 @@ import Role from "../../../models/Role";
 import {getPermissionById, getPermissionByKeys, getRoleById, getRoles} from "../../../DataSource";
 import {verifyCurrentUser, checkPermission} from "../../../helpers/authHelpers";
 import { PERMISSIONS } from "../../../constants";
-import { getRolesCache } from "../../../DataSource/cache";
+import { getRolesCache, addToRoleCache } from "../../../DataSource/cache";
 
 const queries = {
     roles: async (obj: any, args: any, context: any) => {
@@ -28,7 +28,9 @@ const mutations = {
     async addRole(obj: any, {name}: any, context: any) {
         verifyCurrentUser(context);
         await checkPermission(PERMISSIONS.ADD_ROLE, context);
-        return Role.create({name, permissions: []});
+        const role = await Role.create({name, permissions: []});
+        await addToRoleCache(role);
+        return role;
     },
     async updateRole(obj: any, args: any, context: any) {
         verifyCurrentUser(context);

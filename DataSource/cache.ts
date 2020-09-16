@@ -163,11 +163,23 @@ export function getPermissionsCache() {
     }, CACHE_LOGS.GET_PERMISSIONS);
 }
 
+export async function addToPermissionsCache(permission: IPermission) {
+    const permissions = await getPermissionsCache();
+    permissions.push(permission);
+    updateCache(CACHE_KEYS.PERMISSIONS, permissions);
+}
+
 
 export function getRolesCache() {
     return getOrUpdateValuesCache<IRole>(CACHE_KEYS.ROLES, async  () => {
         return await getRoles() as IRole[]
     }, CACHE_LOGS.GET_ROLES);
+}
+
+export async function addToRoleCache(role: IRole) {
+    const roles = await getRolesCache();
+    roles.push(role);
+    updateCache(CACHE_KEYS.ROLES, roles);
 }
 
 
