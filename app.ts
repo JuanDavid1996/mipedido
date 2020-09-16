@@ -14,6 +14,7 @@ import express = require('express');
 
 import {getUserByToken} from "./graphql/resolvers/auth";
 import {login} from "./app/auth";
+import { clearAllCache } from "./app/caching";
 
 const { graphqlHTTP } = require('express-graphql');
 
@@ -44,6 +45,8 @@ const schema = makeExecutableSchema({
 app.get("/", (req: any, res: any) => res.send("Ok!"));
 
 app.post("/login",  login)
+
+app.get("/cache", clearAllCache);
 
 app.post("/send_notification_to", async(request: any, response: any) => {
   

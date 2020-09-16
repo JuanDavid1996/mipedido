@@ -45,7 +45,8 @@ export enum PERMISSIONS {
     ADD_USER = "addUser",
     UPDATE_USER = "updateUser",
     LIST_USER_DEVICES = "listUserDevice",
-    SHOW_STORE_CLIENT = "showStoreClient"
+    SHOW_STORE_CLIENT = "showStoreClient",
+    CLEAR_CACHE = "CLEAR_CACHE"
 }
 
 export enum ORDER_FIELDS {

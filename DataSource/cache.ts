@@ -255,3 +255,7 @@ export async function removeOrdersCache({ _id }: IOrder) {
         orders.filter(order => order._id !== _id)
     );
 }
+
+export async function clearCacheDb(cb: (err: any) => void) {
+    redisClient.flushall('ASYNC', cb);
+}
