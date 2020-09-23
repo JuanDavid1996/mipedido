@@ -1,5 +1,5 @@
 require('dotenv').config({
-    path: "../.env"
+    path: __dirname+"/../.env"
 })
 
 import connectDB from "../config/db";

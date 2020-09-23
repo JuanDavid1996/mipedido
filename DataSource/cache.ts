@@ -65,19 +65,19 @@ function resolveValues<T extends Document>(
 ): Promise<T[]> {
     return new Promise(async (resolve: any) => {
         console.time(message)
-        redisClient.hvals(hashKey, async (err: any, data?: T[]) => {
+        redisClient.hvals(hashKey, async (err: any, data?: string[]) => {
             if ((err || !data) || !data.length) {
                 const values: T[] = await getValues();
                 values.forEach((val: T) => {
-                    redisClient.hset(hashKey, val._id, val);
+                    redisClient.hset(hashKey, val._id.toString(), JSON.stringify(val));
                 });
                 console.log("=== FROM DB ===")
                 console.timeEnd(message)
                 resolve(values)
             } else {
                 console.log("=== FROM CACHE ===")
+                resolve(data.map((item: string) => JSON.parse(item) as T) as T[])
                 console.timeEnd(message)
-                resolve(data)
             }
         })
     })
@@ -100,8 +100,6 @@ function getOrUpdateValuesCache<T extends Document>(
 }
 
 const clearCache = (key: string) => redisClient.del(key)
-
-const updateCache = (key: string, value: any) => redisClient.set(key, JSON.stringify(value), redis.print);
 
 const addOrUpdateListCache = (hashKey: string, key: string, value: any) => {
     redisClient.hset(hashKey, key, value)
