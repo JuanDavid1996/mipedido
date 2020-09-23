@@ -76,6 +76,9 @@ function resolveValues<T extends Document>(
                 resolve(values)
             } else {
                 console.log("=== FROM CACHE ===")
+                console.log("DATA OF CACHE (BEGIN)")
+                console.log(data);
+                console.log("DATA OF CACHE (END)")
                 resolve(data.map((item: string) => JSON.parse(item) as T) as T[])
                 console.timeEnd(message)
             }
