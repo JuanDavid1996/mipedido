@@ -127,7 +127,7 @@ const D_CACHE_KEYS = {
     GET_ORDERS_BY_DOMICILIARY: (key: string) => `${BASE_ROLES.DOMICILIARIO}_${key}_${CACHE_KEYS.ORDERS}`,
     GET_ORDERS_BY_STORE: (key: string) => `${BASE_ROLES.TENDERO}_${key}_${CACHE_KEYS.ORDERS}`,
     GET_ORDERS_BY_CLIENT: (key: string) => `${BASE_ROLES.CLIENTE}_${key}_${CACHE_KEYS.ORDERS}`,
-    GET_USER_WITH_PERMISSIONS: (key: any) => `${CACHE_KEYS.USER}_${key}_${CACHE_KEYS.USER}`,
+    GET_USER_WITH_PERMISSIONS: (key: any) => `${CACHE_KEYS.USER}_${key}_${CACHE_KEYS.PERMISSIONS}`,
     GET_USER_KEY: (key: any) => `${CACHE_KEYS.USER}_${key}`
 }
 
