@@ -35,16 +35,16 @@ function canParse(input: any) {
     } catch (e) { return false; }
 }
 
-function resolveValue(
+function resolveValue<T>(
     key: string,
-    getValue: () => Promise<any>,
+    getValue: () => Promise<T>,
     message?: string,
-) {
+): Promise<T> {
     return new Promise(async (resolve: any) => {
         console.time(message)
         redisClient.get(key, async (err: any, data?: string) => {
             if ((err || !data) || (data && !canParse(data))) {
-                const value = await getValue();
+                const value: T = await getValue();
                 redisClient.set(key, JSON.stringify(value), redis.print)
                 console.log("=== FROM DB ===")
                 console.timeEnd(message)
@@ -53,6 +53,31 @@ function resolveValue(
                 console.log("=== FROM CACHE ===")
                 console.timeEnd(message)
                 resolve(JSON.parse(data))
+            }
+        })
+    })
+}
+
+function resolveValues<T extends Document>(
+    hashKey: string,
+    getValues: () => Promise<T[]>,
+    message?: string,
+): Promise<T[]> {
+    return new Promise(async (resolve: any) => {
+        console.time(message)
+        redisClient.hvals(hashKey, async (err: any, data?: T[]) => {
+            if ((err || !data) || !data.length) {
+                const values: T[] = await getValues();
+                values.forEach((val: T) => {
+                    redisClient.hset(hashKey, val._id, val);
+                });
+                console.log("=== FROM DB ===")
+                console.timeEnd(message)
+                resolve(values)
+            } else {
+                console.log("=== FROM CACHE ===")
+                console.timeEnd(message)
+                resolve(data)
             }
         })
     })
@@ -68,15 +93,23 @@ function getOrUpdateValueCache<T extends Document>(
 
 function getOrUpdateValuesCache<T extends Document>(
     key: string,
-    getValue: () => Promise<Array<T>>,
+    getValues: () => Promise<T[]>,
     message?: string
-)  : Promise<Array<T>> {
-    return resolveValue(key, getValue, message) as Promise<Array<T>>
+)  : Promise<T[]> {
+    return resolveValues(key, getValues, message) as Promise<T[]>
 }
 
 const clearCache = (key: string) => redisClient.del(key)
 
 const updateCache = (key: string, value: any) => redisClient.set(key, JSON.stringify(value), redis.print);
+
+const addOrUpdateListCache = (hashKey: string, key: string, value: any) => {
+    redisClient.hset(hashKey, key, value)
+}
+
+const removeToListCache = (hashKey: string, key: string) => {
+    redisClient.hdel(hashKey, key)
+}
 
 enum CACHE_KEYS {
     ORDERS = "orders",
@@ -153,16 +186,11 @@ export function getUserDevicesCache() {
 }
 
 export async function addToUserDevicesCache(userDevice: IUserDevice) {
-    const userDevices = await getUserDevices();
-    userDevices.push(userDevice);
-    updateCache(CACHE_KEYS.USER_DEVICES, userDevices);
+    addOrUpdateListCache(CACHE_KEYS.USER_DEVICES, userDevice._id, userDevice);
 }
 
 export async function updateUserDevicesCache(userDevice: IUserDevice) {
-    let userDevices = await getUserDevices();
-    userDevices = userDevices.filter(u => u._id !== userDevice._id);
-    userDevices.push(userDevice);
-    updateCache(CACHE_KEYS.USER_DEVICES, userDevices);
+    addOrUpdateListCache(CACHE_KEYS.USER_DEVICES, userDevice._id, userDevice);
 }
 
 export function getCategoriesCache() {
@@ -172,6 +200,7 @@ export function getCategoriesCache() {
 }
 
 
+//Permissions
 export function getPermissionsCache() {
     return getOrUpdateValuesCache<IPermission>(CACHE_KEYS.PERMISSIONS, async  () => {
         return await getPermissions() as IPermission[]
@@ -179,12 +208,10 @@ export function getPermissionsCache() {
 }
 
 export async function addToPermissionsCache(permission: IPermission) {
-    const permissions = await getPermissionsCache();
-    permissions.push(permission);
-    updateCache(CACHE_KEYS.PERMISSIONS, permissions);
+    addOrUpdateListCache(CACHE_KEYS.PERMISSIONS, permission._id, permission);
 }
 
-
+//Roles
 export function getRolesCache() {
     return getOrUpdateValuesCache<IRole>(CACHE_KEYS.ROLES, async  () => {
         return await getRoles() as IRole[]
@@ -192,12 +219,11 @@ export function getRolesCache() {
 }
 
 export async function addToRoleCache(role: IRole) {
-    const roles = await getRolesCache();
-    roles.push(role);
-    updateCache(CACHE_KEYS.ROLES, roles);
+    addOrUpdateListCache(CACHE_KEYS.ROLES, role._id, role);
 }
 
 
+//Stores
 export function getStoresCache() {
     return getOrUpdateValuesCache<IStore>(CACHE_KEYS.STORES, async () => {
         return await getStores() as IStore[]
@@ -217,24 +243,17 @@ export function getAvailableOrdersCache() {
     }, CACHE_LOGS.GET_AVAILABLE_ORDERS);
 }
 
+//TODO: REMOVE THIS FEATURE
 export async function addOrdersCache(order: IOrder) {
-    const orders: IOrder[] = await getOrdersCache()
-    orders.push(order);
-    updateCache(CACHE_KEYS.ORDERS, orders);
+    addOrUpdateListCache(CACHE_KEYS.ORDERS, order._id, order);
 }
 
 export async function addAvailableOrdersCache(order: IOrder) {
-    const orders: IOrder[] = await getOrdersCache()
-    orders.push(order);
-    updateCache(CACHE_KEYS.AVAILABLE_ORDERS, orders);
+    addOrUpdateListCache(CACHE_KEYS.AVAILABLE_ORDERS, order._id, order);
 }
 
 export async function removeAvailableOrdersCache({ _id }: IOrder) {
-    const orders: IOrder[] = await getOrdersCache()
-    updateCache(
-        CACHE_KEYS.AVAILABLE_ORDERS,
-        orders.filter(order => order._id !== _id)
-    );
+    removeToListCache(CACHE_KEYS.AVAILABLE_ORDERS, _id);
 }
 
 export async function clearAvailableOrdersCache() {
@@ -264,23 +283,15 @@ export async function getOrdersByClientCache(client: string) {
 }
 
 export async function addOrdersByDomiciliaryCache(domiciliary: string, order: IOrder) {
-    const orders = await getOrdersByDomiciliaryCache(domiciliary);
-    orders.push(order);
-    updateCache(D_CACHE_KEYS.GET_ORDERS_BY_DOMICILIARY(domiciliary), orders);
+    addOrUpdateListCache(D_CACHE_KEYS.GET_ORDERS_BY_DOMICILIARY(domiciliary), order._id, order);
 }
 
 export async function addOrdersByStoreCache(store: string, order: IOrder) {
-    const orders = await getOrdersByDomiciliaryCache(store);
-    orders.push(order);
-    updateCache(D_CACHE_KEYS.GET_ORDERS_BY_STORE(store), orders);
+    addOrUpdateListCache(D_CACHE_KEYS.GET_ORDERS_BY_STORE(store), order._id, order);
 }
 
 export async function removeOrdersCache({ _id }: IOrder) {
-    const orders = await getOrdersCache();
-    updateCache(
-        CACHE_KEYS.ORDERS,
-        orders.filter(order => order._id !== _id)
-    );
+    removeToListCache(CACHE_KEYS.ORDERS, _id);
 }
 
 export async function clearCacheDb(cb: (err: any) => void) {
