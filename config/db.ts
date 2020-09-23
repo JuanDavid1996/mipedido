@@ -5,8 +5,8 @@ export default function connectDB() {
   let uri = "mongodb://localhost:27017/domi";
 
   if (process.env.NODE_ENV === "production") {
-    const {DB_USERNAME, DB_PASSWORD} = process.env;
-    uri = `mongodb://${DB_USERNAME}:${DB_PASSWORD}@ds155243.mlab.com:55243/mipedido`;
+    const {DB_URI} = process.env;
+    uri = DB_URI as string;
   }
 
   return new Promise((resolve, rejected) => {
