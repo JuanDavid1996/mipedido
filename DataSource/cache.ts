@@ -35,7 +35,7 @@ function canParse(input: any) {
     } catch (e) { return false; }
 }
 
-function reolveValue(
+function resolveValue(
     key: string,
     getValue: () => Promise<any>,
     message?: string,
@@ -63,7 +63,7 @@ function getOrUpdateValueCache<T extends Document>(
     getValue: () => Promise<T>,
     message?: string
 )  : Promise<T> {
-    return reolveValue(key, getValue, message) as Promise<T>
+    return resolveValue(key, getValue, message) as Promise<T>
 }
 
 function getOrUpdateValuesCache<T extends Document>(
@@ -71,7 +71,7 @@ function getOrUpdateValuesCache<T extends Document>(
     getValue: () => Promise<Array<T>>,
     message?: string
 )  : Promise<Array<T>> {
-    return reolveValue(key, getValue, message) as Promise<Array<T>>
+    return resolveValue(key, getValue, message) as Promise<Array<T>>
 }
 
 const clearCache = (key: string) => redisClient.del(key)
@@ -87,13 +87,15 @@ enum CACHE_KEYS {
     CATEGORIES = "categories",
     PERMISSIONS = "permissions",
     USERS = "users",
+    USER = "user"
 }
 
 const D_CACHE_KEYS = {
-    GET_ORDERS_BY_DOMICILIARY: (key: string) => `${key}_${BASE_ROLES.DOMICILIARIO}_${CACHE_KEYS.ORDERS}`,
-    GET_ORDERS_BY_STORE: (key: string) => `${key}_${BASE_ROLES.TENDERO}_${CACHE_KEYS.ORDERS}`,
-    GET_ORDERS_BY_CLIENT: (key: string) => `${key}_${BASE_ROLES.CLIENTE}_${CACHE_KEYS.ORDERS}`,
-    GET_USER_WITH_PERMISSIONS: (key: any) => `${key}_${CACHE_KEYS.PERMISSIONS}`
+    GET_ORDERS_BY_DOMICILIARY: (key: string) => `${BASE_ROLES.DOMICILIARIO}_${key}_${CACHE_KEYS.ORDERS}`,
+    GET_ORDERS_BY_STORE: (key: string) => `${BASE_ROLES.TENDERO}_${key}_${CACHE_KEYS.ORDERS}`,
+    GET_ORDERS_BY_CLIENT: (key: string) => `${BASE_ROLES.CLIENTE}_${key}_${CACHE_KEYS.ORDERS}`,
+    GET_USER_WITH_PERMISSIONS: (key: any) => `${CACHE_KEYS.USER}_${key}_${CACHE_KEYS.USER}`,
+    GET_USER_KEY: (key: any) => `${CACHE_KEYS.USER}_${key}`
 }
 
 enum CACHE_LOGS {
@@ -105,7 +107,7 @@ enum CACHE_LOGS {
     GET_USER_WITH_PERMISSION = "GET_USER_WITH_PERMISSION",
     GET_ROLES = "GET_ROLES",
     GET_PERMISSIONS = "GET_PERMISSIONS",
-    GET_CATTEGORIES = "GET_CATTEGORIES",
+    GET_CATEGORIES = "GET_CATEGORIES",
     GET_USERS = "GET_USERS",
     GET_ORDERS_BY_CLIENT = "GET_ORDERS_BY_CLIENT",
     GET_USER_DEVICES = "GET_USER_DEVICES"
@@ -119,7 +121,7 @@ export function getUserWithPermissionsCache(userId: string): Promise<IUser> {
 }
 
 export function getUserCache(userId: string): Promise<IUser> {
-    return getOrUpdateValueCache<IUser>(userId, async () => {
+    return getOrUpdateValueCache<IUser>(D_CACHE_KEYS.GET_USER_KEY(userId), async () => {
         return await getUserById(userId) as IUser;
     }, CACHE_LOGS.GET_USER)
 }
@@ -166,7 +168,7 @@ export async function updateUserDevicesCache(userDevice: IUserDevice) {
 export function getCategoriesCache() {
     return getOrUpdateValuesCache<ICategory>(CACHE_KEYS.CATEGORIES, async () => {
         return await getCategories() as ICategory[]
-    }, CACHE_LOGS.GET_CATTEGORIES)
+    }, CACHE_LOGS.GET_CATEGORIES)
 }
 
 
