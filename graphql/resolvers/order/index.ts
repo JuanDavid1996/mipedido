@@ -1,9 +1,6 @@
 import {
-    getOrdersByDomiciliary,
     getOrderByDomiciliaryWithStatus,
     getOrderById,
-    getOrders,
-    getOrdersAvailable,
     getOrderStatusById,
     getOrderStatusByName,
     getRoleById,
@@ -11,8 +8,6 @@ import {
     getStoreClientById,
     getUserById,
     getUserDeviceByIds,
-    getUserDevices,
-    getOrdersByStore,
 } from "../../../DataSource";
 import {
     checkPermission,
@@ -37,7 +32,7 @@ import {
     addOrdersByStoreCache,
     removeOrdersCache,
     clearAvailableOrdersCache,
-    clearOrdersCache
+    clearOrdersCache, getOrderByIdCache
 } from "../../../DataSource/cache";
 
 const queries = {
@@ -70,7 +65,7 @@ const queries = {
     order: async (obj: any, args: any, context: any) => {
         verifyCurrentUser(context)
         await checkPermission(PERMISSIONS.SHOW_ORDER, context);
-        return getOrderById(args._id)
+        return getOrderByIdCache(args._id)
     },
     async ordersAvailable(obj: any, args: any, context: any) {
         verifyCurrentUser(context);
@@ -173,8 +168,8 @@ const mutations = {
             await removeOrdersCache(order);
             await removeAvailableOrdersCache(order);
         } else {
-            clearAvailableOrdersCache()
-            clearOrdersCache()
+            await clearAvailableOrdersCache()
+            await clearOrdersCache()
         }
         return order;
     },

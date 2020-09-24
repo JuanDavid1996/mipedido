@@ -12,7 +12,7 @@ import {
     getOrdersAvailable,
     getOrdersByStore,
     getOrdersByClient,
-    getOrdersByDomiciliary
+    getOrdersByDomiciliary, getOrderById
 } from "./index";
 import { IUser } from "../models/User";
 import { ICategory } from "../models/Category";
@@ -119,6 +119,37 @@ function getOrUpdateValuesCache<T extends Document>(
     return resolveValues(key, getValues, message) as Promise<T[]>
 }
 
+function findValueAtHash<T extends Document>(
+    hashKey: string,
+    key: string,
+    getValue: () => Promise<T>,
+    message?: string
+): Promise<T> {
+    return new Promise(async (resolve) => {
+        redisClient.hget(hashKey, key, async (err: any, data?: string) => {
+            console.log("BEGIN TRANSACTION (GET IN HASH)", message);
+            console.time(message)
+            if ((err || !data) || !data) {
+                console.log("GET FROM DB")
+                const value: T = await getValue();
+                resolve(value);
+            } else {
+                try {
+                    console.log("GET FROM CACHE")
+                    resolve(JSON.parse(data));
+                } catch (e) {
+                    console.log("ERROR WHEN DID USE JSON.PARSE")
+                    console.log("GET FROM DB")
+                    const value: T = await getValue();
+                    addOrUpdateListCache(hashKey, key, value);
+                    resolve(value)
+                }
+            }
+            console.timeEnd(message)
+        });
+    });
+}
+
 const clearCache = (key: string) => redisClient.del(key)
 
 const addOrUpdateListCache = (hashKey: string, key: string, value: any) => {
@@ -161,7 +192,8 @@ enum CACHE_LOGS {
     GET_CATEGORIES = "GET_CATEGORIES",
     GET_USERS = "GET_USERS",
     GET_ORDERS_BY_CLIENT = "GET_ORDERS_BY_CLIENT",
-    GET_USER_DEVICES = "GET_USER_DEVICES"
+    GET_USER_DEVICES = "GET_USER_DEVICES",
+    GET_ORDER_BY_ID = "GET_ORDER_BY_ID",
 }
 
 //User + Permission
@@ -312,6 +344,13 @@ export async function removeOrdersCache({ _id }: IOrder) {
     removeToListCache(CACHE_KEYS.ORDERS, _id);
 }
 
+export async function getOrderByIdCache(id: string) {
+    return findValueAtHash<IOrder>(CACHE_KEYS.ORDERS, id, async () => {
+        return await getOrderById(id) as IOrder;
+    }, CACHE_LOGS.GET_ORDER_BY_ID);
+}
+
+//
 export async function clearCacheDb(cb: (err: any) => void) {
     redisClient.flushall('ASYNC', cb);
 }
