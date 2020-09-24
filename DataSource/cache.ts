@@ -91,7 +91,7 @@ function resolveValues<T extends Document>(
                 try {
                     resolve(data.map((item: string) => JSON.parse(item) as T) as T[])
                 } catch (e) {
-                    console.log("FAILED TO CONVERT DATA FROM CACHE");
+                    console.log("FAILED TO CONVERT DATA FROM CACHE (message="+message+")");
                     console.log(e);
                     const values: T[] = await getDataFromDb();
                     console.log("GET DATA FROM CACHE (CATCH SECTION)")
