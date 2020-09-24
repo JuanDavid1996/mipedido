@@ -22,6 +22,8 @@ import { IStore } from "../models/Store";
 import { IOrder } from "../models/Order";
 import { IUserDevice } from "../models/UserDevice";
 import { BASE_ROLES } from "../constants";
+import ts from "typescript/lib/tsserverlibrary";
+import LogLevel = ts.server.LogLevel;
 
 const redis = require("redis")
 const redisClient = redis.createClient()
@@ -63,14 +65,21 @@ function resolveValues<T extends Document>(
     getValues: () => Promise<T[]>,
     message?: string,
 ): Promise<T[]> {
+
+    async function getDataFromDb() {
+        const values: T[] = await getValues();
+        values.forEach((val: T) => {
+            redisClient.hset(hashKey, val._id.toString(), JSON.stringify(val));
+        });
+        return values;
+    }
+
     return new Promise(async (resolve: any) => {
+        console.log("BEGIN TRANSACTION ", message);
         console.time(message)
         redisClient.hvals(hashKey, async (err: any, data?: string[]) => {
             if ((err || !data) || !data.length) {
-                const values: T[] = await getValues();
-                values.forEach((val: T) => {
-                    redisClient.hset(hashKey, val._id.toString(), JSON.stringify(val));
-                });
+                const values: T[] = await getDataFromDb();
                 console.log("=== FROM DB ===")
                 console.timeEnd(message)
                 resolve(values)
@@ -79,7 +88,15 @@ function resolveValues<T extends Document>(
                 console.log("DATA OF CACHE (BEGIN)")
                 console.log(data);
                 console.log("DATA OF CACHE (END)")
-                resolve(data.map((item: string) => JSON.parse(item) as T) as T[])
+                try {
+                    resolve(data.map((item: string) => JSON.parse(item) as T) as T[])
+                } catch (e) {
+                    console.log("FAILED TO CONVERT DATA FROM CACHE");
+                    console.log(e);
+                    const values: T[] = await getDataFromDb();
+                    console.log("GET DATA FROM CACHE (CATCH SECTION)")
+                    resolve(values)
+                }
                 console.timeEnd(message)
             }
         })
