@@ -1,6 +1,8 @@
 import {getStoreById} from "../DataSource";
 import {IUser} from "../models/User";
-import {getUserWithPermissionsCache} from "../DataSource/cache";
+import {getRoleByIdCache, getUserWithPermissionsCache} from "../DataSource/cache";
+import {IRole} from "../models/Role";
+import {BASE_ROLES} from "../constants";
 
 const noAuthorized = () => {
 	throw Error("No autorizado");
@@ -42,4 +44,9 @@ export async function checkPermissions(names: string[], context: any) {
         const hasPermission = permissions.includes(name);
         if (!hasPermission) noAuthorized()
     }
+}
+
+export async function isAdmin(context: any) {
+    const role: IRole = await getRoleByIdCache(context.currentUser.role);
+    return role.name === BASE_ROLES.ADMIN;
 }

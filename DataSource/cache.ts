@@ -12,7 +12,7 @@ import {
     getOrdersAvailable,
     getOrdersByStore,
     getOrdersByClient,
-    getOrdersByDomiciliary, getOrderById
+    getOrdersByDomiciliary, getOrderById, getRoleById
 } from "./index";
 import { IUser } from "../models/User";
 import { ICategory } from "../models/Category";
@@ -194,6 +194,7 @@ enum CACHE_LOGS {
     GET_ORDERS_BY_CLIENT = "GET_ORDERS_BY_CLIENT",
     GET_USER_DEVICES = "GET_USER_DEVICES",
     GET_ORDER_BY_ID = "GET_ORDER_BY_ID",
+    GET_ROLE_BY_ID = "GET_ROLE_BY_ID",
 }
 
 //User + Permission
@@ -266,6 +267,12 @@ export function getRolesCache() {
     return getOrUpdateValuesCache<IRole>(CACHE_KEYS.ROLES, async  () => {
         return await getRoles() as IRole[]
     }, CACHE_LOGS.GET_ROLES);
+}
+
+export function getRoleByIdCache(id: string) {
+    return findValueAtHash<IRole>(CACHE_KEYS.ROLES, id, async () => {
+        return await getRoleById(id) as IRole;
+    }, CACHE_LOGS.GET_ROLE_BY_ID)
 }
 
 export async function addToRoleCache(role: IRole) {

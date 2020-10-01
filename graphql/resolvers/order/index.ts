@@ -11,7 +11,7 @@ import {
 } from "../../../DataSource";
 import {
     checkPermission,
-    checkPermissions,
+    checkPermissions, isAdmin,
     verifyCurrentUser,
     verifyIfStoreBelongsToUser
 } from "../../../helpers/authHelpers";
@@ -19,21 +19,23 @@ import {notifyNewOrder, notifyOrderTaken} from "../../../helpers/notification";
 import Order, {IOrder} from "../../../models/Order";
 import {BASE_ROLES, ORDER_FIELDS, ORDER_STATUS, ORDER_STATUS_FIELDS, PERMISSIONS} from "../../../constants";
 import {
-    getOrdersCache,
-    getUserDevicesCache,
-    addOrdersCache,
     addAvailableOrdersCache,
-    getAvailableOrdersCache,
-    removeAvailableOrdersCache,
-    getOrdersByStoreCache,
-    getOrdersByClientCache,
-    getOrdersByDomiciliaryCache,
     addOrdersByDomiciliaryCache,
     addOrdersByStoreCache,
-    removeOrdersCache,
+    addOrdersCache,
     clearAvailableOrdersCache,
-    clearOrdersCache, getOrderByIdCache
+    clearOrdersCache,
+    getAvailableOrdersCache,
+    getOrderByIdCache,
+    getOrdersByClientCache,
+    getOrdersByDomiciliaryCache,
+    getOrdersByStoreCache,
+    getOrdersCache, getRoleByIdCache,
+    getUserDevicesCache,
+    removeAvailableOrdersCache,
+    removeOrdersCache
 } from "../../../DataSource/cache";
+import {IRole} from "../../../models/Role";
 
 const queries = {
     orders: async (obj: any, args: any, context: any) => {
@@ -203,6 +205,27 @@ const mutations = {
 
         return order;
     },
+    async updateOrderStatus(obj: any, { _id, status }: any, context: any) {
+        verifyCurrentUser(context)
+
+        if (
+            status !== ORDER_STATUS.PENDIENTE &&
+            status !== ORDER_STATUS.EN_CURSO &&
+            status !== ORDER_STATUS.CANCELADA &&
+            status !== ORDER_STATUS.COMPLETADA &&
+            status !== ORDER_STATUS.TOMADO
+        ) {
+            throw new Error("Estado no valido")
+        }
+
+        if (!await isAdmin(context) && status === ORDER_STATUS.EN_CURSO) { //Next status
+            await checkPermission(PERMISSIONS.DELIVER_TO_DOMICILIARY, context);
+        }
+
+        const order:any = await getOrderById(_id);
+        order.status = await getOrderStatusByName(status)
+        return order.save()
+    }
 
 }
 export default {
