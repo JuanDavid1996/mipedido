@@ -38,7 +38,7 @@ import {
 import {IRole} from "../../../models/Role";
 
 const queries = {
-    orders: async (obj: any, args: any, context: any) => {
+    async orders(obj: any, args: any, context: any) {
         verifyCurrentUser(context)
 
         if (args.domiciliary) {
@@ -64,7 +64,7 @@ const queries = {
 
         return getOrdersCache();
     },
-    order: async (obj: any, args: any, context: any) => {
+    async order(obj: any, args: any, context: any) {
         verifyCurrentUser(context)
         await checkPermission(PERMISSIONS.SHOW_ORDER, context);
         return getOrderByIdCache(args._id)
@@ -189,7 +189,7 @@ const mutations = {
         }
 
         order.status = (await getOrderStatusByName(ORDER_STATUS.TOMADO) as any)._id;
-        order.domiciliary = (await  getUserById(domiciliary) as any)._id;
+        order.domiciliary = (await getUserById(domiciliary) as any)._id;
         await order.save()
 
         await removeAvailableOrdersCache(order)
@@ -222,6 +222,7 @@ const mutations = {
             await checkPermission(PERMISSIONS.DELIVER_TO_DOMICILIARY, context);
         } else if (!await isAdmin(context) && status === ORDER_STATUS.EN_CURSO) {
             await checkPermission(PERMISSIONS.DELIVER_TO_CLIENT, context);
+
         }
 
         const order:any = await getOrderById(_id);
