@@ -305,6 +305,8 @@ export async function addOrdersCache(order: IOrder) {
     addOrUpdateListCache(CACHE_KEYS.ORDERS, order._id, order);
 }
 
+export const updateOrderCache = async(order: IOrder) => addOrdersCache(order);
+
 export async function addAvailableOrdersCache(order: IOrder) {
     addOrUpdateListCache(CACHE_KEYS.AVAILABLE_ORDERS, order._id, order);
 }

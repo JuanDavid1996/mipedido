@@ -33,7 +33,7 @@ import {
     getOrdersCache, getRoleByIdCache,
     getUserDevicesCache,
     removeAvailableOrdersCache,
-    removeOrdersCache
+    removeOrdersCache, updateOrderCache
 } from "../../../DataSource/cache";
 import {IRole} from "../../../models/Role";
 
@@ -224,7 +224,10 @@ const mutations = {
 
         const order:any = await getOrderById(_id);
         order.status = await getOrderStatusByName(status)
-        return order.save()
+        await order.save()
+
+        await updateOrderCache(order);
+        return order;
     }
 
 }
