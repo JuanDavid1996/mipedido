@@ -47,7 +47,8 @@ export enum PERMISSIONS {
     LIST_USER_DEVICES = "listUserDevice",
     SHOW_STORE_CLIENT = "showStoreClient",
     CLEAR_CACHE = "clearCache",
-    DELIVER_TO_DOMICILIARY = "deliverToDomiciliary"
+    DELIVER_TO_DOMICILIARY = "deliverToDomiciliary",
+    DELIVER_TO_CLIENT = "deliverToClient",
 }
 
 export enum ORDER_FIELDS {
