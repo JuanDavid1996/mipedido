@@ -30,7 +30,8 @@ import {
     getOrdersByClientCache,
     getOrdersByDomiciliaryCache,
     getOrdersByStoreCache,
-    getOrdersCache, getRoleByIdCache,
+    getOrdersCache,
+    getRoleByIdCache,
     getUserDevicesCache,
     removeAvailableOrdersCache,
     removeOrdersCache, updateOrderCache
