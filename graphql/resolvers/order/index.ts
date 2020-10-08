@@ -222,11 +222,12 @@ const mutations = {
 
         console.log("before check if not is admin and check if status is tomado")
 
-        if (!await isAdmin(context) && status === ORDER_STATUS.TOMADO) {
-            console.log("before check if has permission!")
+        if (!await isAdmin(context) && status === ORDER_STATUS.EN_CURSO) {
             await checkPermission(PERMISSIONS.DELIVER_TO_DOMICILIARY, context);
-        } else if (!await isAdmin(context) && status === ORDER_STATUS.EN_CURSO) {
-            console.log("status is en curso and no is admin")
+        } else if (
+            !await isAdmin(context) &&
+            (status === ORDER_STATUS.COMPLETADA || status === ORDER_STATUS.CANCELADA)
+        ) {
             await checkPermission(PERMISSIONS.DELIVER_TO_CLIENT, context);
         }
 
