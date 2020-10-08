@@ -208,6 +208,7 @@ const mutations = {
     },
     async updateOrderStatus(obj: any, { _id, status }: any, context: any) {
         verifyCurrentUser(context)
+        console.log("before check if status is valid");
 
         if (
             status !== ORDER_STATUS.PENDIENTE &&
@@ -219,10 +220,13 @@ const mutations = {
             throw new Error("Estado no valido")
         }
 
+        console.log("before check if not is admin and check if status is tomado")
+
         if (!await isAdmin(context) && status === ORDER_STATUS.TOMADO) {
             console.log("before check if has permission!")
             await checkPermission(PERMISSIONS.DELIVER_TO_DOMICILIARY, context);
         } else if (!await isAdmin(context) && status === ORDER_STATUS.EN_CURSO) {
+            console.log("status is en curso and no is admin")
             await checkPermission(PERMISSIONS.DELIVER_TO_CLIENT, context);
         }
 
