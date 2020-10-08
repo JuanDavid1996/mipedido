@@ -219,11 +219,11 @@ const mutations = {
             throw new Error("Estado no valido")
         }
 
-        if (!await isAdmin(context) && status === ORDER_STATUS.TOMADO) { //Next status
+        if (!await isAdmin(context) && status === ORDER_STATUS.TOMADO) {
+            console.log("before check if has permission!")
             await checkPermission(PERMISSIONS.DELIVER_TO_DOMICILIARY, context);
         } else if (!await isAdmin(context) && status === ORDER_STATUS.EN_CURSO) {
             await checkPermission(PERMISSIONS.DELIVER_TO_CLIENT, context);
-
         }
 
         const order:any = await getOrderById(_id);
