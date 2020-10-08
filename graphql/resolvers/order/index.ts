@@ -22,7 +22,6 @@ import {
     addAvailableOrdersCache,
     addOrdersByDomiciliaryCache,
     addOrdersByStoreCache,
-    addOrdersCache,
     clearAvailableOrdersCache,
     clearOrdersCache,
     getAvailableOrdersCache,
@@ -31,12 +30,10 @@ import {
     getOrdersByDomiciliaryCache,
     getOrdersByStoreCache,
     getOrdersCache,
-    getRoleByIdCache,
     getUserDevicesCache,
     removeAvailableOrdersCache,
     removeOrdersCache, updateOrderCache
 } from "../../../DataSource/cache";
-import {IRole} from "../../../models/Role";
 
 const queries = {
     async orders(obj: any, args: any, context: any) {
@@ -138,7 +135,7 @@ const mutations = {
         const newOrder = new Order({client, store, description, destination, status, origin})
         await newOrder.save();
 
-        await addOrdersCache(newOrder);
+        await updateOrderCache(newOrder);
         await addOrdersByStoreCache(storeModel._id, newOrder);
         await addAvailableOrdersCache(newOrder);
 
@@ -208,7 +205,6 @@ const mutations = {
     },
     async updateOrderStatus(obj: any, { _id, status }: any, context: any) {
         verifyCurrentUser(context)
-        console.log("before check if status is valid");
 
         if (
             status !== ORDER_STATUS.PENDIENTE &&
@@ -219,8 +215,6 @@ const mutations = {
         ) {
             throw new Error("Estado no valido")
         }
-
-        console.log("before check if not is admin and check if status is tomado")
 
         if (!await isAdmin(context) && status === ORDER_STATUS.EN_CURSO) {
             await checkPermission(PERMISSIONS.DELIVER_TO_DOMICILIARY, context);
