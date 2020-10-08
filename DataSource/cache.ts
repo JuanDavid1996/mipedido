@@ -154,7 +154,7 @@ const clearCache = (key: string) => redisClient.del(key)
 
 const addOrUpdateListCache = (hashKey: string, key: string, value: any) => {
     redisClient.hdel(hashKey, key)
-    redisClient.hset(hashKey, key, value)
+    redisClient.hset(hashKey, key, JSON.stringify(value))
 }
 
 const removeToListCache = (hashKey: string, key: string) => {
