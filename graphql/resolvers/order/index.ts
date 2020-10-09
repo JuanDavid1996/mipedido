@@ -192,6 +192,7 @@ const mutations = {
 
         await removeAvailableOrdersCache(order)
         await addOrdersByDomiciliaryCache(domiciliary, order);
+        await updateOrderCache(order)
 
         const store: any = await getStoreById(order.store).populate(ORDER_FIELDS.OWNER).exec()
         const owner = store.owner._id
