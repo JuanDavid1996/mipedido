@@ -4,7 +4,7 @@ import {getRoleByIdCache, getUserWithPermissionsCache} from "../DataSource/cache
 import {IRole} from "../models/Role";
 import {BASE_ROLES} from "../constants";
 
-const noAuthorized = () => {
+export const noAuthorized = () => {
 	throw Error("No autorizado");
 }
 

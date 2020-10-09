@@ -11,7 +11,7 @@ import {
 } from "../../../DataSource";
 import {
     checkPermission,
-    checkPermissions, isAdmin,
+    checkPermissions, isAdmin, noAuthorized,
     verifyCurrentUser,
     verifyIfStoreBelongsToUser
 } from "../../../helpers/authHelpers";
@@ -217,20 +217,27 @@ const mutations = {
             throw new Error("Estado no valido")
         }
 
-        if (!await isAdmin(context) && status === ORDER_STATUS.EN_CURSO) {
+        const admin = await isAdmin(context)
+
+        if (!admin && status === ORDER_STATUS.EN_CURSO) {
             await checkPermission(PERMISSIONS.DELIVER_TO_DOMICILIARY, context);
         } else if (
-            !await isAdmin(context) &&
+            !admin &&
             (status === ORDER_STATUS.COMPLETADA || status === ORDER_STATUS.CANCELADA)
         ) {
             await checkPermission(PERMISSIONS.DELIVER_TO_CLIENT, context);
-        }
+        } else if (!admin && status === ORDER_STATUS.PENDIENTE) noAuthorized()
 
         const order:any = await getOrderById(_id);
         order.status = await getOrderStatusByName(status)
         await order.save()
 
         await updateOrderCache(order);
+
+        if (status === ORDER_STATUS.PENDIENTE) {
+            await addAvailableOrdersCache(order)
+        }
+
         return order;
     }
 
